@@ -1,0 +1,17 @@
+.footer_about-us {
+  display: flex;
+  justify-content: space-around;
+  /*background-color: #4646f4;*/
+  background: rgba(70, 70, 244, 0.5);
+  color: ivory;
+  font-size: 18px;
+}
+
+.about-us_description{
+  width: 30%;
+}
+
+.contacts_list{
+  list-style: none;
+  padding: 0  ;
+}
