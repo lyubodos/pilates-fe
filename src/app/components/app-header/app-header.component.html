@@ -1,16 +1,22 @@
 <header>
-    <div class="logo_container">
-      <img src="./assets/images/image_123650291.JPG" alt="pil_logo" class="header_logo">
-    </div>
-    <nav class="header_nav">
-      <ul class="nav_list">
-        <li><a routerLink="" routerLinkActive="active-link">Начало</a></li>
-        <li><a routerLink="/news" routerLinkActive="active-link">Новини</a></li>
-        <li><a routerLink="/prices" routerLinkActive="active-link">Цени</a></li>
-        <li><a routerLink="/reservations" routerLinkActive="active-link">Резервации</a></li>
-        <li><a routerLink="/gallery" routerLinkActive="active-link">Галерия</a></li>
-        <li><a routerLink="/about-us" routerLinkActive="active-link">За Нас</a></li>
-        <li><a routerLink="/contacts" id="contacts_link" class="contacts_link">Контакти</a></li>
-      </ul>
-    </nav>
+  <div class="logo_container">
+    <img src="./assets/images/image_123650291.JPG" alt="pil_logo" class="header_logo">
+  </div>
+  <nav class="header_nav">
+    <ul class="nav_list">
+      <li><a routerLink="" routerLinkActive="active-link">{{ 'MAIN.HEADER.NAV.HOME' | translate }}</a></li>
+      <li><a routerLink="/news" routerLinkActive="active-link">{{ 'MAIN.HEADER.NAV.NEWS' | translate }}</a></li>
+      <li><a routerLink="/prices" routerLinkActive="active-link">{{ 'MAIN.HEADER.NAV.PRICES' | translate }}</a></li>
+      <li><a routerLink="/reservations"
+             routerLinkActive="active-link">{{ 'MAIN.HEADER.NAV.RESERVATIONS' | translate }}</a></li>
+      <li><a routerLink="/gallery" routerLinkActive="active-link">{{ 'MAIN.HEADER.NAV.GALLERY' | translate }}</a></li>
+      <li><a routerLink="/about-us" routerLinkActive="active-link">{{ 'MAIN.HEADER.NAV.ABOUT_US' | translate }}</a></li>
+      <li><a routerLink="/contacts" class="myButton">{{ 'MAIN.HEADER.NAV.CONTACTS' | translate }}</a></li>
+    </ul>
+  </nav>
 </header>
+<div class="translate_bts">
+  <button (click)="switchLanguage('main-en')">English</button>
+  <button (click)="switchLanguage('main-bg')">Bulgarian</button>
+</div>
+

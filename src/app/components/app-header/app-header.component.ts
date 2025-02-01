@@ -1,4 +1,5 @@
 import {Component, HostListener} from '@angular/core';
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-header',
@@ -16,5 +17,15 @@ export class AppHeaderComponent {
     } else {
       header?.classList.remove('shrink');
     }
+  }
+
+  constructor(private translate: TranslateService) {
+    // Set default language
+    this.translate.setDefaultLang('main-en');
+    this.translate.use('en');
+  }
+
+  switchLanguage(language: string) {
+    this.translate.use(language);
   }
 }

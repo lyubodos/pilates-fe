@@ -1,14 +1,18 @@
 header {
   position: fixed;
-  top:0;
+  top: 0;
   width: 100%;
   height: 75px;
-  background: rgb(209,208,215);
-  background: linear-gradient(90deg, rgba(209,208,215,1) 0%, rgba(202,173,175,1) 48%);
+  background: rgb(209, 208, 215);
+  background: linear-gradient(90deg, rgba(209, 208, 215, 1) 0%, rgba(202, 173, 175, 1) 48%);
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1;
+}
+
+.translate_bts{
+  margin-top: 100px;
 }
 
 header:hover {
@@ -37,7 +41,9 @@ header:hover {
 header.shrink {
   height: 60px;
 
-}header.shrink .header_logo {
+}
+
+header.shrink .header_logo {
   height: 100%;
 }
 
@@ -55,6 +61,7 @@ header.shrink {
 .nav_list a {
   color: white;
   text-decoration: none;
+  transition: font-size 0.3s ease-in-out; /* Smooth transition */
 }
 
 .active-link {
@@ -67,7 +74,7 @@ header.shrink {
   text-decoration: none;
 }
 
-#contacts_link{
+#contacts_link {
   color: #ededd2;
   text-decoration: none;
 }
@@ -78,21 +85,46 @@ header.shrink {
 }
 
 .contacts_link {
-  background-color:#383b38;
-  border-radius:28px;
-  border:1px solid #b2c1b2;
-  display:inline-block;
-  cursor:pointer;
-  color:#ffffff;
-  font-size:17px;
-  padding:16px 31px;
-  text-decoration:none;
-  text-shadow:0px 1px 0px #2f6627;
+  background-color: #383b38;
+  border-radius: 28px;
+  border: 1px solid #b2c1b2;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 17px;
+  padding: 16px 31px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #2f6627;
 }
+
 .contacts_link:hover {
-  background-color:#0c0d0c;
+  background-color: #0c0d0c;
 }
+
 .contacts_link:active {
-  position:relative;
-  top:1px;
+  position: relative;
+  top: 1px;
+}
+
+.myButton {
+  background-color: #a8badf;
+  border-radius: 11px;
+  border: 1px solid #1e2029;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 23px;
+  padding: 14px 30px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #283966;
+}
+
+.myButton:hover {
+  background-color: #8bbcdc;
+}
+
+.myButton:active {
+  position: relative;
+  top: 1px;
 }

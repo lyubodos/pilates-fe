@@ -1,12 +1,11 @@
-.main_img {
-  width: 100%;
-  height: 100%;
-  opacity: 60%;
-  margin-top: -100px;
-  object-fit: cover;
+
+.main-section {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+  url("https://media.istockphoto.com/id/1171254637/photo/group-of-people-doing-the-mermaid-pilates-exercise.jpg?s=612x612&w=0&k=20&c=iP3Q0cQ-HbnCfGFzrUg8v7LvCxCHNUSKsSlA-4eVF7k=");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-/*.main-section {*/
-/*  width: 100%;*/
-
-/*}*/

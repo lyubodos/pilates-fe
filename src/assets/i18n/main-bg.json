@@ -1,0 +1,16 @@
+{
+  "MAIN": {
+    "HEADER": {
+      "NAV": {
+        "HOME": "Начало",
+        "NEWS": "Новини",
+        "PRICES": "Цени",
+        "RESERVATIONS": "Резервации",
+        "GALLERY": "Галерия",
+        "ABOUT_US": "За Нас",
+        "CONTACTS": "Контакти"
+      }
+    }
+  }
+}
+}

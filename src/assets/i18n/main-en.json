@@ -1,0 +1,15 @@
+{
+  "MAIN": {
+    "HEADER": {
+      "NAV": {
+        "HOME": "Home",
+        "NEWS": "News",
+        "PRICES": "Prices",
+        "RESERVATIONS": "Reservations",
+        "GALLERY": "Gallery",
+        "ABOUT_US": "About us",
+        "CONTACTS": "Contacts"
+      }
+    }
+  }
+}
