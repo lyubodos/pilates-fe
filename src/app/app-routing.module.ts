@@ -6,6 +6,15 @@ import {
 import {
   NewsPageSectionComponent
 } from "./components/app-main-section/components/news-page-section/news-page-section.component";
+import {
+  GalleryPageSectionComponent
+} from "./components/app-main-section/components/gallery-page-section/gallery-page-section.component";
+import {
+  AboutUsPageSectionComponent
+} from "./components/app-main-section/components/about-us-page-section/about-us-page-section.component";
+import {
+  ContactsPageSectionComponent
+} from "./components/app-main-section/components/contacts-page-section/contacts-page-section.component";
 
 export const routes: Routes = [
   {
@@ -19,10 +28,29 @@ export const routes: Routes = [
     pathMatch: 'full',
     component: NewsPageSectionComponent,
   },
+
+  {
+    path: 'gallery',
+    pathMatch: 'full',
+    component: GalleryPageSectionComponent,
+  },
+
+  {
+    path: 'about-us',
+    pathMatch: 'full',
+    component: AboutUsPageSectionComponent,
+  },
+
+  {
+    path: 'contacts',
+    pathMatch: 'full',
+    component: ContactsPageSectionComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+}

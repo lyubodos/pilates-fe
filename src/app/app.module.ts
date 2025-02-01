@@ -6,6 +6,15 @@ import {AppMainSectionComponent} from "./components/app-main-section/app-main-se
 import {
   AppMainPageSectionComponent
 } from "./components/app-main-section/components/main-page-section/app-main-page-section.component";
+import {
+  AboutUsPageSectionComponent
+} from "./components/app-main-section/components/about-us-page-section/about-us-page-section.component";
+import {
+  ContactsPageSectionComponent
+} from "./components/app-main-section/components/contacts-page-section/contacts-page-section.component";
+import {
+  GalleryPageSectionComponent
+} from "./components/app-main-section/components/gallery-page-section/gallery-page-section.component";
 
 
 @NgModule({
@@ -16,13 +25,16 @@ import {
     AppMainSectionComponent,
     AppMainPageSectionComponent,
     AppHeaderComponent,
-    AppFooterComponent
+    AppFooterComponent,
+    ContactsPageSectionComponent,
+    GalleryPageSectionComponent,
+    AboutUsPageSectionComponent
   ],
   providers: [],
   exports: [
     AppHeaderComponent,
     AppFooterComponent,
-    AppMainSectionComponent
+    AppMainSectionComponent,
   ]
 })
 export class AppModule {
