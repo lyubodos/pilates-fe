@@ -1,11 +1,30 @@
-
 .main-section {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
-  url("https://media.istockphoto.com/id/1171254637/photo/group-of-people-doing-the-mermaid-pilates-exercise.jpg?s=612x612&w=0&k=20&c=iP3Q0cQ-HbnCfGFzrUg8v7LvCxCHNUSKsSlA-4eVF7k=");
-  background-size: contain;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+  url("/assets/images/image.jpg");
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  margin-top: -100px;
+}
+
+.main-section_block {
+  margin-top: 175px;
+}
+
+.main-section_block h1 {
+  padding: 50px 0;
+  color: ivory;
+  text-align: center;
+  font-size: 42px;
+  font-weight: lighter;
+}
+
+.main-section_block p {
+  color: white;
+  padding: 0 300px;
+  font-size: 20px;
+  text-align: center;
 }
 
