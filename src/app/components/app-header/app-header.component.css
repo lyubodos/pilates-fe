@@ -11,8 +11,9 @@ header {
   z-index: 1;
 }
 
-.translate_bts{
-  margin-top: 100px;
+nav {
+  display: flex;
+  align-items: center;
 }
 
 header:hover {
@@ -53,6 +54,10 @@ header.shrink .header_logo {
   align-items: center;
 }
 
+.translate_bts{
+  display: inline-block;
+}
+
 .nav_list li {
   margin: 0 15px;
   font-size: 23px;
@@ -61,7 +66,7 @@ header.shrink .header_logo {
 .nav_list a {
   color: white;
   text-decoration: none;
-  transition: font-size 0.3s ease-in-out; /* Smooth transition */
+  transition: font-size 0.3s ease-in-out;
 }
 
 .active-link {
@@ -71,11 +76,6 @@ header.shrink .header_logo {
 .nav_list a:hover {
   color: #ededd2;
   font-size: 26px;
-  text-decoration: none;
-}
-
-#contacts_link {
-  color: #ededd2;
   text-decoration: none;
 }
 
@@ -106,25 +106,25 @@ header.shrink .header_logo {
   top: 1px;
 }
 
-.myButton {
-  background-color: #a8badf;
+#contacts_link {
+  background-color: rgb(255, 149, 159);
   border-radius: 11px;
   border: 1px solid #1e2029;
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
   font-family: Arial;
-  font-size: 23px;
+  font-size: 14px;
   padding: 14px 30px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #283966;
 }
 
-.myButton:hover {
-  background-color: #8bbcdc;
-}
-
-.myButton:active {
+#contacts_link:active {
   position: relative;
   top: 1px;
+}
+#contacts_link:hover{
+  background-color: #8bbcdc;
+  font-size: 20px;
 }

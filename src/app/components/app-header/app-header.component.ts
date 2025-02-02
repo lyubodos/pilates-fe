@@ -9,20 +9,9 @@ import {TranslateService} from "@ngx-translate/core";
 
 export class AppHeaderComponent {
 
-  @HostListener('window:scroll', [])
-  onWindowScroll(): void {
-    const header = document.querySelector('header');
-    if (window.scrollY > 50) {
-      header?.classList.add('shrink');
-    } else {
-      header?.classList.remove('shrink');
-    }
-  }
-
   constructor(private translate: TranslateService) {
-    // Set default language
     this.translate.setDefaultLang('main-en');
-    this.translate.use('en');
+    this.translate.use('main-en');
   }
 
   switchLanguage(language: string) {

@@ -11,12 +11,13 @@
              routerLinkActive="active-link">{{ 'MAIN.HEADER.NAV.RESERVATIONS' | translate }}</a></li>
       <li><a routerLink="/gallery" routerLinkActive="active-link">{{ 'MAIN.HEADER.NAV.GALLERY' | translate }}</a></li>
       <li><a routerLink="/about-us" routerLinkActive="active-link">{{ 'MAIN.HEADER.NAV.ABOUT_US' | translate }}</a></li>
-      <li><a routerLink="/contacts" class="myButton">{{ 'MAIN.HEADER.NAV.CONTACTS' | translate }}</a></li>
+      <li><a id="contacts_link" routerLink="/contacts" routerLinkActive="active-link">{{ 'MAIN.HEADER.NAV.CONTACTS' | translate }}</a></li>
     </ul>
+    <div class="translate_bts">
+      <button (click)="switchLanguage('main-en')">English</button>
+      <button (click)="switchLanguage('main-bg')">Bulgarian</button>
+    </div>
   </nav>
 </header>
-<div class="translate_bts">
-  <button (click)="switchLanguage('main-en')">English</button>
-  <button (click)="switchLanguage('main-bg')">Bulgarian</button>
-</div>
+
 

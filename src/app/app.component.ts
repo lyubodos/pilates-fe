@@ -13,12 +13,4 @@ import {TranslateService} from "@ngx-translate/core";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  constructor(private translate: TranslateService) {
-    this.translate.setDefaultLang('main-en');
-    this.translate.use('en');
-  }
-
-  switchLanguage(language: string) {
-    this.translate.use(language);
-  }
 }
