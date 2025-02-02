@@ -13,9 +13,11 @@
       <li><a routerLink="/about-us" routerLinkActive="active-link">{{ 'MAIN.HEADER.NAV.ABOUT_US' | translate }}</a></li>
       <li><a id="contacts_link" routerLink="/contacts" routerLinkActive="active-link">{{ 'MAIN.HEADER.NAV.CONTACTS' | translate }}</a></li>
     </ul>
-    <div class="translate_bts">
-      <button (click)="switchLanguage('main-en')">English</button>
-      <button (click)="switchLanguage('main-bg')">Bulgarian</button>
+    <div class="language-select">
+      <select id="languageDropdown" (change)="switchLanguage($event)">
+        <option value="main-en" data-icon="🇬🇧" selected>🇬🇧</option>
+        <option value="main-bg" data-icon="🇧🇬">🇧🇬</option>
+      </select>
     </div>
   </nav>
 </header>
