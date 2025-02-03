@@ -18,11 +18,11 @@ nav {
 
 
 select {
-  padding: 3px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  appearance: auto;
+  padding: 0;
+  font-size: 30px;
+  background: transparent;
+  border: none;
+  appearance: none;
   cursor: pointer;
 }
 
@@ -135,7 +135,8 @@ header.shrink .header_logo {
   position: relative;
   top: 1px;
 }
-#contacts_link:hover{
+
+#contacts_link:hover {
   background-color: #8bbcdc;
   font-size: 20px;
 }
