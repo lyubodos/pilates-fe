@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './app-footer.component.css'
 })
 export class AppFooterComponent {
-
+  currentBranch: string = 'main';
 }
