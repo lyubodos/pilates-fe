@@ -15,6 +15,12 @@ import {
 import {
   ContactsPageSectionComponent
 } from "./components/app-main-section/components/contacts-page-section/contacts-page-section.component";
+import {
+  ReservationsPageSectionComponent
+} from "./components/app-main-section/components/reservations-page-section/reservations-page-section.component";
+import {
+  PricesPageSectionComponent
+} from "./components/app-main-section/components/prices-page-section/prices-page-section.component";
 
 export const routes: Routes = [
   {
@@ -22,19 +28,25 @@ export const routes: Routes = [
     pathMatch: 'full',
     component: AppMainPageSectionComponent,
   },
-
   {
     path: 'news',
     pathMatch: 'full',
     component: NewsPageSectionComponent,
+  },  {
+    path: 'prices',
+    pathMatch: 'full',
+    component: PricesPageSectionComponent,
   },
-
+  {
+    path: 'reservations',
+    pathMatch: 'full',
+    component: ReservationsPageSectionComponent,
+  },
   {
     path: 'gallery',
     pathMatch: 'full',
     component: GalleryPageSectionComponent,
   },
-
   {
     path: 'about-us',
     pathMatch: 'full',

@@ -18,6 +18,12 @@ import {
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
+import {
+  ReservationsPageSectionComponent
+} from "./components/app-main-section/components/reservations-page-section/reservations-page-section.component";
+import {
+  PricesPageSectionComponent
+} from "./components/app-main-section/components/prices-page-section/prices-page-section.component";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -43,7 +49,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppFooterComponent,
     ContactsPageSectionComponent,
     GalleryPageSectionComponent,
-    AboutUsPageSectionComponent
+    AboutUsPageSectionComponent,
+    ReservationsPageSectionComponent,
+    PricesPageSectionComponent
   ],
   providers: [
   ],
