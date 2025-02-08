@@ -10,6 +10,18 @@
         "ABOUT_US": "About us",
         "CONTACTS": "Contacts"
       }
+    },
+    "FOOTER": {
+      "ABOUT_US": "About Us",
+      "SOCIAL_MEDIA": {
+        "HEADER": "Social media"
+      },
+      "CONTACTS": {
+        "HEADER": "Contacts",
+        "CONTACTS_LIST": {
+          "LOCATION": "Location"
+        }
+      }
     }
   }
 }

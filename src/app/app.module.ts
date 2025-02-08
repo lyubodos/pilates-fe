@@ -15,7 +15,7 @@ import {
 import {
   GalleryPageSectionComponent
 } from "./components/app-main-section/components/gallery-page-section/gallery-page-section.component";
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 
@@ -51,6 +51,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppHeaderComponent,
     AppFooterComponent,
     AppMainSectionComponent,
+    TranslateModule
   ]
 })
 export class AppModule {

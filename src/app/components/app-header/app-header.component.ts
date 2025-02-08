@@ -1,4 +1,5 @@
-import {Component, HostListener} from '@angular/core';
+import {Component} from '@angular/core';
+import {TranslationService} from "../../services/languages.service";
 import {TranslateService} from "@ngx-translate/core";
 
 @Component({
@@ -20,6 +21,6 @@ export class AppHeaderComponent {
     this.translate.use(currentLanguage);
 
     //TODO Console line implemented only for test purposes, delete before merging into dev
-    console.log("Language changed to:", this.selectedLanguage);
+    console.log("Language changed to:", currentLanguage);
   }
 }

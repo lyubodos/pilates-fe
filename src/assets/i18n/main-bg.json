@@ -10,6 +10,18 @@
         "ABOUT_US": "За Нас",
         "CONTACTS": "Контакти"
       }
+    },
+    "FOOTER": {
+      "ABOUT_US": "За Нас",
+      "SOCIAL_MEDIA": {
+        "HEADER": "Социални мрежи"
+      },
+      "CONTACTS": {
+        "HEADER": "Контакти",
+        "CONTACTS_LIST": {
+          "LOCATION": "Локация"
+        }
+      }
     }
   }
 }
