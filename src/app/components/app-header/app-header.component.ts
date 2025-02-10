@@ -5,7 +5,7 @@ import {TranslateService} from "@ngx-translate/core";
 @Component({
   selector: 'app-header',
   templateUrl: './app-header.component.html',
-  styleUrl: './app-header.component.css'
+  styleUrl: './app-header.component.scss'
 })
 
 export class AppHeaderComponent {

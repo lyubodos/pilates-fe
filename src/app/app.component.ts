@@ -10,7 +10,7 @@ import {TranslateService} from "@ngx-translate/core";
   standalone: true,
   imports: [AppModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
 }
