@@ -8,8 +8,12 @@
         "RESERVATIONS": "Reservations",
         "GALLERY": "Gallery",
         "ABOUT_US": "About us",
-        "CONTACTS": "Contacts"
+        "CONTACTS": "Get in Touch"
       }
+    },
+    "HONE": {
+      "SUBTITLE": "Your body's reformer!",
+      "GET_IN_TOUCH": "Get in Touch"
     },
     "FOOTER": {
       "ABOUT_US": "About Us",

@@ -1,9 +1,14 @@
 @import '@fortawesome/fontawesome-free/css/all.min.css';
-
+@import 'assets/modules/btn';
 
 html, body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
