@@ -1,3 +1,22 @@
+@mixin atSmall {
+  @media (min-width: 530px) {
+    @content;
+  }
+}
+
+@mixin atMedium {
+  @media (min-width: 800px) {
+    @content;
+  }
+}
+
+@mixin atLarge {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+
 .main-section {
   margin-top: -100px;
 }
@@ -21,26 +40,154 @@
 
   &__title {
     color: #FF959F;
-    font-size: 7rem;
     font-weight: 300;
-    margin: 0;
+    font-size: 3.1rem;
+
+    @include atSmall {
+      margin: 0;
+      font-size: 4rem;
+    }
+
+    @include atMedium {
+      margin: 0;
+      font-size: 5rem;
+    }
+
+    @include atLarge {
+      margin: 0;
+      font-size: 7rem;
+    }
   }
 
   &__subtitle {
-    font-size: 4rem;
+    font-size: 2.1rem;
     font-weight: 300;
     color: #383b38;
     margin: 0;
+
+    @include atSmall {
+      font-size: 3rem;
+    }
+
+    @include atMedium {
+      font-size: 3.4rem;
+    }
+
+    @include atLarge {
+      font-size: 4rem;
+    }
   }
 
   &__paragraph {
     color: #383b38;
-    font-size: 1.875rem;
+    font-size: 1rem;
     font-weight: 100;
-    padding: 0 200px;
     text-shadow: 2px 20px 0 rgba(0, 0, 0, 0.1);
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 360px;
+    margin-bottom: 50px;
+
+    @include atSmall{
+      margin: 0;
+      font-size: 1.2rem;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 360px;
+      margin-bottom: 30px;
+    }
+
+    @include atMedium{
+      margin: 0;
+      font-size: 1.5rem;
+      padding: 0 200px;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 360px;
+      margin-bottom: 30px;
+    }
+
+    @include atLarge {
+      margin: 0;
+      font-size: 1.875rem;
+      padding: 0 200px;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 360px;
+      margin-bottom: 30px;
+    }
   }
+}
+
+.middle-hero {
+  img {
+    display: block;
+    margin: auto;
+    opacity: 50%;
+  }
+
+  &__text-content {
+    position: absolute;
+    top: 120%;
+    left:0;
+    transform: translateY(-100%);
+    width: 100%;
+    text-align: center;
+  }
+
+  &__title {
+    color: #FF959F;
+    font-weight: 300;
+    font-size: 3.1rem;
+
+    @include atSmall {
+      margin: 0;
+      font-size: 4rem;
+    }
+
+    @include atMedium {
+      margin: 0;
+      font-size: 5rem;
+    }
+
+    @include atLarge {
+      margin: 0;
+      font-size: 5rem;
+    }
+  }
+
+  &__paragraph {
+    color: #383b38;
+    font-size: 1rem;
+    font-weight: 100;
+    text-shadow: 2px 20px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+
+    @include atSmall{
+      margin: 0;
+      font-size: 1.2rem;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 360px;
+      margin-bottom: 30px;
+    }
+
+    @include atMedium{
+      margin: 0;
+      font-size: 1.5rem;
+      padding: 0 200px;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 360px;
+      margin-bottom: 30px;
+    }
+
+    @include atLarge {
+      margin: 0;
+      font-size: 2rem;
+      padding: 0 200px;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 360px;
+    }
+  }
+
+
 }
