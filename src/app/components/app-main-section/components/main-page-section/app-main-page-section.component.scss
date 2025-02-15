@@ -22,17 +22,20 @@
 }
 
 .intro-hero {
+  border-bottom: 10px solid #FF959F;
+
   img {
     width: 100%;
     height: 800px;
     object-fit: cover;
     opacity: 40%;
+    display: block;
   }
 
   &__text-content {
     position: absolute;
     top: 45%;
-    left:0;
+    left: 0;
     transform: translateY(-50%);
     width: 100%;
     text-align: center;
@@ -85,7 +88,7 @@
     text-shadow: 2px 20px 0 rgba(0, 0, 0, 0.1);
     margin-bottom: 50px;
 
-    @include atSmall{
+    @include atSmall {
       margin: 0;
       font-size: 1.2rem;
       margin-left: auto;
@@ -94,7 +97,7 @@
       margin-bottom: 30px;
     }
 
-    @include atMedium{
+    @include atMedium {
       margin: 0;
       font-size: 1.5rem;
       padding: 0 200px;
@@ -117,65 +120,52 @@
 }
 
 .middle-hero {
-  img {
+
+  &__img {
     display: block;
-    margin: auto;
+    margin: 50px auto 0 auto;
     opacity: 50%;
   }
 
   &__text-content {
-    position: absolute;
-    top: 120%;
-    left:0;
-    transform: translateY(-100%);
-    width: 100%;
     text-align: center;
   }
 
   &__title {
     color: #FF959F;
     font-weight: 300;
-    font-size: 3.1rem;
+    font-size: 2rem;
 
     @include atSmall {
       margin: 0;
-      font-size: 4rem;
+      font-size: 3rem;
+      margin-bottom: 10px;
     }
 
-    @include atMedium {
-      margin: 0;
-      font-size: 5rem;
-    }
-
-    @include atLarge {
-      margin: 0;
-      font-size: 5rem;
-    }
   }
 
   &__paragraph {
     color: #383b38;
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: 100;
     text-shadow: 2px 20px 0 rgba(0, 0, 0, 0.1);
     margin-bottom: 50px;
 
-    @include atSmall{
+    @include atSmall {
       margin: 0;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       margin-left: auto;
       margin-right: auto;
-      max-width: 360px;
+      max-width: 540px;
       margin-bottom: 30px;
     }
 
-    @include atMedium{
+    @include atMedium {
       margin: 0;
       font-size: 1.5rem;
       padding: 0 200px;
       margin-left: auto;
       margin-right: auto;
-      max-width: 360px;
       margin-bottom: 30px;
     }
 
@@ -185,9 +175,117 @@
       padding: 0 200px;
       margin-left: auto;
       margin-right: auto;
-      max-width: 360px;
+    }
+  }
+}
+
+.story-hero {
+
+  &__img {
+    height: 700px;
+    width: 600px;
+  }
+
+  &__heading {
+    color: #FF959F;
+    font-weight: 300;
+    font-size: 2rem;
+    text-align: center;
+
+
+    @include atMedium {
+      margin-top: 0;
+      font-size: 2.875rem;
     }
   }
 
+  &__paragraph {
+    color: #383b38;
+    font-size: 1rem;
+    font-weight: 100;
+    text-shadow: 2px 20px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+  }
 
+  @include atSmall {
+    font-size: 1.3rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 360px;
+    margin-bottom: 30px;
+  }
+
+  @include atMedium {
+    margin: 0;
+    font-size: 1.5rem;
+    padding: 0 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+
+  @include atLarge {
+    margin: 0;
+    font-size: 2rem;
+    padding: 0 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.page-section {
+  padding: 1.2rem 0.5rem;
+  overflow: hidden;
+
+  @include atLarge {
+    padding: 4.5rem 200px;
+  }
+}
+
+.wrapper {
+  padding-left: 18px;
+  padding-right: 18px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  &--gutters {
+
+    @include atMedium {
+      padding-right: -65px;
+    }
+  }
+
+  &--gutters > div {
+
+    @include atMedium {
+      padding-right: 65px;
+      box-sizing: border-box;
+    }
+  }
+
+  &__4 {
+
+    @include atMedium {
+      float: left;
+      width: 33.33%;
+    }
+  }
+
+  &__8 {
+
+    @include atMedium {
+      float: left;
+      width: 66.66%;
+    }
+  }
 }
