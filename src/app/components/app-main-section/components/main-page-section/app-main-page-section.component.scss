@@ -1,28 +1,14 @@
-@mixin atSmall {
-  @media (min-width: 530px) {
-    @content;
-  }
-}
-
-@mixin atMedium {
-  @media (min-width: 800px) {
-    @content;
-  }
-}
-
-@mixin atLarge {
-  @media (min-width: 1200px) {
-    @content;
-  }
-}
-
+@import '../../../../../assets/base/global';
+@import '../../../../../assets/modules/page-section';
+@import '../../../../../assets/modules/row';
+@import '../../../../../assets/modules/wrapper';
 
 .main-section {
   margin-top: -100px;
 }
 
 .intro-hero {
-  border-bottom: 10px solid #FF959F;
+  border-bottom: 10px solid $mainRoseAsh;
 
   img {
     width: 100%;
@@ -42,7 +28,7 @@
   }
 
   &__title {
-    color: #FF959F;
+    color: $mainRoseAsh;
     font-weight: 300;
     font-size: 3.1rem;
 
@@ -132,7 +118,7 @@
   }
 
   &__title {
-    color: #FF959F;
+    color: $mainRoseAsh;
     font-weight: 300;
     font-size: 2rem;
 
@@ -187,7 +173,7 @@
   }
 
   &__heading {
-    color: #FF959F;
+    color: $mainRoseAsh;
     font-weight: 300;
     font-size: 2rem;
     text-align: center;
@@ -233,59 +219,3 @@
   }
 }
 
-.page-section {
-  padding: 1.2rem 0.5rem;
-  overflow: hidden;
-
-  @include atLarge {
-    padding: 4.5rem 200px;
-  }
-}
-
-.wrapper {
-  padding-left: 18px;
-  padding-right: 18px;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.row {
-
-  &::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-
-  &--gutters {
-
-    @include atMedium {
-      padding-right: -65px;
-    }
-  }
-
-  &--gutters > div {
-
-    @include atMedium {
-      padding-right: 65px;
-      box-sizing: border-box;
-    }
-  }
-
-  &__4 {
-
-    @include atMedium {
-      float: left;
-      width: 33.33%;
-    }
-  }
-
-  &__8 {
-
-    @include atMedium {
-      float: left;
-      width: 66.66%;
-    }
-  }
-}
