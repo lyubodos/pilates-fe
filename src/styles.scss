@@ -1,11 +1,13 @@
 @import '@fortawesome/fontawesome-free/css/all.min.css';
 @import 'assets/modules/btn';
+@import './assets/modules/_colors.scss';
 
 html, body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: $mainBgColor;
 }
 
 img {
