@@ -1,3 +1,22 @@
+@mixin atSmall {
+  @media (min-width: 530px) {
+    @content;
+  }
+}
+
+@mixin atMedium {
+  @media (min-width: 800px) {
+    @content;
+  }
+}
+
+@mixin atLarge {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+
 .footer {
   display: flex;
   justify-content: space-around;
@@ -5,6 +24,13 @@
   color: ivory;
   font-size: 18px;
   padding: 24px 0 50px;
+  flex-direction: column;
+  align-items: center;
+
+  @include atMedium {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 
   h4 {
     font-size: 24px;
@@ -15,18 +41,29 @@
 }
 
 .about-us_container {
-  flex: 1;
-  margin-left: 100px;
-}
 
-.social-media_heading {
-  margin-bottom: 11px !important;
-}
+  &__heading {
+    text-align: center;
 
+    @include atLarge {
+      margin-top: 0;
+    }
+  }
+
+  &__description {
+    text-align: center;
+    max-width: 250px;
+  }
+}
 
 .social-media_container {
-  flex: 1;
-  margin-left: 250px;
+
+  &__heading {
+
+    @include atLarge {
+      margin-top: 0;
+    }
+  }
 
   li {
     display: flex;
@@ -44,40 +81,39 @@
       margin-left: 5px;
     }
   }
-}
 
-.social-media_list {
-  padding-left: 0;
-  margin-top: 0;
-  margin-left: -10px;
+  &__list {
+    padding-left: 0;
+    margin-top: 0;
+    margin-left: -10px;
+  }
 }
 
 
 .contacts_container {
-  flex: 1;
-  margin-left: 100px;
-}
 
-.contacts_list {
-  list-style: none;
-  padding: 0;
+  &__heading {
 
-  li {
-    list-style: none;
-    margin-bottom: 10px;
-
-    a {
-      text-decoration: none;
-    }
-
-    i {
-      margin-right: 10px;
+    @include atLarge {
+      margin-top: 0;
     }
   }
-}
 
-.footer_version {
-  margin: 0 10px;
-  padding: 0;
-  text-align: right;
+  &__list {
+    list-style: none;
+    padding: 0;
+
+    li {
+      list-style: none;
+      margin-bottom: 10px;
+
+      a {
+        text-decoration: none;
+      }
+
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
 }
