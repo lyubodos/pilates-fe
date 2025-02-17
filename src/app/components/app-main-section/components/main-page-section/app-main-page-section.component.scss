@@ -2,6 +2,9 @@
 @import '../../../../../assets/modules/page-section';
 @import '../../../../../assets/modules/row';
 @import '../../../../../assets/modules/wrapper';
+@import '../../../../../assets/modules/section-title';
+@import '../../../../../assets/modules/feature-item';
+@import '../../../../../assets/modules/generic-content-container';
 
 .main-section {
   margin-top: -100px;
@@ -71,7 +74,6 @@
     color: #383b38;
     font-size: 1rem;
     font-weight: 100;
-    text-shadow: 2px 20px 0 rgba(0, 0, 0, 0.1);
     margin-bottom: 50px;
 
     @include atSmall {
@@ -134,7 +136,6 @@
     color: #383b38;
     font-size: 1.3rem;
     font-weight: 100;
-    text-shadow: 2px 20px 0 rgba(0, 0, 0, 0.1);
     margin-bottom: 50px;
 
     @include atSmall {
@@ -168,8 +169,8 @@
 .story-hero {
 
   &__img {
-    height: 700px;
-    width: 600px;
+    height: 610px;
+    width: 5400px;
   }
 
   &__heading {
@@ -189,7 +190,6 @@
     color: #383b38;
     font-size: 1rem;
     font-weight: 100;
-    text-shadow: 2px 20px 0 rgba(0, 0, 0, 0.1);
     margin-bottom: 50px;
   }
 
