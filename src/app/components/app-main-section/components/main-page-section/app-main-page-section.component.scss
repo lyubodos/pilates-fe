@@ -191,6 +191,11 @@
     font-size: 1rem;
     font-weight: 100;
     margin-bottom: 50px;
+    text-align: center;
+
+    @include atMedium {
+      text-align: left;
+    }
   }
 
   @include atSmall {
