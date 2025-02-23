@@ -6,5 +6,4 @@ import {Component} from '@angular/core';
   styleUrl: './app-footer.component.scss'
 })
 export class AppFooterComponent {
-  currentBranch: string = 'development';
-  }
+}
