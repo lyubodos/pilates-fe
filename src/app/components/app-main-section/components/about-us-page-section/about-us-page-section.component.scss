@@ -1,22 +1,25 @@
-.main_heading {
-  font-size: 42px;
-  text-align: center;
+@import '../../../../../assets/base/global';
+@import '../../../../../assets/modules/section-title';
+
+
+.about-us_heading {
+  color: $mainRoseAsh;
 }
 
 .about-us_main {
   display: flex;
   align-items: flex-start;
-  margin: 50px 300px;
+  margin: 3.125rem 18.75rem;
 }
 
 .about-us_image {
-  width: 300px;
-  height: 300px;
+  width: 18.75rem;
+  height: 18.75rem;
   max-width: 40%;
 }
 
 .about-us_main_description {
-  padding: 0 200px;
+  padding: 0 12.5rem;
   width: 40%;
   margin: 0;
 }
