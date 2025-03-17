@@ -1,0 +1,56 @@
+@import '../../../../../assets/base/global';
+@import '../../../../../assets/modules/page-section';
+@import '../../../../../assets/modules/row';
+@import '../../../../../assets/modules/wrapper';
+@import '../../../../../assets/modules/section-title';
+@import '../../../../../assets/modules/feature-item';
+@import '../../../../../assets/modules/generic-content-container';
+
+
+#pilates-prices {
+  padding: 40px 0;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  color: $mainRoseAsh;
+}
+
+.section-description{
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.price-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.price-table th, .price-table td {
+  text-align: center;
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+
+.price-table th {
+  background-color: #f4f4f4;
+  font-size: 18px;
+}
+
+.price-table td {
+  background-color: #fff;
+}
+
+.price-table tr:nth-child(even) td {
+  background-color: #e4dfdf;
+}
+
+
