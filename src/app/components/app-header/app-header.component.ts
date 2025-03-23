@@ -9,7 +9,7 @@ import {Router} from "@angular/router";
 })
 
 export class AppHeaderComponent {
-  menuOpen = false;
+  public menuOpen = false;
 
   private readonly contactsLink = "/contacts";
 
