@@ -5,4 +5,15 @@
   padding: 1.2rem 2rem;
   display: inline-block;
   text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: #0c0d0c;
+  background-color: #87eadc;
+}
+
+.btn:active {
+  background-color: #FF959F;
+  color: #FFF;
 }

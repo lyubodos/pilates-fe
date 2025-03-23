@@ -11,6 +11,8 @@ import {Router} from "@angular/router";
 export class AppHeaderComponent {
   menuOpen = false;
 
+  private readonly contactsLink = "/contacts";
+
   constructor(private translate: TranslateService,
               private router: Router) {
     this.translate.setDefaultLang('main-en');
@@ -27,6 +29,6 @@ export class AppHeaderComponent {
   }
 
   public navigateToContacts(){
-      this.router.navigate(["contacts"]);
+      this.router.navigate([this.contactsLink]);
   }
 }
