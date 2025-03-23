@@ -1,3 +1,5 @@
+@import '../../../assets/base/global';
+
 header {
   position: fixed;
   top: 0;
@@ -64,14 +66,19 @@ header:hover {
 }
 
 .header_logo {
-  position: absolute;
-  border-radius: 50%;
-  top: -5px;
-  left: -3px;
-  height: 98px;
-  width: auto;
-  object-fit: contain;
-  transition: height 0.5s ease;
+  display: none;
+
+  @include headerNav{
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    top: -5px;
+    left: -3px;
+    height: 98px;
+    width: auto;
+    object-fit: contain;
+    transition: height 0.5s ease;
+  }
 }
 
 .language-select {
@@ -84,28 +91,6 @@ header:hover {
 }
 
 .contacts_link {
-  background-color: #383b38;
-  border-radius: 28px;
-  border: 1px solid #b2c1b2;
-  display: inline-block;
-  cursor: pointer;
-  color: #ffffff;
-  font-size: 17px;
-  padding: 16px 31px;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #2f6627;
-}
-
-.contacts_link:hover {
-  background-color: #0c0d0c;
-}
-
-.contacts_link:active {
-  position: relative;
-  top: 1px;
-}
-
-#contacts_link {
   background-color: rgb(255, 149, 159);
   border-radius: 11px;
   border: 1px solid #1e2029;
@@ -119,9 +104,15 @@ header:hover {
   margin-right: 10px;
 }
 
+.contacts_link:hover {
+  color: #0c0d0c;
+  background-color: $mainTurquoise;
+}
 
-#contacts_link:hover {
-  background-color: #8bbcdc;
+
+.contacts_link:active {
+  background-color: $mainRoseAsh;
+  color: #FFF;
 }
 
 
