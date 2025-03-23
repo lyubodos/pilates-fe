@@ -11,8 +11,8 @@
              routerLinkActive="active-link">{{ 'MAIN.HEADER.NAV.RESERVATIONS' | translate }}</a></li>
       <li><a routerLink="/gallery" routerLinkActive="active-link">{{ 'MAIN.HEADER.NAV.GALLERY' | translate }}</a></li>
       <li><a routerLink="/about-us" routerLinkActive="active-link">{{ 'MAIN.HEADER.NAV.ABOUT_US' | translate }}</a></li>
-      <li><a id="contacts_link" routerLink="/contacts" routerLinkActive="active-link">{{ 'MAIN.HEADER.NAV.CONTACTS' | translate }}</a></li>
     </ul>
+    <button id="contacts_link" onclick="navigateToContacts()">{{ 'MAIN.HEADER.NAV.CONTACTS' | translate }}</button>
     <div class="language-select">
       <select id="languageDropdown" (change)="switchLanguage($event)">
         <option value="main-en" data-icon="🇬🇧" selected>🇬🇧</option>
@@ -21,5 +21,3 @@
     </div>
   </nav>
 </header>
-
-
