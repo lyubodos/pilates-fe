@@ -31,6 +31,7 @@
         "SINGLE_TRAINING": "Еднократна тренировка",
         "PER_MONTH": "за един месец",
         "UNLIMITED": "Неограничен период",
+        "TWO_MONTHS": "за два месеца",
         "TRAINING": "посещение",
         "TRAININGS": "посещения"
       }
