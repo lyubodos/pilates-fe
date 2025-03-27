@@ -24,6 +24,7 @@ import {
 import {
   PricesPageSectionComponent
 } from "./components/app-main-section/components/prices-page-section/prices-page-section.component";
+import {NgClass} from "@angular/common";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -31,17 +32,18 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 
 @NgModule({
-  imports: [
-    AppRoutingModule,
-    HttpClientModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient],
-      },
-    }),
-  ],
+    imports: [
+        AppRoutingModule,
+        HttpClientModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient],
+            },
+        }),
+        NgClass,
+    ],
   declarations: [
     AppMainSectionComponent,
     AppMainPageSectionComponent,

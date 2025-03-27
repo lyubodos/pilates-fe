@@ -1,6 +1,8 @@
 @import '../../../assets/base/global';
+@import 'boxicons';
 
-header {
+
+.site-header {
   position: fixed;
   top: 0;
   width: 100%;
@@ -10,65 +12,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: display 0.3s ease-in;
   z-index: 1;
 
-  .header_nav {
-    display: flex;
-    align-items: center;
-    margin-right: 40px;
 
-
-    .nav_list {
-      list-style: none;
-      display: flex;
-      align-items: center;
-
-      li {
-        margin: 0 15px;
-        font-size: 23px;
-      }
-
-      a {
-        color: white;
-        text-decoration: none;
-        transition: font-size 0.3s ease-in-out;
-      }
-    }
-
-    .nav_list a:hover {
-      color: #ededd2;
-      font-size: 26px;
-      text-decoration: none;
-    }
-
-    .nav_list a:focus {
-      color: #6ec7e1;
-      text-decoration: none;
-    }
+  .logo_container {
+    height: 80%;
   }
-}
 
-select {
-  padding: 0;
-  font-size: 30px;
-  background: transparent;
-  border: none;
-  appearance: none;
-  cursor: pointer;
-}
-
-header:hover {
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.logo_container {
-  height: 80%;
-}
-
-.header_logo {
-  display: none;
-
-  @include headerNav{
+  .header_logo {
     display: block;
     position: absolute;
     border-radius: 50%;
@@ -77,8 +29,134 @@ header:hover {
     height: 98px;
     width: auto;
     object-fit: contain;
-    transition: height 0.5s ease;
+    //transition: height 0.5s ease;
   }
+
+  .header_title {
+    display: inline-block;
+    color: #FFFFFF;
+    font-weight: 200;
+    margin: 0 0 0 100px;
+
+    @include atMedium {
+      margin: 5% 0 0 100px;
+    }
+  }
+
+  .icons {
+    font-size: 2.8rem;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-flex;
+    position: absolute;
+    right: 5%;
+
+    #close-icon {
+      display: none;
+    }
+
+    #menu-icon {
+
+    }
+
+    @include atMedium {
+      display: none;
+    }
+  }
+
+  .header_nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    backdrop-filter: blur(50px);
+    display: none;
+    z-index: -1;
+
+    .nav_list {
+      color: white;
+      margin-right: 40px;
+
+      li {
+        text-align: center;
+        list-style: none;
+        margin: 1.5rem 0;
+        color: #FFFFFF;
+      }
+
+      a {
+        color: #454343;
+        text-decoration: none;
+      }
+
+      .contacts_link_mobile {
+        border: 1px solid white;
+        padding: 4px;
+        border-radius: 5px;
+      }
+
+      @include atMedium {
+        display: flex;
+        align-items: center;
+
+        li {
+          margin: 0 15px;
+          font-size: 18px;
+        }
+
+        a {
+          color: #FFFFFF;
+          transition: font-size 0.4s ease-in-out;
+        }
+      }
+    }
+
+    .nav_list a:hover {
+      color: #ca626a;
+
+      @include atMedium {
+        color: #ededd2;
+        font-size: 26px;
+        text-decoration: none;
+      }
+    }
+
+    .nav_list a:focus {
+
+      @include atMedium {
+        color: #6ec7e1;
+        text-decoration: none;
+      }
+    }
+
+    @include atMedium {
+      display: flex;
+      position: static;
+      top: 0;
+      color: #FFFFFF;
+      align-items: center;
+      margin-right: 40px;
+      background-color: transparent;
+      width: auto;
+    }
+  }
+}
+
+.header_nav.active {
+  display: block !important;
+}
+
+.site-header:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.language-dropdown {
+  padding: 0;
+  font-size: 30px;
+  background: transparent;
+  border: none;
+  appearance: none;
+  cursor: pointer;
 }
 
 .language-select {
@@ -86,29 +164,28 @@ header:hover {
   display: inline-block;
 }
 
-.active-link {
-  color: #0c0d0c;
-}
-
 .contacts_link {
-  background-color: rgb(255, 149, 159);
-  border-radius: 11px;
-  border: 1px solid #1e2029;
-  display: inline-block;
-  cursor: pointer;
-  color: #ffffff;
-  font-size: 14px;
-  padding: 14px 30px;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #283966;
-  margin-right: 10px;
+  display: none;
+
+  @include atMedium {
+    background-color: rgb(255, 149, 159);
+    border-radius: 11px;
+    border: 1px solid #1e2029;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 14px 30px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #283966;
+    margin-right: 10px;
+  }
 }
 
 .contacts_link:hover {
   color: #0c0d0c;
   background-color: $mainTurquoise;
 }
-
 
 .contacts_link:active {
   background-color: $mainRoseAsh;

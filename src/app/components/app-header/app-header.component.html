@@ -1,23 +1,33 @@
-<header>
+<header class="site-header">
   <div class="logo_container">
     <img src="./assets/images/image_123650291.JPG" alt="pil_logo" class="header_logo">
+    <h1 class="header_title">ReformFlow Studio</h1>
   </div>
-  <nav class="header_nav">
+  <label class="icons">
+    <i  class="bx bx-menu" id="menu-icon" (click)="toggleMenu()"></i>
+    <i  class="bx bx-x" id="close-icon" (click)="closeMenu()"></i>
+  </label>
+  <nav class="header_nav" [class.active]="menuOpen">
     <ul class="nav_list">
-      <li><a routerLink="" routerLinkActive="active-link">{{ 'MAIN.HEADER.NAV.HOME' | translate }}</a></li>
-      <li><a routerLink="/news" routerLinkActive="active-link">{{ 'MAIN.HEADER.NAV.NEWS' | translate }}</a></li>
-      <li><a routerLink="/prices" routerLinkActive="active-link">{{ 'MAIN.HEADER.NAV.PRICES' | translate }}</a></li>
-      <li><a routerLink="/reservations"
-             routerLinkActive="active-link">{{ 'MAIN.HEADER.NAV.RESERVATIONS' | translate }}</a></li>
-      <li><a routerLink="/gallery" routerLinkActive="active-link">{{ 'MAIN.HEADER.NAV.GALLERY' | translate }}</a></li>
-      <li><a routerLink="/about-us" routerLinkActive="active-link">{{ 'MAIN.HEADER.NAV.ABOUT_US' | translate }}</a></li>
+      <li><a routerLink="" routerLinkActive="active-link" (click)="closeMenu()">{{ 'MAIN.HEADER.NAV.HOME' | translate }}</a></li>
+      <li><a routerLink="/news" routerLinkActive="active-link" (click)="closeMenu()">{{ 'MAIN.HEADER.NAV.NEWS' | translate }}</a></li>
+      <li><a routerLink="/prices" routerLinkActive="active-link" (click)="closeMenu()">{{ 'MAIN.HEADER.NAV.PRICES' | translate }}</a></li>
+      <li><a routerLink="/reservations" (click)="closeMenu()">{{ 'MAIN.HEADER.NAV.RESERVATIONS' | translate }}</a></li>
+      <li><a routerLink="/gallery" routerLinkActive="active-link"(click)="closeMenu()">{{ 'MAIN.HEADER.NAV.GALLERY' | translate }}</a></li>
+      <li><a routerLink="/about-us" routerLinkActive="active-link" (click)="closeMenu()">{{ 'MAIN.HEADER.NAV.ABOUT_US' | translate }}</a></li>
+      <li><a routerLink="/contacts" routerLinkActive="active-link" (click)="closeMenu()">{{ 'MAIN.HEADER.NAV.CONTACTS' | translate }}</a></li>
+      @if(currentLang == 'main-en' || currentLang == undefined){
+        <li><a class="contacts_link_mobile" (click)="switchLanguageToBG()">BG</a></li>
+      } @else {
+      <li><a class="contacts_link_mobile" (click)="switchLanguageToEN()">EN</a></li>
+      }
     </ul>
-    <button class="contacts_link" (click)="navigateToContacts()">{{ 'MAIN.HEADER.NAV.CONTACTS' | translate }}</button>
-    <div class="language-select">
-      <select id="languageDropdown" (change)="switchLanguage($event)">
-        <option value="main-en" data-icon="🇬🇧" selected>🇬🇧</option>
-        <option value="main-bg" data-icon="🇧🇬">🇧🇬</option>
-      </select>
-    </div>
+    <!--    <a class="contacts_link" (click)="navigateToContacts()">{{ 'MAIN.HEADER.NAV.CONTACTS' | translate }}</a>-->
+<!--    <div class="language-select">-->
+<!--      <select class="language-dropdown" (change)="switchLanguage($event)">-->
+<!--        <option value="main-en" data-icon="🇬🇧" selected>🇬🇧</option>-->
+<!--        <option value="main-bg" data-icon="🇧🇬">🇧🇬</option>-->
+<!--      </select>-->
+<!--    </div>-->
   </nav>
 </header>
