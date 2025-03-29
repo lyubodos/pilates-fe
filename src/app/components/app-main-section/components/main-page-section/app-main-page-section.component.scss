@@ -10,6 +10,14 @@
   margin-top: -100px;
 }
 
+.intro-hero__text-content_container {
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 20px;
+  width: 70%;
+  //left: 13.75%
+}
+
 .intro-hero {
   border-bottom: 10px solid $mainRoseAsh;
 
@@ -24,9 +32,12 @@
   &__text-content {
     position: absolute;
     top: 45%;
-    left: 0;
+    left: 15%;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    width: 70%;
     transform: translateY(-50%);
-    width: 100%;
     text-align: center;
   }
 
