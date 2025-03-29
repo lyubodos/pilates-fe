@@ -12,8 +12,8 @@ export class GalleryPageSectionComponent implements OnInit, OnDestroy {
   public images = [
     'assets/images/IMG_9881.jpeg',
     'assets/images/IMG_9917.jpeg',
-    'assets/images/IMG_9881.jpeg',
-    'assets/images/IMG_9917.jpeg'
+    'assets/images/IMG_9979.jpeg',
+    'assets/images/IMG_9983.jpeg'
   ];
 
 
