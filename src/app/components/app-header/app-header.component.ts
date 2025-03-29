@@ -1,7 +1,7 @@
-import {Component, HostListener, OnDestroy, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {TranslateService} from "@ngx-translate/core";
 import {Router} from "@angular/router";
-import {BehaviorSubject} from "rxjs";
+
 
 @Component({
   selector: 'app-header',
@@ -36,11 +36,6 @@ export class AppHeaderComponent implements OnInit {
     this.currentLang = this.translate.currentLang;
   }
 
-  public switchLanguage(event: any) {
-    const currentLanguage = event.target.value;
-    this.translate.use(currentLanguage);
-  }
-
   public switchLanguageToBG() {
     this.translate.use('main-bg');
     this.currentLang = 'main-bg';
@@ -59,7 +54,14 @@ export class AppHeaderComponent implements OnInit {
     this.menuOpen = false;
   }
 
+  //Sample navigation for contacts section for future use
   public navigateToContacts() {
     this.router.navigate([this.contactsLink]);
+  }
+
+  //Sample language switch  for future use
+  private switchLanguage(event: any) {
+    const currentLanguage = event.target.value;
+    this.translate.use(currentLanguage);
   }
 }

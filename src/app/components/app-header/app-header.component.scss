@@ -7,13 +7,11 @@
   top: 0;
   width: 100%;
   height: 75px;
-  background: rgb(209, 208, 215);
   background: linear-gradient(90deg, rgba(209, 208, 215, 1) 0%, rgba(202, 173, 175, 1) 48%);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: display 0.3s ease-in;
-  z-index: 1;
+  z-index: 100;
 
 
   .logo_container {
@@ -29,18 +27,20 @@
     height: 98px;
     width: auto;
     object-fit: contain;
-    //transition: height 0.5s ease;
   }
 
   .header_title {
     display: inline-block;
     color: #FFFFFF;
     font-weight: 200;
-    margin: 0 0 0 100px;
+    margin: 0 0 0 50px;
 
     @include atMedium {
-      margin: 5% 0 0 100px;
     }
+  }
+
+  #check {
+    display: none;
   }
 
   .icons {
@@ -55,27 +55,39 @@
       display: none;
     }
 
-    #menu-icon {
-
-    }
-
     @include atMedium {
       display: none;
     }
+  }
+
+  #check:checked ~ .icons #menu-icon {
+    display: none;
+  }
+
+  #check:checked ~ .icons #close-icon {
+    display: block;
+  }
+
+  #check:checked ~ .header_nav {
+    height: 23rem;
   }
 
   .header_nav {
     position: absolute;
     top: 100%;
     left: 0;
+    height: 0;
     width: 100%;
     backdrop-filter: blur(50px);
-    display: none;
+    display: block;
+    transition: 0.3s ease-in;
+    overflow: hidden;
     z-index: -1;
+
 
     .nav_list {
       color: white;
-      margin-right: 40px;
+      padding-left: 0;
 
       li {
         text-align: center;
@@ -98,6 +110,7 @@
       @include atMedium {
         display: flex;
         align-items: center;
+        margin-right: 40px;
 
         li {
           margin: 0 15px;
@@ -130,21 +143,23 @@
     }
 
     @include atMedium {
-      display: flex;
       position: static;
+      height: auto;
       top: 0;
       color: #FFFFFF;
-      align-items: center;
+      align-items: normal;
       margin-right: 40px;
-      background-color: transparent;
+      backdrop-filter: none;
       width: auto;
     }
   }
 }
 
+
 .header_nav.active {
   display: block !important;
 }
+
 
 .site-header:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
