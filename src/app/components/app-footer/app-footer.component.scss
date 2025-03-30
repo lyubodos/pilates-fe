@@ -66,9 +66,12 @@
       width: 2rem;
       height: 2rem;
       list-style: none;
+      margin-right: 0.3125rem;
     }
 
     a {
+      display: flex;
+      align-items: center;
       text-decoration: none;
       margin-left: 0.3125rem;
     }
