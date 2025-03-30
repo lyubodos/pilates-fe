@@ -1,10 +1,12 @@
 @import '../../../../../assets/base/global';
+@import '../../../../../assets/modules/load-spinner';
 @import '../../../../../assets/modules/page-section';
 @import '../../../../../assets/modules/row';
 @import '../../../../../assets/modules/wrapper';
 @import '../../../../../assets/modules/section-title';
 @import '../../../../../assets/modules/feature-item';
 @import '../../../../../assets/modules/generic-content-container';
+
 
 .main-section {
   margin-top: -100px;
@@ -15,7 +17,7 @@
   background-color: rgba(255, 255, 255, 0.6);
   padding: 20px;
   width: 70%;
-  //left: 13.75%
+  //left: 14.5%;
 }
 
 .intro-hero {
@@ -32,13 +34,17 @@
   &__text-content {
     position: absolute;
     top: 45%;
-    left: 15%;
+    left: 13%;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.6);
     padding: 20px;
     width: 70%;
     transform: translateY(-50%);
     text-align: center;
+
+    @include atMedium{
+      left: 14.35%;
+    }
   }
 
   &__title {
