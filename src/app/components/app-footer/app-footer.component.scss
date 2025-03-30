@@ -87,8 +87,10 @@
 .contacts_container {
 
   &__heading {
+    text-align: center;
 
     @include atLarge {
+      text-align: left;
       margin-top: 0;
     }
   }
