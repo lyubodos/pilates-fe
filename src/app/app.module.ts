@@ -27,6 +27,9 @@ import {
 import {CommonModule, NgClass} from "@angular/common";
 import {LoadingSpinnerComponent} from "./components/shared/loading-spinner/loading-spinner.component";
 import {LoadingInterceptor} from "./interceptors/loading.interceptor";
+import {
+  NewsPageSectionComponent
+} from "./components/app-main-section/components/news-page-section/news-page-section.component";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -57,6 +60,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AboutUsPageSectionComponent,
     ReservationsPageSectionComponent,
     PricesPageSectionComponent,
+    NewsPageSectionComponent,
     LoadingSpinnerComponent
   ],
   providers: [
