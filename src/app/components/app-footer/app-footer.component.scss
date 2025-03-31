@@ -43,6 +43,14 @@
 
   &__description {
     padding: 0 100px;
+
+    @include atMedium{
+      padding: 0;
+    }
+  }
+
+  @include atMedium {
+    width: 15%;
   }
 }
 
