@@ -1,29 +1,26 @@
 <div class="footer">
-  <div class="about-us">
-    <h4>About Us</h4>
-    <p class="about-us_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque error magnam mollitia tempora, tempore
-      voluptas<!doctype html>
-      <html lang="en">
-      <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"
-              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
-      </head>
-      <body>
-
-      </body>
-      </html>.</p>
+  <div class="about-us_container">
+    <h4 class="about-us_container__heading">{{ 'MAIN.FOOTER.ABOUT_US' | translate }}</h4>
+    <p class="about-us_container__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque error
+      magnam mollitia tempora, tempore, atque error
+      magnam mollitia tempora, tempore</p>
   </div>
-  <div class="contacts">
-    <h4>Contacts</h4>
-    <ul class="contacts_list">
-      <li><a type="phone" href="">08888888</a></li>
-      <li><a href="">Location</a></li>
-      <li><a type="mail" href="">{{ 'ven@abv.bg' }}</a></li>
+  <div class="social-media_container">
+    <h4 class="social-media_container__heading">{{ 'MAIN.FOOTER.SOCIAL_MEDIA.HEADER' | translate }}</h4>
+    <ul class="social-media_container__list">
+      <li><a href="https://www.instagram.com/reformflowstudio/"><img src="./assets/icons/instagram.svg" alt="instagram icon">Instagram</a></li>
+      <li><a href=""><img src="./assets/icons/facebook.svg" alt="facebook icon">Facebook</a></li>
+      <li><a href=""><img src="./assets/images/tiktok2.png" alt="tiktok icon">TikTok</a></li>
+    </ul>
+  </div>
+  <div class="contacts_container">
+    <h4 class="contacts_container__heading">{{ 'MAIN.FOOTER.CONTACTS.HEADER' | translate }}</h4>
+    <ul class="contacts_container__list">
+      <li><a type="phone" href="tel:+1234567890"><i class="fa-solid fa-phone"></i>+359 88888888</a></li>
+      <li><a
+        href="https://g.co/kgs/Rp5DPvw"><i class="fa-solid fa-location-arrow"></i>{{ 'MAIN.FOOTER.CONTACTS.CONTACTS_LIST.LOCATION' | translate }}</a></li>
+      <li><a type="mail" href="mailto:lyubomir_vasilev1992@abv.bg"><i class="fa-solid fa-envelope"></i>{{ 'ven@abv.bg' }}</a></li>
     </ul>
   </div>
 </div>
-<p *ngIf="currentBranch === 'development'" class="footer_version">v.0.1.4</p>
 

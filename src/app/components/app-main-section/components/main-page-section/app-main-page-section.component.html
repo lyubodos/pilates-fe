@@ -1,3 +1,68 @@
 <div class="main-section">
-  <img src="./assets/images/istockphoto-1171254637-612x612.jpg" alt="main_section_photo" class="main_img">
+  <div class="intro-hero">
+    <img src="./assets/images/IMG_9979.jpeg" alt="main-section image">
+    <div class="intro-hero__text-content">
+      <h1 class="intro-hero__title">ReformFlow</h1>
+      <h2 class="intro-hero__subtitle">{{ 'MAIN.HOME.SUBTITLE' | translate }}</h2>
+      <p class="intro-hero__paragraph">Providing the best care for your body and mind that will be appreciated by your
+        <b>soul.</b></p>
+      <a class="btn" (click)="navigateToContacts()">{{ 'MAIN.HOME.GET_IN_TOUCH' | translate }}</a>
+    </div>
+  </div>
+  <div class="middle-hero page-section">
+    <div class="middle-hero__text-content">
+      <h1 class="middle-hero__title">{{ 'MAIN.HOME.MIDDLE_HEADING' | translate }}</h1>
+      <p class="middle-hero__paragraph">{{ 'MAIN.HOME.MIDDLE_PARAGRAPH' | translate }}</p>
+      <img class="middle-hero__img" src="./assets/images/home/IMG_0001.jpeg" alt="main-section stretch image">
+    </div>
+  </div>
+  <div class="row row--gutters page-section">
+    <div class="row__4">
+      <img class="story-hero__img" src="./assets/images/owner.jpeg" alt="owner image">
+    </div>
+    <div class="row__8">
+      <h1 class="story-hero__heading">{{ 'MAIN.HOME.STORY_HEADING' | translate }}</h1>
+      <p class="story-hero__paragraph">{{ 'MAIN.HOME.STORY_PARAGRAPH' | translate }}</p>
+    </div>
+  </div>
+  <div class="features">
+    <div class="wrapper">
+      <h2 class="section-title"><img class="section-title__icon" src="./assets/icons/star.svg" alt="star icon">Benefits
+      </h2>
+      <div class="row row--gutters-large generic-content-container">
+        <div class="row__6">
+          <div class="feature-item">
+            <img class="feature-item__icon" src="./assets/icons/fire.svg" alt="feature icon">
+            <h3 class="feature-item__title">Improves physical health</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquid asperiores, consequatur, deleniti
+              deserunt ipsum iure maxime nam nesciunt numquam officiis porro quos repudiandae sed soluta suscipit,
+              tempore vero voluptates?</p>
+          </div>
+          <div class="feature-item">
+            <img class="feature-item__icon" src="./assets/icons/rain.svg" alt="feature icon">
+            <h3 class="feature-item__title">Helps with high levels of stress</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur cupiditate deleniti excepturi
+              illum magni odio odit optio perspiciatis qui totam? A blanditiis delectus laboriosam maiores provident,
+              quibusdam quo ratione reprehenderit.</p>
+          </div>
+        </div>
+        <div class="row__6">
+          <div class="feature-item">
+            <img class="feature-item__icon" src="./assets/icons/globe.svg" alt="feature icon">
+            <h3 class="feature-item__title">Different way of thinking</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, blanditiis doloremque eligendi facere
+              illum modi nobis non nostrum nulla officia suscipit, voluptatem! Facere facilis itaque, laudantium optio
+              pariatur qui quos!</p>
+          </div>
+          <div class="feature-item">
+            <img class="feature-item__icon" src="./assets/icons/wifi.svg" alt="feature icon">
+            <h3 class="feature-item__title">Fast access to our services at any time.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum distinctio dolores expedita, iusto minus,
+              nihil non porro quibusdam quisquam, quo rerum voluptas. Distinctio ex necessitatibus nisi, porro quibusdam
+              rem voluptas?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

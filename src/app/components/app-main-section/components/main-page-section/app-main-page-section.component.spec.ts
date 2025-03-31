@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {AppMainSectionComponent} from "../../app-main-section.component";
 
-import { AppMainSectionComponent } from './app-main-page-section.component';
 
 describe('AppMainSectionComponent', () => {
   let component: AppMainSectionComponent;

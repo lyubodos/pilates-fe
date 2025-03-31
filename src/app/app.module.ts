@@ -15,12 +15,41 @@ import {
 import {
   GalleryPageSectionComponent
 } from "./components/app-main-section/components/gallery-page-section/gallery-page-section.component";
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from "@angular/common/http";
+import {TranslateHttpLoader} from "@ngx-translate/http-loader";
+import {
+  ReservationsPageSectionComponent
+} from "./components/app-main-section/components/reservations-page-section/reservations-page-section.component";
+import {
+  PricesPageSectionComponent
+} from "./components/app-main-section/components/prices-page-section/prices-page-section.component";
+import {CommonModule, NgClass} from "@angular/common";
+import {LoadingSpinnerComponent} from "./components/shared/loading-spinner/loading-spinner.component";
+import {LoadingInterceptor} from "./interceptors/loading.interceptor";
+import {
+  NewsPageSectionComponent
+} from "./components/app-main-section/components/news-page-section/news-page-section.component";
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 
 @NgModule({
-  imports: [
-    AppRoutingModule
-  ],
+    imports: [
+        AppRoutingModule,
+        HttpClientModule,
+        CommonModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient],
+            },
+        }),
+        NgClass,
+    ],
   declarations: [
     AppMainSectionComponent,
     AppMainPageSectionComponent,
@@ -28,13 +57,20 @@ import {
     AppFooterComponent,
     ContactsPageSectionComponent,
     GalleryPageSectionComponent,
-    AboutUsPageSectionComponent
+    AboutUsPageSectionComponent,
+    ReservationsPageSectionComponent,
+    PricesPageSectionComponent,
+    NewsPageSectionComponent,
+    LoadingSpinnerComponent
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true }
+  ],
   exports: [
     AppHeaderComponent,
     AppFooterComponent,
     AppMainSectionComponent,
+    TranslateModule
   ]
 })
 export class AppModule {

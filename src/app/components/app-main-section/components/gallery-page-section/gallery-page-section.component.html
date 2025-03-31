@@ -1,1 +1,21 @@
-<p>gallery-page-section works!</p>
+<h1 class="section-title">{{ 'MAIN.GALLERY.TITLE' | translate }}</h1>
+<p class="section-description">{{ 'MAIN.GALLERY.DESCRIPTION' | translate }}</p>
+<div class="carousel">
+  <button class="prev" (click)="prevSlide()">&#10094;</button>
+
+  <div class="carousel-images">
+    <img *ngFor="let img of images; let i = index"
+         [src]="img"
+         [class.active]="i === currentIndex"
+         alt="Carousel image">
+  </div>
+
+  <button class="next" (click)="nextSlide()">&#10095;</button>
+
+  <div class="dots">
+    <span *ngFor="let img of images; let i = index"
+          class="dot"
+          [class.active]="i === currentIndex"
+          (click)="currentIndex = i"></span>
+  </div>
+</div>

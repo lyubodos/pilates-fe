@@ -1,0 +1,244 @@
+@import '../../../../../assets/base/global';
+@import '../../../../../assets/modules/load-spinner';
+@import '../../../../../assets/modules/page-section';
+@import '../../../../../assets/modules/row';
+@import '../../../../../assets/modules/wrapper';
+@import '../../../../../assets/modules/section-title';
+@import '../../../../../assets/modules/feature-item';
+@import '../../../../../assets/modules/generic-content-container';
+
+
+.main-section {
+  margin-top: -100px;
+}
+
+.intro-hero__text-content_container {
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 20px;
+  width: 70%;
+  //left: 14.5%;
+}
+
+.intro-hero {
+  border-bottom: 10px solid $mainRoseAsh;
+
+  img {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    opacity: 40%;
+    display: block;
+  }
+
+  &__text-content {
+    position: absolute;
+    top: 45%;
+    left: 13%;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    width: 70%;
+    transform: translateY(-50%);
+    text-align: center;
+
+    @include atMedium{
+      left: 14.35%;
+    }
+  }
+
+  &__title {
+    color: $mainRoseAsh;
+    font-weight: 300;
+    font-size: 3.1rem;
+
+    @include atSmall {
+      margin: 0;
+      font-size: 4rem;
+    }
+
+    @include atMedium {
+      margin: 0;
+      font-size: 5rem;
+    }
+
+    @include atLarge {
+      margin: 0;
+      font-size: 7rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 2.1rem;
+    font-weight: 300;
+    color: #383b38;
+    margin: 0;
+
+    @include atSmall {
+      font-size: 3rem;
+    }
+
+    @include atMedium {
+      font-size: 3.4rem;
+    }
+
+    @include atLarge {
+      font-size: 4rem;
+    }
+  }
+
+  &__paragraph {
+    color: #383b38;
+    font-size: 1rem;
+    font-weight: 100;
+    margin-bottom: 50px;
+
+    @include atSmall {
+      margin: 0;
+      font-size: 1.2rem;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 360px;
+      margin-bottom: 30px;
+    }
+
+    @include atMedium {
+      margin: 0;
+      font-size: 1.5rem;
+      padding: 0 200px;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 360px;
+      margin-bottom: 30px;
+    }
+
+    @include atLarge {
+      margin: 0;
+      font-size: 1.875rem;
+      padding: 0 200px;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 360px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.middle-hero {
+
+  &__img {
+    display: block;
+    margin: 50px auto 0 auto;
+    opacity: 50%;
+  }
+
+  &__text-content {
+    text-align: center;
+  }
+
+  &__title {
+    color: $mainRoseAsh;
+    font-weight: 300;
+    font-size: 2rem;
+
+    @include atSmall {
+      margin: 0;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+  }
+
+  &__paragraph {
+    color: #383b38;
+    font-size: 1.3rem;
+    font-weight: 100;
+    margin-bottom: 50px;
+
+    @include atSmall {
+      margin: 0;
+      font-size: 1.4rem;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 540px;
+      margin-bottom: 30px;
+    }
+
+    @include atMedium {
+      margin: 0;
+      font-size: 1.5rem;
+      padding: 0 200px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 30px;
+    }
+
+    @include atLarge {
+      margin: 0;
+      font-size: 2rem;
+      padding: 0 200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.story-hero {
+
+  &__img {
+    height: 610px;
+    width: 5400px;
+    object-fit: contain;
+  }
+
+  &__heading {
+    color: $mainRoseAsh;
+    font-weight: 300;
+    font-size: 2rem;
+    text-align: center;
+
+
+    @include atMedium {
+      margin-top: 0;
+      font-size: 2.875rem;
+    }
+  }
+
+  &__paragraph {
+    color: #383b38;
+    font-size: 1rem;
+    font-weight: 100;
+    margin-bottom: 50px;
+    text-align: center;
+
+    @include atMedium {
+      text-align: left;
+    }
+  }
+
+  @include atSmall {
+    font-size: 1.3rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 360px;
+    margin-bottom: 30px;
+  }
+
+  @include atMedium {
+    margin: 0;
+    font-size: 1.5rem;
+    padding: 0 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+
+  @include atLarge {
+    margin: 0;
+    font-size: 2rem;
+    padding: 0 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+

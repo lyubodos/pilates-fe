@@ -1,0 +1,56 @@
+{
+  "MAIN": {
+    "HEADER": {
+      "NAV": {
+        "HOME": "Home",
+        "NEWS": "News",
+        "PRICES": "Prices",
+        "RESERVATIONS": "Reservations",
+        "GALLERY": "Gallery",
+        "ABOUT_US": "About us",
+        "CONTACTS": "Contacts"
+      }
+    },
+    "HOME": {
+      "SUBTITLE": "Your body's reformer!",
+      "GET_IN_TOUCH": "Get in Touch",
+      "MIDDLE_HEADING": "The first body we reformed was our own.",
+      "MIDDLE_PARAGRAPH": "After a long period in the fitness area, we decided to make the final touch.",
+      "STORY_HEADING": "Where do we come from?",
+      "STORY_PARAGRAPH": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet ex eget dolor sodales euismod. Curabitur a aliquet eros, et tempor tortor. Sed sit amet nisi in magna blandit efficitur. Suspendisse potenti. Proin at dolor sagittis, malesuada metus eget, tristique ex. Donec nulla tortor, posuere ut urna vel, malesuada convallis quam. Vestibulum malesuada purus non sagittis convallis. Proin libero arcu, interdum suscipit ullamcorper sed, maximus et nisl. Pellentesque vestibulum suscipit nunc. Etiam pulvinar egestas ligula vitae egestas. Suspendisse placerat a urna vitae maximus. Vivamus iaculis id lacus vel luctus. Aliquam lobortis semper accumsan."
+    },
+    "PRICES": {
+      "PRICES_TITLE": "Pilates Plans",
+      "GROUP_TRAININGS": "Group trainings",
+      "INDIVIDUAL_TRAININGS": "Individual trainings",
+      "PRICES_PARAGRAPH": "Find the best pilates plan that fits your needs and lifestyle.",
+      "TABLE": {
+        "CLASSES": "Classes",
+        "PRICES": "Prices",
+        "VISITS": "Terms",
+        "SINGLE_TRAINING": "Single training",
+        "PER_MONTH": "per month",
+        "UNLIMITED": "Unlimited period",
+        "TWO_MONTHS": "per two months",
+        "TRAINING": "Training",
+        "TRAININGS": "Trainings"
+      }
+    },
+    "GALLERY": {
+      "TITLE": "Our Studio is open and waiting for you!",
+      "DESCRIPTION": "We are using brand new reformers, which will help you strengthen your body and form."
+    },
+    "FOOTER": {
+      "ABOUT_US": "About Us",
+      "SOCIAL_MEDIA": {
+        "HEADER": "Social media"
+      },
+      "CONTACTS": {
+        "HEADER": "Contacts",
+        "CONTACTS_LIST": {
+          "LOCATION": "Location"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "MAIN": {
+    "HEADER": {
+      "NAV": {
+        "HOME": "Начало",
+        "NEWS": "Новини",
+        "PRICES": "Цени",
+        "RESERVATIONS": "Резервации",
+        "GALLERY": "Галерия",
+        "ABOUT_US": "За Нас",
+        "CONTACTS": "Контакти"
+      }
+    },
+    "HOME": {
+      "SUBTITLE": "Промяната в твоето тяло!",
+      "GET_IN_TOUCH": "Контакти",
+      "MIDDLE_HEADING": "Първото усъвършенстахме себе си.",
+      "MIDDLE_PARAGRAPH": "След дълго време прекарано във фитнес сферата, фокусът ни се насочи към финалното извайване.",
+      "STORY_HEADING": "Нашата история",
+      "STORY_PARAGRAPH": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet ex eget dolor sodales euismod. Curabitur a aliquet eros, et tempor tortor. Sed sit amet nisi in magna blandit efficitur. Suspendisse potenti. Proin at dolor sagittis, malesuada metus eget, tristique ex. Donec nulla tortor, posuere ut urna vel, malesuada convallis quam. Vestibulum malesuada purus non sagittis convallis. Proin libero arcu, interdum suscipit ullamcorper sed, maximus et nisl. Pellentesque vestibulum suscipit nunc. Etiam pulvinar egestas ligula vitae egestas. Suspendisse placerat a urna vitae maximus. Vivamus iaculis id lacus vel luctus. Aliquam lobortis semper accumsan."
+    },
+    "PRICES": {
+      "PRICES_TITLE": "Пилатес планове",
+      "GROUP_TRAININGS": "Групови тренировки",
+      "INDIVIDUAL_TRAININGS": "Индивидуални тренировки",
+      "PRICES_PARAGRAPH": "Намерете най-добрият пилатес план според вашите нужди и предпочитания.",
+      "TABLE": {
+        "CLASSES": "Брой тренировки",
+        "PRICES": "Цени",
+        "VISITS": "Условия",
+        "SINGLE_TRAINING": "Еднократна тренировка",
+        "PER_MONTH": "за един месец",
+        "UNLIMITED": "Неограничен период",
+        "TWO_MONTHS": "за два месеца",
+        "TRAINING": "посещение",
+        "TRAININGS": "посещения"
+      }
+    },
+    "GALLERY": {
+      "TITLE": "Нашето студио е отворено и ви очаква!",
+      "DESCRIPTION": "Използваме чисто нови ремормъри, които ще помогнат да подсилите тялото и формата си."
+    },
+    "FOOTER": {
+      "ABOUT_US": "За Нас",
+      "SOCIAL_MEDIA": {
+        "HEADER": "Социални мрежи"
+      },
+      "CONTACTS": {
+        "HEADER": "Контакти",
+        "CONTACTS_LIST": {
+          "LOCATION": "Локация"
+        }
+      }
+    }
+  }
+}
+

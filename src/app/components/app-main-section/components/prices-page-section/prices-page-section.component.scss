@@ -1,0 +1,58 @@
+@import '../../../../../assets/base/global';
+@import '../../../../../assets/modules/page-section';
+@import '../../../../../assets/modules/row';
+@import '../../../../../assets/modules/wrapper';
+@import '../../../../../assets/modules/section-title';
+@import '../../../../../assets/modules/feature-item';
+@import '../../../../../assets/modules/generic-content-container';
+
+#pilates-prices {
+  padding: 2.5rem 0;
+}
+
+.container {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.section-title {
+  color: $mainRoseAsh;
+}
+
+.group_trainings_title {
+  margin-top: 12.5rem;
+}
+
+.section-description {
+  text-align: center;
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.price-table {
+  width: 100%;
+  margin-top: 2.5rem;
+  border-collapse: collapse;
+}
+
+.price-table th, .price-table td {
+  text-align: center;
+  padding: 0.9375rem;
+  border: 0.0625rem solid #ddd;
+}
+
+.price-table th {
+  background-color: #f4f4f4;
+  font-size: 1.125rem;
+}
+
+.price-table td {
+  background-color: #fff;
+}
+
+.price-table tr:nth-child(even) td {
+  background-color: #e4dfdf;
+}
+
+
