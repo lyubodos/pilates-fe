@@ -10,8 +10,10 @@ export class GalleryPageSectionComponent implements OnInit, OnDestroy {
   public interval: any;
 
   public images = [
-    'assets/images/IMG_9881.jpeg',
-    'assets/images/IMG_9917.jpeg',
+    'assets/images/home/IMG_0007.jpeg',
+    'assets/images/home/IMG_0024.jpeg',
+    'assets/images/home/IMG_0025.jpeg',
+    'assets/images/home/IMG_0030.jpeg',
     'assets/images/IMG_9979.jpeg',
     'assets/images/IMG_9983.jpeg'
   ];
