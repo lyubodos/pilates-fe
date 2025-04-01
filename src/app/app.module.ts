@@ -31,7 +31,14 @@ import {
   NewsPageSectionComponent
 } from "./components/app-main-section/components/news-page-section/news-page-section.component";
 import {NgIconsModule} from "@ng-icons/core";
-import {bootstrapFacebook, bootstrapInstagram, bootstrapTiktok} from "@ng-icons/bootstrap-icons";
+import {
+  bootstrapEnvelopeOpenFill,
+  bootstrapFacebook,
+  bootstrapInstagram,
+  bootstrapTelephonePlusFill,
+  bootstrapTiktok
+} from "@ng-icons/bootstrap-icons";
+import {iconsStashData} from "./data/icons-stash.data";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -51,7 +58,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       },
     }),
     NgClass,
-    NgIconsModule.withIcons({bootstrapInstagram, bootstrapFacebook, bootstrapTiktok}),
+    NgIconsModule.withIcons(iconsStashData),
 
   ],
   declarations: [
