@@ -11,6 +11,13 @@
   flex-direction: column;
   align-items: center;
 
+  .ng_icons {
+    width: 1.75rem;
+    height: 1.75rem;
+    list-style: none;
+    margin-right: 0.3125rem;
+  }
+
   @include atMedium {
     flex-direction: row;
     align-items: flex-start;
@@ -44,7 +51,7 @@
   &__description {
     padding: 0 100px;
 
-    @include atMedium{
+    @include atMedium {
       padding: 0;
     }
   }
@@ -69,12 +76,6 @@
     list-style: none;
     margin-bottom: 0.9375rem;
 
-    .ng_icons {
-      width: 2rem;
-      height: 2rem;
-      list-style: none;
-      margin-right: 0.3125rem;
-    }
 
     a {
       display: flex;
@@ -112,6 +113,8 @@
 
       a {
         text-decoration: none;
+        display: flex;
+        align-items: center;
       }
 
       i {

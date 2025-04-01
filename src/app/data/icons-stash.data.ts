@@ -1,7 +1,7 @@
 import {
   bootstrapEnvelopeOpenFill,
   bootstrapFacebook,
-  bootstrapInstagram, bootstrapPinMapFill,
+  bootstrapInstagram, bootstrapPinMapFill, bootstrapTelephoneFill,
   bootstrapTelephonePlusFill,
   bootstrapTiktok
 } from "@ng-icons/bootstrap-icons";
@@ -10,7 +10,7 @@ export const iconsStashData: Record<string, string> = {
   bootstrapInstagram,
   bootstrapFacebook,
   bootstrapTiktok,
-  bootstrapTelephonePlusFill,
+  bootstrapTelephoneFill,
   bootstrapEnvelopeOpenFill,
   bootstrapPinMapFill
 }
