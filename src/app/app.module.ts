@@ -32,7 +32,7 @@ import {
 } from "./components/app-main-section/components/news-page-section/news-page-section.component";
 import {NgIconsModule} from "@ng-icons/core";
 import {iconsStashData} from "./data/icons-stash.data";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -54,6 +54,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     NgClass,
     NgIconsModule.withIcons(iconsStashData),
     FormsModule,
+    ReactiveFormsModule,
 
   ],
   declarations: [
