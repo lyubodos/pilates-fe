@@ -14,10 +14,9 @@
 
 .intro-hero__text-content_container {
   border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.7);
   padding: 20px;
   width: 70%;
-  //left: 14.5%;
 }
 
 .intro-hero {
@@ -88,7 +87,7 @@
   }
 
   &__paragraph {
-    color: #383b38;
+    color: grey;
     font-size: 1rem;
     font-weight: 100;
     margin-bottom: 50px;
@@ -98,7 +97,7 @@
       font-size: 1.2rem;
       margin-left: auto;
       margin-right: auto;
-      max-width: 360px;
+      max-width: 400px;
       margin-bottom: 30px;
     }
 
@@ -128,6 +127,7 @@
 
   &__img {
     display: block;
+    border-radius: 20px;
     margin: 50px auto 0 auto;
     opacity: 50%;
   }
@@ -279,6 +279,7 @@
   align-items: center;
 }
 
+
 /* Styling for arrow indicator */
 .arrow {
   display: inline-block;
@@ -292,14 +293,14 @@
 
 /* Arrow icon (→) and transition effect */
 .arrow::after {
-  content: "→";
+  content: "↓";
   position: absolute;
   top: -20px;
   right: 10px;
   font-size: 30px;
-  color: #ff6b6b;
-  opacity: 0;
-  transform: translateX(-10px);
+  color: $mainRoseAsh;
+  //opacity: 0;
+  //transform: translateX(-px);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -331,6 +332,7 @@
 .answer-container.open {
   max-height: 100px;
   opacity: 1;
+
 }
 
 /* Styling for the answer text */

@@ -17,6 +17,10 @@
   .logo_container {
     display: flex;
     align-items: center;
+
+    @include atMedium{
+    margin-left: 20px;
+    }
   }
 
   .header_logo {
@@ -34,10 +38,10 @@
     font-weight: 200;
     font-size: 22px;
 
-
     @include atMedium {
       font-size: 20px;
       color: $mainRoseAsh;
+      margin-left: 5px;
     }
 
     @include atLarge {

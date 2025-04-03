@@ -38,7 +38,7 @@
     },
     "GALLERY": {
       "TITLE": "Our Studio is open and waiting for you!",
-      "DESCRIPTION": "We are using brand new reformers, which will help you strengthen your body and form."
+      "DESCRIPTION": "We are using brand new professional reformers, which will help you strengthen your body and form."
     },
     "RESERVATIONS": {
       "TITLE": "Send a request for reservation",
@@ -54,7 +54,7 @@
       "CONTACTS": {
         "HEADER": "Contacts",
         "CONTACTS_LIST": {
-          "LOCATION": "Location"
+          "LOCATION": "Sofia, Studentski Kompleks,\n ulitsa 'Professor Hristo Vakarelski' 11А"
         }
       }
     }
