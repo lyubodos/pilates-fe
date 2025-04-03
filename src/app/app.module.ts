@@ -30,6 +30,15 @@ import {LoadingInterceptor} from "./interceptors/loading.interceptor";
 import {
   NewsPageSectionComponent
 } from "./components/app-main-section/components/news-page-section/news-page-section.component";
+import {NgIconsModule} from "@ng-icons/core";
+import {
+  bootstrapEnvelopeOpenFill,
+  bootstrapFacebook,
+  bootstrapInstagram,
+  bootstrapTelephonePlusFill,
+  bootstrapTiktok
+} from "@ng-icons/bootstrap-icons";
+import {iconsStashData} from "./data/icons-stash.data";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -37,19 +46,21 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 
 @NgModule({
-    imports: [
-        AppRoutingModule,
-        HttpClientModule,
-        CommonModule,
-        TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: HttpLoaderFactory,
-                deps: [HttpClient],
-            },
-        }),
-        NgClass,
-    ],
+  imports: [
+    AppRoutingModule,
+    HttpClientModule,
+    CommonModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
+    NgClass,
+    NgIconsModule.withIcons(iconsStashData),
+
+  ],
   declarations: [
     AppMainSectionComponent,
     AppMainPageSectionComponent,
@@ -64,7 +75,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     LoadingSpinnerComponent
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true }
+    {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true}
   ],
   exports: [
     AppHeaderComponent,

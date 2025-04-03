@@ -39,12 +39,12 @@ button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  background-color: transparent;
+  color: #FFFFFF;
   border: none;
   padding: 10px;
   cursor: pointer;
-  font-size: 24px;
+  font-size: 40px;
   border-radius: 50%;
 }
 
@@ -54,10 +54,6 @@ button {
 
 .next {
   right: 10px;
-}
-
-button:hover {
-  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .dots {

@@ -33,8 +33,15 @@
     display: inline-block;
     color: $mainRoseAsh;
     font-weight: 200;
+    font-size: 22px;
+
 
     @include atMedium {
+      font-size: 20px;
+    }
+
+    @include atLarge {
+      font-size: 2rem;
     }
   }
 
@@ -68,7 +75,7 @@
   }
 
   #check:checked ~ .header_nav {
-    height: 23rem;
+    height: 24rem;
   }
 
   .header_nav {
@@ -77,7 +84,8 @@
     left: 0;
     height: 0;
     width: 100%;
-    backdrop-filter: blur(50px);
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
     display: block;
     transition: 0.3s ease-in;
     overflow: hidden;
@@ -97,8 +105,9 @@
 
       a {
         font-weight: 500;
-        color: #f44e4e;
+        color: #ededed;
         text-decoration: none;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
       }
 
       .contacts_link_mobile {
@@ -121,12 +130,13 @@
         a {
           color: #FFFFFF;
           transition: font-size 0.4s ease-in-out;
+          text-shadow: none;
         }
       }
     }
 
     .nav_list a:hover {
-      color: #ca626a;
+      color: $mainRoseAsh;
 
       @include atMedium {
         color: #ededd2;
@@ -144,14 +154,18 @@
     }
 
     @include atMedium {
+      background: none;
       position: static;
       height: auto;
       top: 0;
       color: #FFFFFF;
       align-items: normal;
-      margin-right: 40px;
       backdrop-filter: none;
       width: auto;
+    }
+
+    @include atLarge {
+      margin-right: 40px;
     }
   }
 }
@@ -184,7 +198,6 @@
   display: none;
 
   @include atMedium {
-    background-color: rgb(255, 149, 159);
     border-radius: 11px;
     border: 1px solid #1e2029;
     display: inline-block;
