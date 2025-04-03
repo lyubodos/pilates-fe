@@ -4,7 +4,7 @@
 .footer {
   display: flex;
   justify-content: space-around;
-  background: #CAADAF;
+  background: $mainRoseAsh;
   color: ivory;
   font-size: 1.125rem;
   padding: 1.5rem 0 3.125rem;
@@ -57,7 +57,7 @@
   }
 
   @include atMedium {
-    width: 15%;
+    width: 25%;
   }
 }
 

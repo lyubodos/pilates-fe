@@ -7,8 +7,7 @@
   top: 0;
   width: 100%;
   height: 75px;
-  background: rgb(255,255,255);
-  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,240,242,1) 17%, rgba(255,165,174,1) 50%, rgba(255,149,159,1) 100%);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,240,242,1) 20%, rgba(248,180,177,1) 46%, rgba(248,180,177,1) 100%);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,13 +30,14 @@
 
   .header_title {
     display: inline-block;
-    color: $mainRoseAsh;
+    color: #FFFFFF;
     font-weight: 200;
     font-size: 22px;
 
 
     @include atMedium {
       font-size: 20px;
+      color: $mainRoseAsh;
     }
 
     @include atLarge {
