@@ -15,7 +15,7 @@ import {
 import {
   GalleryPageSectionComponent
 } from "./components/app-main-section/components/gallery-page-section/gallery-page-section.component";
-import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from "@angular/common/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {
@@ -31,14 +31,8 @@ import {
   NewsPageSectionComponent
 } from "./components/app-main-section/components/news-page-section/news-page-section.component";
 import {NgIconsModule} from "@ng-icons/core";
-import {
-  bootstrapEnvelopeOpenFill,
-  bootstrapFacebook,
-  bootstrapInstagram,
-  bootstrapTelephonePlusFill,
-  bootstrapTiktok
-} from "@ng-icons/bootstrap-icons";
 import {iconsStashData} from "./data/icons-stash.data";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -59,6 +53,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     }),
     NgClass,
     NgIconsModule.withIcons(iconsStashData),
+    FormsModule,
+    ReactiveFormsModule,
 
   ],
   declarations: [

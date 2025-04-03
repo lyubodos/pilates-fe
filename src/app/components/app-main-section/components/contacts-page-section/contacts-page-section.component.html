@@ -1,1 +1,13 @@
-<p>contacts-page-section works!</p>
+<div class="faq-container">
+  <h2>Frequently Asked Questions</h2>
+
+  <div *ngFor="let faq of faqs; let i = index" class="faq" (click)="toggleFaq(i)">
+    <div class="question">
+      {{ faq.question }}
+      <span class="arrow" [class.rotate]="faq.isOpen"> </span>
+    </div>
+    <div class="answer-container" [class.open]="faq.isOpen">
+      <div class="answer">{{ faq.answer }}</div>
+    </div>
+  </div>
+</div>

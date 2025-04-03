@@ -1,0 +1,93 @@
+/* Container for FAQ section */
+.faq-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Individual FAQ item styling */
+.faq {
+  margin: 10px 0;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.3s;
+}
+
+/* Hover effect for FAQ item */
+.faq:hover {
+  background: rgba(255, 107, 107, 0.1);
+}
+
+/* Styling for the question text */
+.question {
+  font-weight: bold;
+  color: #ff6b6b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Styling for arrow indicator */
+.arrow {
+  display: inline-block;
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Arrow icon (→) and transition effect */
+.arrow::after {
+  content: "→";
+  position: absolute;
+  top: -20px;
+  right: 10px;
+  font-size: 30px;
+  color: #ff6b6b;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for the arrow */
+.arrow:hover {
+  color: #ff6b6b;
+  transform: translateX(5px);
+}
+
+.arrow:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Rotate the arrow when expanded */
+.rotate {
+  transform: rotate(180deg);
+}
+
+/* Container for the answer (initially collapsed) */
+.answer-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+/* Open the answer container */
+.answer-container.open {
+  max-height: 100px;
+  opacity: 1;
+}
+
+/* Styling for the answer text */
+.answer {
+  padding: 10px;
+  color: #333;
+}
