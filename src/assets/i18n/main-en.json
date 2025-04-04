@@ -17,7 +17,40 @@
       "MIDDLE_HEADING": "The first body we reformed was our own.",
       "MIDDLE_PARAGRAPH": "After a long period in the fitness area, we decided to make the final touch.",
       "STORY_HEADING": "Where do we come from?",
-      "STORY_PARAGRAPH": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet ex eget dolor sodales euismod. Curabitur a aliquet eros, et tempor tortor. Sed sit amet nisi in magna blandit efficitur. Suspendisse potenti. Proin at dolor sagittis, malesuada metus eget, tristique ex. Donec nulla tortor, posuere ut urna vel, malesuada convallis quam. Vestibulum malesuada purus non sagittis convallis. Proin libero arcu, interdum suscipit ullamcorper sed, maximus et nisl. Pellentesque vestibulum suscipit nunc. Etiam pulvinar egestas ligula vitae egestas. Suspendisse placerat a urna vitae maximus. Vivamus iaculis id lacus vel luctus. Aliquam lobortis semper accumsan."
+      "STORY_PARAGRAPH": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet ex eget dolor sodales euismod. Curabitur a aliquet eros, et tempor tortor. Sed sit amet nisi in magna blandit efficitur. Suspendisse potenti. Proin at dolor sagittis, malesuada metus eget, tristique ex. Donec nulla tortor, posuere ut urna vel, malesuada convallis quam. Vestibulum malesuada purus non sagittis convallis. Proin libero arcu, interdum suscipit ullamcorper sed, maximus et nisl. Pellentesque vestibulum suscipit nunc. Etiam pulvinar egestas ligula vitae egestas. Suspendisse placerat a urna vitae maximus. Vivamus iaculis id lacus vel luctus. Aliquam lobortis semper accumsan.",
+      "FAQ": {
+        "FAQ_TITLE": "Frequently Asked Questions",
+        "FAQ_LIST": [
+          {
+            "question": "What are the benefits of training with the Pilates Reformer?",
+            "answer": "Pilates Reformer workouts engage all muscle groups and improve core strength, posture, balance, flexibility, and mobility. They also boost energy levels, which contributes to an overall improvement in physical condition. In addition to the physical benefits, these workouts are also beneficial for mental health."
+          },
+          {
+            "question": "For who are Pilates Reformer workouts suitable for?",
+            "answer": "Anyone who wants to improve their physical and mental health can start training with the Pilates Reformer."
+          },
+          {
+            "question": "Can pregnant women train?",
+            "answer": "Yes, pregnant women can do Pilates, and it is even recommended to help ease lower back pain. Of course, the exercises must be carefully selected to ensure they pose no risk to the pregnancy."
+          },
+          {
+            "question": "How many calories are burned during one workout?",
+            "answer": "During a single session, the body burns an average of 250 to 300 kcal."
+          },
+          {
+            "question": "What do I need for the workout?",
+            "answer": "Besides motivation and a good mood, you'll need comfortable workout clothes, a towel, and non-slip socks. If you don't have socks or a towel, the studio offers socks for purchase and towels for rent."
+          },
+          {
+            "question": "Can I train if I have injuries?\n Do the joints get strained?",
+            "answer": "At the beginning of each session, the instructor gathers information about each client's health condition. If there is an injury, specially selected, gentle exercises are used, and an individual workout plan is created for the person. Regular training may even help improve the affected area. As for the joints, the Reformer machine is designed to absorb joint pressure, significantly reducing their load."
+          },
+          {
+            "question": "Why choose ReformFlow Studio?",
+            "answer": "ReformFlow Studio is a place created to provide enjoyment and satisfaction through training. Certified instructors work here, dedicated not only to your body but also to your overall well-being and good mood. With us, you’ll gain:\n* Flexibility\n* Improved strength\n* Better muscle tone\n* Enhanced balance\n* Positive energy"
+          }
+        ]
+      }
     },
     "PRICES": {
       "PRICES_TITLE": "Pilates Plans",

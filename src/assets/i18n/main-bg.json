@@ -17,7 +17,40 @@
       "MIDDLE_HEADING": "Първото усъвършенстахме себе си.",
       "MIDDLE_PARAGRAPH": "След дълго време прекарано във фитнес сферата, фокусът ни се насочи към финалното извайване.",
       "STORY_HEADING": "Нашата история",
-      "STORY_PARAGRAPH": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet ex eget dolor sodales euismod. Curabitur a aliquet eros, et tempor tortor. Sed sit amet nisi in magna blandit efficitur. Suspendisse potenti. Proin at dolor sagittis, malesuada metus eget, tristique ex. Donec nulla tortor, posuere ut urna vel, malesuada convallis quam. Vestibulum malesuada purus non sagittis convallis. Proin libero arcu, interdum suscipit ullamcorper sed, maximus et nisl. Pellentesque vestibulum suscipit nunc. Etiam pulvinar egestas ligula vitae egestas. Suspendisse placerat a urna vitae maximus. Vivamus iaculis id lacus vel luctus. Aliquam lobortis semper accumsan."
+      "STORY_PARAGRAPH": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet ex eget dolor sodales euismod. Curabitur a aliquet eros, et tempor tortor. Sed sit amet nisi in magna blandit efficitur. Suspendisse potenti. Proin at dolor sagittis, malesuada metus eget, tristique ex. Donec nulla tortor, posuere ut urna vel, malesuada convallis quam. Vestibulum malesuada purus non sagittis convallis. Proin libero arcu, interdum suscipit ullamcorper sed, maximus et nisl. Pellentesque vestibulum suscipit nunc. Etiam pulvinar egestas ligula vitae egestas. Suspendisse placerat a urna vitae maximus. Vivamus iaculis id lacus vel luctus. Aliquam lobortis semper accumsan.",
+      "FAQ": {
+        "FAQ_TITLE": "Често задавани въпроси и отговори",
+        "FAQ_LIST": [
+          {
+            "question": "Какви са ползите от това да тренираш Пилатес реформър?",
+            "answer": "При тренировките по Пилатес с реформър се засягат всички мускулни групи, като се подобрява силата на ядрото, стойката на тялото, баланса, гъвкавостта и дава подвижност на тялото, също така се увеличава енергията, което цялостно подобрява физическото състояние на организма. Освен физически ползи, тренировките са от полза и за психическото здраве."
+          },
+          {
+            "question": "За кого са подходящи тренировките по Пилатес с реформър?",
+            "answer": "Всеки, който има желание да подобри своето физическо и психическо здраве може да започне тренировки по Пилатес с реформър."
+          },
+          {
+            "question": "Могат ли бременни жени да тренират?",
+            "answer": "Бременни жени могат да тренират Пилатес, дори се препоръчва за успокояване на болките в кръста , разбира се с правилно подбрани упражнения, които по никакъв начин не представляват риск за бременноста."
+          },
+          {
+            "question": "Колко калории се горят по време на една тренировка?",
+            "answer": "За една тренировка средно организмът гори между 250 и 300kкал."
+          },
+          {
+            "question": "Какво е нужно за тренировката?",
+            "answer": "Освен мотивация и добро настроение е нужно да сте в комфортно за вас спортно облекло, да си носите кърпа и чорапи, които да не се хлъзгат. В случай, че нямате, студиото предлага чорапи, които може да закупите и кърпи, които можете да наемете за тренировката."
+          },
+          {
+            "question": "Мога ли да тренирам ако имам контузии?",
+            "answer": "Натоварват ли се ставите? В началото на всяка тренировка инструкторът събира информация относно здравословното състояние на всеки свой клиент. При наличието на контузия се използват упражнения, които са максимално щадящи за възпалено място и се изготвя индивидуален план за тренировка на съответното лице. Редовните тренировки дори могат да спомогнат за подобряването на възпаленото място. Относно ставите реформърът е уред, който е насочен към максимално поемане на тежестта на ставите и по този начин се минимизира тяхното натоварване."
+          },
+          {
+            "question": "Защо да изберете ReformFlow Studio?",
+            "answer": "ReformFlow Studio е място, което е създадено с идеята да носи удоволетворение и наслада от тренировките. За тази цел в него работят сертифицирани инструктори, които да се грижат както за вашето тяло, така и за вашето добро настроение. При нас ще получите: Гъвкавост Подобряване на вашата сила подобряване на тонуса на тялото си Подобряване на баланса на тялото Позитивна енергия."
+          }
+        ]
+      }
     },
     "PRICES": {
       "PRICES_TITLE": "Пилатес планове",
