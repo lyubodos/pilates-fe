@@ -79,6 +79,24 @@
         "TITLE": "Reservation form"
       }
     },
+    "ABOUT_US": {
+      "MAIN-TITLE": "About Us",
+      "TITLE": "Our instructors",
+      "ABOUT_US_CARDS": [
+        {
+          "title": "Veneta Vasileva",
+          "age": "26",
+          "image": "assets/images/gallery/IMG_0239.jpeg",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur dui interdum, tincidunt ipsum in, condimentum urna. Aenean ut cursus lacus, quis vestibulum diam. Nam consectetur sapien sit amet tristique semper. Praesent in malesuada quam, quis congue quam. Pellentesque at justo sed lacus vehicula rutrum eu sed libero. Duis at arcu orci. Nam efficitur mollis tempus."
+        },
+        {
+          "title": "Margarita Vasileva",
+          "age": "20",
+          "image": "assets/images/gallery/IMG_0239.jpeg",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur dui interdum, tincidunt ipsum in, condimentum urna. Aenean ut cursus lacus, quis vestibulum diam. Nam consectetur sapien sit amet tristique semper. Praesent in malesuada quam, quis congue quam. Pellentesque at justo sed lacus vehicula rutrum eu sed libero. Duis at arcu orci. Nam efficitur mollis tempus."
+        }
+      ]
+    },
     "FOOTER": {
       "ABOUT_US": "About Us",
       "SOCIAL_MEDIA": {

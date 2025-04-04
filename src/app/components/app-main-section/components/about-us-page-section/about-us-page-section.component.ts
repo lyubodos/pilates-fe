@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {TranslateService} from "@ngx-translate/core";
 
 interface AboutUsCard {
   title: string;
@@ -12,21 +13,24 @@ interface AboutUsCard {
   templateUrl: './about-us-page-section.component.html',
   styleUrl: './about-us-page-section.component.scss'
 })
-export class AboutUsPageSectionComponent {
+export class AboutUsPageSectionComponent implements OnInit{
 
-  public aboutUsCardsList: AboutUsCard[] = [
-    {
-      title: 'Veneta Vasileva',
-      age: '26',
-      image: 'assets/images/gallery/IMG_0239.jpeg',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur dui interdum, tincidunt ipsum in, condimentum urna. Aenean ut cursus lacus, quis vestibulum diam. Nam consectetur sapien sit amet tristique semper. Praesent in malesuada quam, quis congue quam. Pellentesque at justo sed lacus vehicula rutrum eu sed libero. Duis at arcu orci. Nam efficitur mollis tempus.'
-    },
-    {
-      title: 'Geri Nikolova',
-      age: '24',
-      image: 'assets/images/about-us/IMG_0139_cropped.jpeg',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur dui interdum, tincidunt ipsum in, condimentum urna. Aenean ut cursus lacus, quis vestibulum diam. Nam consectetur sapien sit amet tristique semper. Praesent in malesuada quam, quis congue quam. Pellentesque at justo sed lacus vehicula rutrum eu sed libero. Duis at arcu orci. Nam efficitur mollis tempus.'
-    }
-  ]
+  public aboutUsCardsList: AboutUsCard[] = [];
 
+  constructor(private translateService: TranslateService) {
+  }
+
+  ngOnInit() {
+    this.loadInfoCards();
+
+    this.translateService.onLangChange.subscribe(() => {
+      this.loadInfoCards();
+    });
+  }
+
+  private loadInfoCards() {
+    this.translateService.get('MAIN.ABOUT_US.ABOUT_US_CARDS').subscribe((faqList: any[]) => {
+      this.aboutUsCardsList = faqList;
+    });
+  }
 }

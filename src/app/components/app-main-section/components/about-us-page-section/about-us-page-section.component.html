@@ -1,12 +1,12 @@
 <section class="about-us_section">
-  <h1 class="section-title about-us_heading">About Us</h1>
-  <h2 class="about-us_trainers-heading">Our trainers</h2>
+  <h1 class="section-title about-us_heading">{{ 'MAIN.ABOUT_US.MAIN-TITLE' | translate }}</h1>
+  <h2 class="about-us_trainers-heading">{{ 'MAIN.ABOUT_US.TITLE' | translate }}</h2>
   <div class="about-us_container">
     <div class="about-us_card" *ngFor="let card of aboutUsCardsList">
       <img [src]="card.image" [alt]="card.title" class="about-us_image">
       <div class="about-us_description">
         <h3 class="about-us_card__heading">{{ card.title }}</h3>
-        <p class="about-us_card__age">Age: {{ card.age}}</p>
+        <p class="about-us_card__age">Age: {{ card.age }}</p>
         <p class="about-us_card__description">{{ card.description }}</p>
       </div>
     </div>
