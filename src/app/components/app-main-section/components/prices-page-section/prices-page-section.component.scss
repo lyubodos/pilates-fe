@@ -11,14 +11,12 @@
 }
 
 .container {
-  //max-width: 75rem;
-  margin: 0 auto;
+  margin: 0;
   padding: 0 1.25rem;
 }
 
 .section-title {
   color: grey;
-  margin-bottom: 5px;
 }
 
 .group_trainings_title {
@@ -30,28 +28,6 @@
   font-size: 1.25rem;
 }
 
-.price-table {
-  width: 100%;
-  margin-top: 2.5rem;
-  border-collapse: collapse;
-}
-
-.price-table th, .price-table td {
-  text-align: center;
-  padding: 0.9375rem;
-  //border: 0.0625rem solid #ddd;
-}
-
-.price-table th {
-  //background-color: #f4f4f4;
-  font-size: 1.125rem;
-}
-
-.price-table td {
-  //background-color: #fff;
-}
-
-
 .price-list-section {
   padding: 60px 20px;
   display: flex;
@@ -61,19 +37,19 @@
 
 .price-list {
   width: 100%;
-  //max-width: 900px;
   display: flex;
   flex-direction: column;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
 
 .price-item {
   display: grid;
   grid-template-columns: 2fr 1.5fr 0.4fr;
   align-items: center;
-  padding: 18px 24px;
+  padding: 20px 24px;
+  font-weight: initial;
+  color: grey;
 
   &:hover {
     background-color: #fdf2f2;
@@ -81,7 +57,8 @@
 
   .service {
     font-size: 18px;
-    color: #444;
+    font-weight: bold;
+    color: grey;
   }
 
   .price {
@@ -92,11 +69,15 @@
 
   .terms {
     font-size: 16px;
+    font-weight: bold;
     color: #777;
   }
 
+  .service:nth-child(0), .price:nth-child(0), .terms:nth-child(0){
+    font-size: 45px;
+  }
+
   &.header {
-    //background-color: #ffeaea;
     font-weight: 600;
 
     .service,
@@ -108,7 +89,10 @@
   }
 
   @include atMedium {
-    grid-template-columns: 2fr 0.3fr 0.4fr;
+    margin-left: auto;
+    margin-right: auto;
+    width: 650px;
+    grid-template-columns: 2fr 0.6fr 0.4fr;
   }
 }
 
