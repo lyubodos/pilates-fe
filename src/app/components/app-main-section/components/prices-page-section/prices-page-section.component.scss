@@ -51,8 +51,64 @@
   //background-color: #fff;
 }
 
-//.price-table tr:nth-child(even) td {
-//  background-color: #e4dfdf;
-//}
 
+.price-list-section {
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price-list {
+  width: 100%;
+  //max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.price-item {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 0.4fr;
+  align-items: center;
+  padding: 18px 24px;
+
+  &:hover {
+    background-color: #fdf2f2;
+  }
+
+  .service {
+    font-size: 18px;
+    color: #444;
+  }
+
+  .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: grey;
+  }
+
+  .terms {
+    font-size: 16px;
+    color: #777;
+  }
+
+  &.header {
+    //background-color: #ffeaea;
+    font-weight: 600;
+
+    .service,
+    .price,
+    .terms {
+      font-size: 19px;
+      color: grey;
+    }
+  }
+
+  @include atMedium {
+    grid-template-columns: 2fr 0.3fr 0.4fr;
+  }
+}
 
