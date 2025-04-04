@@ -68,7 +68,6 @@
   <h2 class="section-title">Frequently Asked Questions</h2>
 
   <div class="faq-container page-section">
-
     <div *ngFor="let faq of faqs; let i = index" class="faq" (click)="toggleFaq(i)">
       <div class="question">
         {{ faq.question }}
@@ -79,4 +78,7 @@
       </div>
     </div>
   </div>
+
+  <h2 class="section-title">You can easily find us and start your training today!</h2>
+  <app-google-map></app-google-map>
 </div>

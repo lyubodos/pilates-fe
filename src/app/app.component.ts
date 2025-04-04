@@ -1,6 +1,7 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AppModule} from "./app.module";
 import {CommonModule} from "@angular/common";
+import {GmaInitializerService} from "./services/gma-initializer.service";
 
 @Component({
   selector: 'app-root',
@@ -9,10 +10,14 @@ import {CommonModule} from "@angular/common";
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
-  constructor() {
+  constructor(private gmaInitializerService: GmaInitializerService) {
   }
 
+
+  async ngOnInit() {
+    await this.gmaInitializerService.initialize();
+  }
 
 }

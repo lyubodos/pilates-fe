@@ -44,7 +44,7 @@ export class GalleryPageSectionComponent implements OnInit, OnDestroy {
     clearInterval(this.interval);
     this.interval = setInterval(() => {
       this.nextSlide();
-    }, 5000);
+    }, this.INTERVAL);
   }
 
   public nextSlide() {
@@ -55,12 +55,6 @@ export class GalleryPageSectionComponent implements OnInit, OnDestroy {
   public prevSlide() {
     this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
     this.resetSlideInterval();
-  }
-
-  private intervalGenerator() {
-    setInterval(() => {
-      this.nextSlide();
-    }, this.INTERVAL);
   }
 
 }

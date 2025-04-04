@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {AppRoutingModule} from "./app-routing.module";
 import {AppFooterComponent} from "./components/app-footer/app-footer.component";
 import {AppHeaderComponent} from "./components/app-header/app-header.component";
@@ -33,6 +33,7 @@ import {
 import {NgIconsModule} from "@ng-icons/core";
 import {iconsStashData} from "./data/icons-stash.data";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {GoogleMapComponent} from "./components/shared/google-map/google-map.component";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -68,7 +69,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     ReservationsPageSectionComponent,
     PricesPageSectionComponent,
     NewsPageSectionComponent,
-    LoadingSpinnerComponent
+    LoadingSpinnerComponent,
+    GoogleMapComponent
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true}
@@ -78,7 +80,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppFooterComponent,
     AppMainSectionComponent,
     TranslateModule
-  ]
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {
 }

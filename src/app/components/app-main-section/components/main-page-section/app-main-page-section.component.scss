@@ -291,7 +291,7 @@
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Arrow icon (→) and transition effect */
+/* Arrow icon (↓) and transition effect */
 .arrow::after {
   content: "↓";
   position: absolute;
@@ -299,8 +299,6 @@
   right: 10px;
   font-size: 30px;
   color: $mainRoseAsh;
-  //opacity: 0;
-  //transform: translateX(-px);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -312,12 +310,13 @@
 
 .arrow:hover::after {
   opacity: 1;
-  transform: translateX(0);
+  //transform: translateX(0);
 }
 
 /* Rotate the arrow when expanded */
 .rotate {
   transform: rotate(180deg);
+  right: 30px;
 }
 
 /* Container for the answer (initially collapsed) */
@@ -332,7 +331,6 @@
 .answer-container.open {
   max-height: 100px;
   opacity: 1;
-
 }
 
 /* Styling for the answer text */
@@ -340,5 +338,4 @@
   padding: 10px;
   color: #333;
 }
-
 
