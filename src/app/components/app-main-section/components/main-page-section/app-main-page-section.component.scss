@@ -27,6 +27,11 @@
     height: 800px;
     object-fit: cover;
     opacity: 40%;
+    display: none;
+
+  }
+
+  img.active {
     display: block;
   }
 

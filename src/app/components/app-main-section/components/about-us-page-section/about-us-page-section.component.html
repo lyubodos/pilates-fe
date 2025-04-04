@@ -1,15 +1,14 @@
-<section>
-  <h1 class="main_heading">Reform Flow Pilates</h1>
-  <div class="about-us_main">
-    <img src="./assets/images/download.jpeg" alt="about-us_image" class="about-us_image">
-    <p class="about-us_main_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequuntur cumque cupiditate deleniti doloremque dolorum ducimus itaque, quas quos tempore velit veniam vero, voluptatem. At autem est et laboriosam temporibus.</p>
-  </div>
-  <div class="about-us_main">
-    <img src="./assets/images/istockphoto-1171254524-612x612.jpg" alt="about-us_image" class="about-us_image">
-    <p class="about-us_main_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequuntur cumque cupiditate deleniti doloremque dolorum ducimus itaque, quas quos tempore velit veniam vero, voluptatem. At autem est et laboriosam temporibus.</p>
-  </div>
-  <div class="about-us_main">
-    <img src="./assets/images/360_F_304784012_61hZaLhg1TLRV43Amat6E5Czosml3hZz.jpg" alt="about-us_image" class="about-us_image">
-    <p class="about-us_main_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequuntur cumque cupiditate deleniti doloremque dolorum ducimus itaque, quas quos tempore velit veniam vero, voluptatem. At autem est et laboriosam temporibus.</p>
+<section class="about-us_section">
+  <h1 class="section-title about-us_heading">About Us</h1>
+  <h2 class="about-us_trainers-heading">Our trainers</h2>
+  <div class="about-us_container">
+    <div class="about-us_card" *ngFor="let card of aboutUsCardsList">
+      <img [src]="card.image" [alt]="card.title" class="about-us_image">
+      <div class="about-us_description">
+        <h3 class="about-us_card__heading">{{ card.title }}</h3>
+        <p class="about-us_card__age">Age: {{ card.age}}</p>
+        <p class="about-us_card__description">{{ card.description }}</p>
+      </div>
+    </div>
   </div>
 </section>
