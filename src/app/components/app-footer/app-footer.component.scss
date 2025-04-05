@@ -3,7 +3,7 @@
 
 .footer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   background: $mainRoseAsh;
   color: ivory;
   font-size: 1.125rem;
@@ -98,7 +98,6 @@
   align-items: center;
 
   &__heading {
-    text-align: center;
 
     @include atLarge {
       text-align: left;
@@ -109,6 +108,8 @@
   &__list {
     list-style: none;
     padding: 0;
+    margin-top: 0;
+
 
     li {
       list-style: none;
