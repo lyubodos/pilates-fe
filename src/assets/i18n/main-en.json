@@ -42,15 +42,18 @@
             "answer": "Besides motivation and a good mood, you'll need comfortable workout clothes, a towel, and non-slip socks. If you don't have socks or a towel, the studio offers socks for purchase and towels for rent."
           },
           {
-            "question": "Can I train if I have injuries?\n Do the joints get strained?",
-            "answer": "At the beginning of each session, the instructor gathers information about each client's health condition. If there is an injury, specially selected, gentle exercises are used, and an individual workout plan is created for the person. Regular training may even help improve the affected area. As for the joints, the Reformer machine is designed to absorb joint pressure, significantly reducing their load."
+            "question": "Can I train if I have injuries?",
+            "answer": "At the beginning of each session, the instructor gathers information about each client's health condition. If there is an injury, specially selected, gentle exercises are used, and an individual workout plan is created for the person. Regular training may even help improve the affected area. People also ask 'Do the joints get strained?'. The Reformer machine is designed to absorb joint pressure, significantly reducing their load."
           },
           {
             "question": "Why choose ReformFlow Studio?",
             "answer": "ReformFlow Studio is a place created to provide enjoyment and satisfaction through training. Certified instructors work here, dedicated not only to your body but also to your overall well-being and good mood. With us, you’ll gain:\n* Flexibility\n* Improved strength\n* Better muscle tone\n* Enhanced balance\n* Positive energy"
           }
         ]
-      }
+      },
+      "GM_HEADING": "You can easily find us and start your training today!",
+      "PILATES_QUOTE": "Physical fitness is the first requisite of happiness.",
+      "JOSEPH_PILATES": "Joseph Pilates"
     },
     "PRICES": {
       "PRICES_TITLE": "Pilates Plans",
