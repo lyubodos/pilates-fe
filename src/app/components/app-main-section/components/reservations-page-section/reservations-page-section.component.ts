@@ -2,7 +2,9 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, UntypedFormBuilder, Validators} from "@angular/forms";
 
 interface ContactFormGroup {
-  name: FormControl<string>;
+  firstName: FormControl<string>;
+  secondName: FormControl<string>;
+  phoneNumber: FormControl<string>;
   email: FormControl<string>;
   date: FormControl<string>;
 }
@@ -13,7 +15,6 @@ interface ContactFormGroup {
   styleUrl: './reservations-page-section.component.scss'
 })
 export class ReservationsPageSectionComponent implements OnInit {
-
   public userForm: FormGroup = new FormGroup({});
 
   constructor(private fb: UntypedFormBuilder) {
@@ -21,9 +22,12 @@ export class ReservationsPageSectionComponent implements OnInit {
 
   public ngOnInit() {
     this.userForm = this.fb.group({
-      name: this.fb.control('', [Validators.required, Validators.minLength(3)]),
+      firstName: this.fb.control('', [Validators.required, Validators.minLength(3)]),
+      secondName: this.fb.control('', [Validators.required, Validators.minLength(3)]),
+      phoneNumber: this.fb.control('', [Validators.required]),
       email: this.fb.control('', [Validators.required, Validators.email]),
-      date: this.fb.control('', [Validators.required])
+      date: this.fb.control('', [Validators.required]),
+      option: this.fb.control(null , Validators.required)
     });
 
   }

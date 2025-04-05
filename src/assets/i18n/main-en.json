@@ -77,9 +77,10 @@
       "DESCRIPTION": "We are using brand new professional reformers, which will help you strengthen your body and form."
     },
     "RESERVATIONS": {
-      "TITLE": "Send a request for reservation",
+      "TITLE": "Send a request for a reservation",
       "FORM": {
-        "TITLE": "Reservation form"
+        "TITLE": "Reservation form",
+        "SUBMIT": "Send a request"
       }
     },
     "ABOUT_US": {
