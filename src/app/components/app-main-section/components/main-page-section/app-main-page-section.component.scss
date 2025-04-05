@@ -46,7 +46,7 @@
     transform: translateY(-50%);
     text-align: center;
 
-    @include atMedium{
+    @include atMedium {
       left: 14.35%;
     }
   }
@@ -233,13 +233,17 @@
 
 /* Styling for arrow indicator */
 .arrow {
-  display: inline-block;
+  display: none;
   position: relative;
   font-size: 20px;
   font-weight: bold;
   color: #333;
   cursor: pointer;
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition: transform 1s ease, color 0.3s ease;
+
+  @include atMedium {
+    display: inline-block;
+  }
 }
 
 /* Arrow icon (↓) */
@@ -268,7 +272,7 @@
 .answer-container {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
+  transition: max-height 0.4s ease-in-out, opacity 0.8s ease-in-out;
   opacity: 0;
 }
 
@@ -284,7 +288,7 @@
   color: #333;
 }
 
-.gma-heading{
+.gma-heading {
   font-size: 30px;
   margin: 50px 0;
 }
@@ -318,10 +322,9 @@
 .quote-author {
   font-size: 20px;
   font-weight: 600;
-  color: #a33c3c; // Rose Ash tone if you're using it
+  color: #a33c3c;
 }
 
-/* Optional subtle fade-in animation */
 @keyframes fadeIn {
   0% {
     opacity: 0;
