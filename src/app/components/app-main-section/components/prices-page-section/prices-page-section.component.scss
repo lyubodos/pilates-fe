@@ -6,6 +6,13 @@
 @import '../../../../../assets/modules/feature-item';
 @import '../../../../../assets/modules/generic-content-container';
 
+
+.section-title {
+  color: grey;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 #pilates-prices {
   padding: 2.5rem 0;
 }
@@ -13,10 +20,6 @@
 .container {
   margin: 0;
   padding: 0 1.25rem;
-}
-
-.section-title {
-  color: grey;
 }
 
 .group_trainings_title {
@@ -29,23 +32,30 @@
 }
 
 .price-list-section {
-  padding: 60px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 100px;
+
+  @include atMedium {
+    padding: 60px 20px;
+  }
 }
 
 .price-list {
-  width: 100%;
   display: flex;
   flex-direction: column;
   border-radius: 16px;
   overflow: hidden;
+
+  @include atMedium {
+    box-shadow: 20px 20px 12px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .price-item {
   display: grid;
-  grid-template-columns: 2fr 1.5fr 0.4fr;
+  grid-template-columns: 1fr 1fr 0.8fr;
   align-items: center;
   padding: 20px 24px;
   font-weight: initial;
@@ -73,7 +83,7 @@
     color: #777;
   }
 
-  .service:nth-child(0), .price:nth-child(0), .terms:nth-child(0){
+  .service:nth-child(0), .price:nth-child(0), .terms:nth-child(0) {
     font-size: 45px;
   }
 
@@ -91,8 +101,8 @@
   @include atMedium {
     margin-left: auto;
     margin-right: auto;
-    width: 650px;
-    grid-template-columns: 2fr 0.6fr 0.4fr;
+    width: 750px;
+    grid-template-columns: 2fr 2fr 0.4fr;
   }
 }
 
