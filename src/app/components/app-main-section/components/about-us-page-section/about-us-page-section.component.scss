@@ -58,21 +58,22 @@
   }
 
   &__description {
+
   }
 
   @include atMedium {
     width: 60%;
-    height: 500px;
+    //height: 500px;
     text-align: left;
     margin-left: auto;
     margin-right: auto;
     flex-direction: row;
+    align-items: flex-start;
   }
 }
 
 .about-us_image {
-
-  object-fit: cover;
+  object-fit: contain;
 
   @include atMedium{
     width: 30%;
@@ -81,4 +82,18 @@
 
 .about-us_description {
   padding: 15px;
+
+  @include atMedium {
+    padding-top: 0;
+  }
+}
+
+.scroll-container {
+  max-height: 300px;
+  overflow-y: auto;
+
+
+  @include atMedium {
+    max-height: 1000px;
+  }
 }

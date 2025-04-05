@@ -85,6 +85,7 @@
     "ABOUT_US": {
       "MAIN-TITLE": "About Us",
       "TITLE": "Our instructors",
+      "АGE": "Age: ",
       "ABOUT_US_CARDS": [
         {
           "title": "Veneta Vasileva",
@@ -95,8 +96,8 @@
         {
           "title": "Margarita Vasileva",
           "age": "20",
-          "image": "assets/images/gallery/IMG_0239.jpeg",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur dui interdum, tincidunt ipsum in, condimentum urna. Aenean ut cursus lacus, quis vestibulum diam. Nam consectetur sapien sit amet tristique semper. Praesent in malesuada quam, quis congue quam. Pellentesque at justo sed lacus vehicula rutrum eu sed libero. Duis at arcu orci. Nam efficitur mollis tempus."
+          "image": "assets/images/about-us/IMG_0159.jpeg",
+          "description": "Margarita is a European and World Champion in rhythmic gymnastics. She believes that every movement carries strength and elegance. Through years of intense training and competitions, she has mastered not only physical discipline but also the art of grace and body control. These are exactly the skills and knowledge she wants to pass on to others through Pilates—a system that, as she says, has the power to unite strength, flexibility, and balance, just like in rhythmic gymnastics.\n\nMagi has learned that proper breathing, concentration, and stability are key to achieving inner harmony and outer beauty. As a Pilates instructor, her goal is to inspire and guide her students on the path to a healthier, stronger, and more graceful body, by providing them with the techniques and strategies that will help them feel confident and beautiful in every movement.\n\nBy training with her, you'll discover that Pilates is more than just physical exercise—it’s a way of life that combines elegance and inner strength to help you become the best version of yourself."
         }
       ]
     },

@@ -85,18 +85,19 @@
     "ABOUT_US": {
       "MAIN-TITLE": "За нас",
       "TITLE": "Нашите инструктори",
+      "АGE": "Години: ",
       "ABOUT_US_CARDS": [
         {
           "title": "Венета Василева",
           "age": "26",
           "image": "assets/images/gallery/IMG_0239.jpeg",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur dui interdum, tincidunt ipsum in, condimentum urna. Aenean ut cursus lacus, quis vestibulum diam. Nam consectetur sapien sit amet tristique semper. Praesent in malesuada quam, quis congue quam. Pellentesque at justo sed lacus vehicula rutrum eu sed libero. Duis at arcu orci. Nam efficitur mollis tempus."
+          "description": "Вени akasdmsakadskdsamsadadskamadskdmsakma."
         },
         {
           "title": "Маргарита Василева",
           "age": "20",
-          "image": "assets/images/gallery/IMG_0239.jpeg",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur dui interdum, tincidunt ipsum in, condimentum urna. Aenean ut cursus lacus, quis vestibulum diam. Nam consectetur sapien sit amet tristique semper. Praesent in malesuada quam, quis congue quam. Pellentesque at justo sed lacus vehicula rutrum eu sed libero. Duis at arcu orci. Nam efficitur mollis tempus."
+          "image": "assets/images/about-us/IMG_0159.jpeg",
+          "description": "Маргарита европейска и световна шампионка по художествена гимнастика. Вярва, че всяко движение носи сила и елегантност. През годините на интензивни тренировки и състезания, е усвоила не само физическата дисциплина, но и изкуството на грациозността и контрола върху тялото. Точно тези знания и опит иска да предаде на другите чрез пилатеса – система, която е в състояние да обедини сила, гъвкавост и баланс, също както в художествената гимнастика, както казва самата тя. Маги съм научила, че правилното дишане, концентрацията и стабилността са ключови за постигане на вътрешна хармония и външна красота. Нейното желание като пилатес инструктор е да вдъхновя и да водя нейните ученици по пътя към по-здраво, по-силно и по-грациозно тяло, като им предоставя всички техники и стратегии, които ще ги накарат да се чувстват уверени и красиви във всяко движение. Тренирайки с нея, ще откриете, че пилатесът е повече от просто физическо упражнение – той е начин на живот, който съчетава изящество и вътрешна сила, за да постигнете най-доброто от себе си."
         }
       ]
     },
