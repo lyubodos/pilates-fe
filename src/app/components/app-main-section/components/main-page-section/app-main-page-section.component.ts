@@ -54,7 +54,6 @@ export class AppMainPageSectionComponent implements OnInit {
   }
 
   public navigateToContacts() {
-
     this.router.navigate([this.contactsLink]);
   }
 
