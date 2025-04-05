@@ -2,71 +2,67 @@
   {{ 'MAIN.RESERVATIONS.TITLE' | translate }}
 </h1>
 
-<div>
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form-container">
   <h2 class="form_header">
     {{ 'MAIN.RESERVATIONS.FORM.TITLE' | translate }}
   </h2>
-
-  <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form-container">
-
-    <div class="name-fields">
-      <div class="input-group">
-        <label for="firstName">First Name</label>
-        <input id="firstName" type="text" formControlName="firstName" placeholder="First Name" />
-        <small *ngIf="userForm.get('firstName')?.invalid && userForm.get('firstName')?.touched" class="error">
-          First name must be at least 3 characters.
-        </small>
-      </div>
-
-      <div class="input-group">
-        <label for="secondName">Second Name</label>
-        <input id="secondName" type="text" formControlName="secondName" placeholder="Second Name" />
-        <small *ngIf="userForm.get('secondName')?.invalid && userForm.get('secondName')?.touched" class="error">
-          Second name must be at least 3 characters.
-        </small>
-      </div>
-    </div>
-
+  <div class="name-fields">
     <div class="input-group">
-      <label for="phoneNumber">Phone Number</label>
-      <input id="phoneNumber" type="tel" formControlName="phoneNumber" placeholder="Phone Number" />
-      <small *ngIf="userForm.get('phoneNumber')?.invalid && userForm.get('phoneNumber')?.touched" class="error">
-        Enter a valid phone number.
-      </small>
-    </div>
-
-    <!-- Email Field -->
-    <div class="input-group">
-      <label for="email">E-mail</label>
-      <input id="email" type="email" formControlName="email" placeholder="E-mail" />
-      <small *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched" class="error">
-        Enter a valid email.
+      <label for="firstName">First Name</label>
+      <input id="firstName" type="text" formControlName="firstName" placeholder="First Name"/>
+      <small *ngIf="userForm.get('firstName')?.invalid && userForm.get('firstName')?.touched" class="error">
+        First name must be at least 3 characters.
       </small>
     </div>
 
     <div class="input-group">
-      <label for="date">Select Date</label>
-      <input id="date" type="date" formControlName="date" />
-      <small *ngIf="userForm.get('date')?.invalid && userForm.get('date')?.touched" class="error">
-        Date is required.
+      <label for="secondName">Second Name</label>
+      <input id="secondName" type="text" formControlName="secondName" placeholder="Second Name"/>
+      <small *ngIf="userForm.get('secondName')?.invalid && userForm.get('secondName')?.touched" class="error">
+        Second name must be at least 3 characters.
       </small>
     </div>
+  </div>
 
-    <div class="radio-group">
-      <label>
-        <input type="radio" formControlName="option" value="option1"
-               [disabled]="userForm.get('option')?.value === 'option2'" />
-        Group Training
-      </label>
-      <label>
-        <input type="radio" formControlName="option" value="option2"
-               [disabled]="userForm.get('option')?.value === 'option1'" />
-        Individual Training
-      </label>
-    </div>
+  <div class="input-group">
+    <label for="phoneNumber">Phone Number</label>
+    <input id="phoneNumber" type="tel" formControlName="phoneNumber" placeholder="Phone Number"/>
+    <small *ngIf="userForm.get('phoneNumber')?.invalid && userForm.get('phoneNumber')?.touched" class="error">
+      Enter a valid phone number.
+    </small>
+  </div>
 
-    <button type="submit" [disabled]="!userForm.valid">
-      {{ 'MAIN.RESERVATIONS.FORM.SUBMIT' | translate }}
-    </button>
-  </form>
-</div>
+  <!-- Email Field -->
+  <div class="input-group">
+    <label for="email">E-mail</label>
+    <input id="email" type="email" formControlName="email" placeholder="E-mail"/>
+    <small *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched" class="error">
+      Enter a valid email.
+    </small>
+  </div>
+
+  <div class="input-group">
+    <label for="date">Select Date</label>
+    <input id="date" type="date" formControlName="date"/>
+    <small *ngIf="userForm.get('date')?.invalid && userForm.get('date')?.touched" class="error">
+      Date is required.
+    </small>
+  </div>
+
+  <div class="radio-group">
+    <label>
+      <input type="radio" formControlName="option" value="option1"
+             [disabled]="userForm.get('option')?.value === 'option2'"/>
+      Group Training
+    </label>
+    <label>
+      <input type="radio" formControlName="option" value="option2"
+             [disabled]="userForm.get('option')?.value === 'option1'"/>
+      Individual Training
+    </label>
+  </div>
+
+  <button type="submit" [disabled]="!userForm.valid">
+    {{ 'MAIN.RESERVATIONS.FORM.SUBMIT' | translate }}
+  </button>
+</form>
