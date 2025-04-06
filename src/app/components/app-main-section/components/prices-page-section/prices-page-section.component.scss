@@ -10,7 +10,7 @@
 .section-title {
   color: grey;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 16px;
 }
 
 #pilates-prices {
@@ -39,6 +39,7 @@
 
   @include atMedium {
     padding: 60px 20px;
+    margin-top: 32px;
   }
 }
 
@@ -78,14 +79,11 @@
   }
 
   .terms {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     color: #777;
   }
 
-  .service:nth-child(0), .price:nth-child(0), .terms:nth-child(0) {
-    font-size: 45px;
-  }
 
   &.header {
     font-weight: 600;
@@ -93,7 +91,7 @@
     .service,
     .price,
     .terms {
-      font-size: 19px;
+      font-size: 24px;
       color: grey;
     }
   }
@@ -102,11 +100,15 @@
     margin-left: auto;
     margin-right: auto;
     width: 750px;
-    grid-template-columns: 2fr 2fr 0.4fr;
+    grid-template-columns: 2fr 2fr 0.8fr;
   }
 }
 
 
 .btn_prices {
-  margin-top: 50px;
+  margin-top: 25px;
+
+  @include atMedium {
+    margin-top: 50px;
+  }
 }

@@ -34,6 +34,8 @@ import {NgIconsModule} from "@ng-icons/core";
 import {iconsStashData} from "./data/icons-stash.data";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {GoogleMapComponent} from "./components/shared/google-map/google-map.component";
+import {AppComponent} from "./app.component";
+import {BrowserModule} from "@angular/platform-browser";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -44,7 +46,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   imports: [
     AppRoutingModule,
     HttpClientModule,
-    CommonModule,
+    BrowserModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -56,9 +58,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     NgIconsModule.withIcons(iconsStashData),
     FormsModule,
     ReactiveFormsModule,
-
   ],
   declarations: [
+    AppComponent,
     AppMainSectionComponent,
     AppMainPageSectionComponent,
     AppHeaderComponent,
@@ -73,7 +75,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     GoogleMapComponent
   ],
   providers: [
-    {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true}
+    // {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true}
   ],
   exports: [
     AppHeaderComponent,
@@ -82,6 +84,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     TranslateModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }

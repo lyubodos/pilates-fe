@@ -7,7 +7,6 @@
 @import '../../../../../assets/modules/feature-item';
 @import '../../../../../assets/modules/generic-content-container';
 
-
 .main-section {
   margin-top: -100px;
 }
@@ -189,6 +188,10 @@
       margin-left: auto;
       margin-right: auto;
     }
+  }
+
+  .btn_about-us {
+    margin-top: 10px;
   }
 }
 

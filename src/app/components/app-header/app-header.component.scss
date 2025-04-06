@@ -79,7 +79,7 @@
   }
 
   #check:checked ~ .header_nav {
-    height: 24rem;
+    height: 28rem;
   }
 
   .header_nav {
@@ -88,7 +88,7 @@
     left: 0;
     height: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(5px);
     display: block;
     transition: 0.3s ease-in;
@@ -109,16 +109,26 @@
 
       a {
         font-weight: 500;
-        color: #ededed;
+        color: #ff8f8f;
         text-decoration: none;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        font-size: 23px;
+        text-shadow: 2px 2px 5px rgba(225, 134, 134, 0.5);
+
+        @include atMedium{
+          font-size: 18px;
+        }
       }
 
       .contacts_link_mobile {
-        color: #FFFFFF;
-        border: 1px solid white;
+        color: #ff8f8f;
+        border: 1px solid #ff8f8f;
         padding: 4px;
         border-radius: 5px;
+
+        @include atMedium {
+          color: #FFFFFF;
+          border: 1px solid white;
+        }
       }
 
       @include atMedium {
