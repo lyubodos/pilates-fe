@@ -110,7 +110,7 @@
       "CONTACTS": {
         "HEADER": "Contacts",
         "CONTACTS_LIST": {
-          "LOCATION": "Sofia, Studentski Kompleks,\n ulitsa 'Professor Hristo Vakarelski' 11А"
+          "LOCATION": "Sofia,'Professor Hristo Vakarelski' 11А"
         }
       }
     }
