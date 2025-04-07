@@ -91,8 +91,12 @@
     .service,
     .price,
     .terms {
-      font-size: 24px;
+      font-size: 20px;
       color: grey;
+
+      @include atMedium() {
+        font-size: 24px;
+      }
     }
   }
 
