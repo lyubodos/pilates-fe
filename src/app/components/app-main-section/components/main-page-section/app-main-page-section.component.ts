@@ -26,6 +26,7 @@ export class AppMainPageSectionComponent implements OnInit {
   public imgs = [
     'assets/images/IMG_9979.jpeg',
     'assets/images/IMG_9983.jpeg',
+    'assets/images/gallery/IMG_0313.jpeg',
   ];
 
 
