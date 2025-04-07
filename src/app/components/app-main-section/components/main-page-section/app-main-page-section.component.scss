@@ -1,15 +1,13 @@
 @import '../../../../../assets/base/global';
 @import '../../../../../assets/modules/load-spinner';
 @import '../../../../../assets/modules/page-section';
-@import '../../../../../assets/modules/row';
-@import '../../../../../assets/modules/wrapper';
 @import '../../../../../assets/modules/section-title';
-@import '../../../../../assets/modules/feature-item';
 @import '../../../../../assets/modules/generic-content-container';
 
 .main-section {
   margin-top: -100px;
 }
+
 
 .intro-hero__text-content_container {
   border-radius: 20px;
@@ -27,7 +25,6 @@
     object-fit: cover;
     opacity: 40%;
     display: none;
-
   }
 
   img.active {
@@ -161,7 +158,7 @@
     color: #383b38;
     font-size: 1.3rem;
     font-weight: 100;
-    margin-bottom: 50px;
+
 
     @include atSmall {
       margin: 0;
