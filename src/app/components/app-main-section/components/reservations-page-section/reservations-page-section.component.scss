@@ -23,8 +23,16 @@ h2 {
 }
 
 .name-fields {
-  display: flex;
-  gap: 10px;
+  display: block;
+
+  label:nth-child(1) {
+    margin-top: 10px;
+  }
+
+  @include atMedium {
+    display: flex;
+    gap: 10px;
+  }
 }
 
 .input-group {
