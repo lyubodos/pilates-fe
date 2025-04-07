@@ -22,11 +22,15 @@
         "FAQ_TITLE": "Frequently Asked Questions",
         "FAQ_LIST": [
           {
-            "question": "What are the benefits of training with the Pilates Reformer?",
+            "question": "What are the benefits of training with Pilates Reformer?",
             "answer": "Pilates Reformer workouts engage all muscle groups and improve core strength, posture, balance, flexibility, and mobility. They also boost energy levels, which contributes to an overall improvement in physical condition. In addition to the physical benefits, these workouts are also beneficial for mental health."
           },
           {
-            "question": "For who are Pilates Reformer workouts suitable for?",
+            "question": "How many calories are burned during one workout?",
+            "answer": "During a single session, the body burns an average of 250 to 300 kcal."
+          },
+          {
+            "question": "Who are Pilates Reformer workouts suitable for?",
             "answer": "Anyone who wants to improve their physical and mental health can start training with the Pilates Reformer."
           },
           {
@@ -34,16 +38,12 @@
             "answer": "Yes, pregnant women can do Pilates, and it is even recommended to help ease lower back pain. Of course, the exercises must be carefully selected to ensure they pose no risk to the pregnancy."
           },
           {
-            "question": "How many calories are burned during one workout?",
-            "answer": "During a single session, the body burns an average of 250 to 300 kcal."
+            "question": "Can I train if I have injuries?",
+            "answer": "At the beginning of each session, the instructor gathers information about each client's health condition. If there is an injury, specially selected, gentle exercises are used, and an individual workout plan is created for the person. Regular training may even help improve the affected area. People also ask 'Do the joints get strained?' - The Reformer machine is designed to absorb joint pressure, significantly reducing their load."
           },
           {
             "question": "What do I need for the workout?",
             "answer": "Besides motivation and a good mood, you'll need comfortable workout clothes, a towel, and non-slip socks. If you don't have socks or a towel, the studio offers socks for purchase and towels for rent."
-          },
-          {
-            "question": "Can I train if I have injuries?",
-            "answer": "At the beginning of each session, the instructor gathers information about each client's health condition. If there is an injury, specially selected, gentle exercises are used, and an individual workout plan is created for the person. Regular training may even help improve the affected area. People also ask 'Do the joints get strained?'. The Reformer machine is designed to absorb joint pressure, significantly reducing their load."
           },
           {
             "question": "Why choose ReformFlow Studio?",

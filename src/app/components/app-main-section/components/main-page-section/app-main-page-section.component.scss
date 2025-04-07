@@ -282,10 +282,16 @@
   opacity: 1;
 }
 
+.answer-container.open:last-child {
+  max-height: 450px;
+  opacity: 1;
+}
+
 /* Styling for the answer text */
 .answer {
   padding: 10px;
   color: #333;
+  font-size: 1.25rem;
 }
 
 .gma-heading {
