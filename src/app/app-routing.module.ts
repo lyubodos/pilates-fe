@@ -22,6 +22,7 @@ import {
 import {
   PricesPageSectionComponent
 } from './components/app-main-section/components/prices-page-section/prices-page-section.component';
+import {TermsOfUseComponent} from "./components/app-main-section/components/terms-of-use/terms-of-use.component";
 
 export const routes: Routes = [
   {path: '', pathMatch: 'full', component: AppMainPageSectionComponent},
@@ -31,6 +32,7 @@ export const routes: Routes = [
   {path: 'gallery', pathMatch: 'full', component: GalleryPageSectionComponent},
   {path: 'about-us', pathMatch: 'full', component: AboutUsPageSectionComponent},
   {path: 'contacts', pathMatch: 'full', component: ContactsPageSectionComponent},
+  {path: 'terms', pathMatch: 'full', component: TermsOfUseComponent},
 ];
 
 @NgModule({
