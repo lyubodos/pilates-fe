@@ -36,6 +36,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {GoogleMapComponent} from "./components/shared/google-map/google-map.component";
 import {AppComponent} from "./app.component";
 import {BrowserModule} from "@angular/platform-browser";
+import {TermsOfUseComponent} from "./components/app-main-section/components/terms-of-use/terms-of-use.component";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -72,6 +73,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     PricesPageSectionComponent,
     NewsPageSectionComponent,
     LoadingSpinnerComponent,
+    TermsOfUseComponent,
     GoogleMapComponent
   ],
   providers: [

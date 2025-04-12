@@ -113,6 +113,47 @@
         "CONTACTS_LIST": {
           "LOCATION": "Sofia,'Professor Hristo Vakarelski' 11А"
         }
+      },
+      "OTHERS": {
+        "TITLE": "Further Options",
+        "FAQ": "FAQ",
+        "TERMS": "Terms & Conditions",
+        "GDPR": "GDPR"
+      }
+    },
+    "OTHER": {
+      "TERMS_CONDITIONS": {
+        "TITLE": "Terms & Conditions",
+        "PARAGRAPH": "These General Terms and Conditions govern the relationship between {{studioName}} and users of its services.",
+        "TERMS": {
+          "TERMS_TITLE1": "1. Booking Reservations",
+          "1_1": "1.1 Participation in training sessions is only possible with prior booking through the studio’s website, by phone, or in person.",
+          "1_2": "1.2 Each reservation must be confirmed by the studio.",
+          "1_3": "1.3 Clients must arrive at least 5 minutes before the class starts.",
+          "1_4": "1.4 If the client is more than 10 minutes late, the instructor has the right to deny participation in the session.",
+          "TERMS_TITLE2": "2. Cancellation and Reservation Changes",
+          "2_1": "2.1 Clients can cancel a training session no later than 3 hours in advance.",
+          "2_2": "2.2 If the cancellation deadline is not met, the session will be considered used.",
+          "2_3": "2.3 The studio reserves the right to make changes to the schedule and/or cancel sessions due to exceptional circumstances (instructor illness, technical issues, etc.).",
+          "TERMS_TITLE3": "3. Subscriptions and Payments",
+          "3_1": "3.1 Services must be paid for in advance at the studio.",
+          "3_2": "3.2 Purchased sessions and passes are personal and non-transferable.",
+          "3_3": "3.3 Unused sessions within the pass validity period cannot be compensated.",
+          "TERMS_TITLE4": "4. Health Status and Responsibility",
+          "4_1": "4.1 The client declares they are in good health and capable of participating in training sessions.",
+          "4_2": "4.2 The studio is not responsible for injuries occurring during sessions due to failure to follow the instructor’s guidance.",
+          "4_3": "4.3 Clients with health conditions must inform the instructor before the session starts.",
+          "TERMS_TITLE5": "5. Conduct and Discipline",
+          "5_1": "5.1 Clients must maintain cleanliness in the studio and show respect to staff and other clients.",
+          "5_2": "5.2 Access is prohibited for individuals under the influence of alcohol or drugs.",
+          "5_3": "5.3 The studio reserves the right to deny access to individuals who disrupt order or endanger the safety of others.",
+          "TERMS_TITLE6": "6. Personal Data",
+          "6_1": "6.1 The studio processes personal data in accordance with the Data Protection Act and GDPR.",
+          "6_2": "6.2 Data is used solely for the purposes of booking, communication, and with the client’s explicit consent.",
+          "TERMS_TITLE7": "7. Final Provisions",
+          "7_1": "7.1 The studio reserves the right to amend these terms and conditions.",
+          "7_2": "7.2 Use of the studio’s services implies acceptance of these terms and conditions."
+        }
       }
     }
   }
