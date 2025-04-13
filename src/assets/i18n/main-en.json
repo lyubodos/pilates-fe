@@ -82,7 +82,21 @@
       "TITLE": "Send a request for a reservation",
       "FORM": {
         "TITLE": "Reservation form",
-        "SUBMIT": "Send a request"
+        "FIRST_NAME": "First Name",
+        "LAST_NAME": "Last Name",
+        "PHONE_NUMBER": "Phone number",
+        "E_MAIL": "E-mail",
+        "DATE": "Select Date",
+        "GROUP_TRAINING": "Group Training",
+        "INDIVIDUAL_TRAINING": "Individual Training",
+        "SUBMIT": "Send a request",
+        "ERRORS": {
+          "FIRST_NAME": "First name must be at least 3 characters.",
+          "LAST_NAME": "Last name must be at least 3 characters.",
+          "PHONE_NUMBER": "Enter a valid phone number.",
+          "E_MAIL": "Enter a valid email.",
+          "DATE": "Date is required."
+        }
       }
     },
     "ABOUT_US": {
