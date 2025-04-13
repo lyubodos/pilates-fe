@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {TranslateService} from "@ngx-translate/core";
 
 interface FaqStruct {
@@ -30,7 +30,7 @@ export class AppMainPageSectionComponent implements OnInit {
   ];
 
 
-  constructor(private router: Router, private translateService: TranslateService) {
+  constructor(private router: Router, private route: ActivatedRoute, private translateService: TranslateService) {
 
   }
 
@@ -44,6 +44,16 @@ export class AppMainPageSectionComponent implements OnInit {
     this.translateService.onLangChange.subscribe(() => {
       this.loadFaqs();
     });
+  }
+
+  public ngAfterViewInit() {
+    this.route.fragment.subscribe(fragment => {
+      if (fragment) {
+        setTimeout(() => {
+         this.scrollToWithOffset(fragment, 100);
+        }, 0);
+      }
+    })
   }
 
   public toggleFaq(index: number) {
@@ -66,5 +76,13 @@ export class AppMainPageSectionComponent implements OnInit {
         isOpen: false
       }));
     });
+  }
+
+  private scrollToWithOffset(id: string, offset: number = 100) {
+    const element = document.getElementById(id);
+    if (element) {
+      const y = element.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
   }
 }
