@@ -1,5 +1,6 @@
 <div class="main-section">
   <div class="intro-hero">
+    <div class="image-overlay"></div>
     <img *ngFor="let img of imgs; let i = index" [src]='img' [class.active]="i === currentIndex">
     <div class="intro-hero__text-content page-section">
       <h1 class="intro-hero__title">ReformFlow</h1>
@@ -22,7 +23,7 @@
     <p class="quote-author">— {{ 'MAIN.HOME.JOSEPH_PILATES' | translate }}</p>
   </div>
   <h2 class="section-title faq_heading" id="faq">{{ 'MAIN.HOME.FAQ.FAQ_TITLE' | translate }}</h2>
-  <div class="faq-container page-section" >
+  <div class="faq-container page-section">
     <div *ngFor="let faq of faqs; let i = index" class="faq" (click)="toggleFaq(i)">
       <div class="question">
         {{ faq.question }}
