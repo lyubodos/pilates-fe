@@ -17,6 +17,18 @@
     margin-bottom: 50px;
   }
 
+  a {
+    color: grey;
+  }
+
+  a:hover{
+    color: $mainRoseAsh;
+  }
+
+  a:active{
+    color: grey;
+  }
+
   @include atMedium{
     background: rgba(255, 255, 255, 0.4);
     border-radius: 10px;
