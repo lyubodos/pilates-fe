@@ -21,8 +21,8 @@
     <p class="quote-text">“{{ 'MAIN.HOME.PILATES_QUOTE' | translate }}”</p>
     <p class="quote-author">— {{ 'MAIN.HOME.JOSEPH_PILATES' | translate }}</p>
   </div>
-  <h2 class="section-title faq_heading">{{ 'MAIN.HOME.FAQ.FAQ_TITLE' | translate }}</h2>
-  <div class="faq-container page-section">
+  <h2 class="section-title faq_heading" id="faq">{{ 'MAIN.HOME.FAQ.FAQ_TITLE' | translate }}</h2>
+  <div class="faq-container page-section" >
     <div *ngFor="let faq of faqs; let i = index" class="faq" (click)="toggleFaq(i)">
       <div class="question">
         {{ faq.question }}
