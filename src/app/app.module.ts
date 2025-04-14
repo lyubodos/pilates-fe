@@ -16,7 +16,7 @@ import {
   GalleryPageSectionComponent
 } from "./components/app-main-section/components/gallery-page-section/gallery-page-section.component";
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
-import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from "@angular/common/http";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {
   ReservationsPageSectionComponent
@@ -24,9 +24,8 @@ import {
 import {
   PricesPageSectionComponent
 } from "./components/app-main-section/components/prices-page-section/prices-page-section.component";
-import {CommonModule, NgClass} from "@angular/common";
+import {NgClass} from "@angular/common";
 import {LoadingSpinnerComponent} from "./components/shared/loading-spinner/loading-spinner.component";
-import {LoadingInterceptor} from "./interceptors/loading.interceptor";
 import {
   NewsPageSectionComponent
 } from "./components/app-main-section/components/news-page-section/news-page-section.component";
