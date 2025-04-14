@@ -1,5 +1,6 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {animate, state, style, transition, trigger} from "@angular/animations";
+import {FormGroup, UntypedFormBuilder, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-contacts-page-section',
@@ -15,40 +16,31 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
     ])
   ]
 })
-export class ContactsPageSectionComponent {
-  public faqs = [
-    {
-      question: 'What is the best time for training?',
-      answer: 'The best time depends on your schedule, but morning workouts boost metabolism, while evening sessions may improve performance.',
-      isOpen: false
-    },
-    {
-      question: 'How often should I work out?',
-      answer: 'For general fitness, aim for at least 3-5 sessions per week, balancing cardio and strength training.',
-      isOpen: false
-    },
-    {
-      question: 'Is weightlifting good for weight loss?',
-      answer: 'Yes! Strength training boosts metabolism, burns fat, and builds muscle, which helps with long-term weight management.',
-      isOpen: false
-    }
-  ];
+export class ContactsPageSectionComponent implements OnInit{
+  public userForm: FormGroup = new FormGroup({});
 
-  public contactInfo = {
-    phone: '+1 (123) 456-7890',
-    email: 'info@studiotraining.com',
-    location: '123 Fitness Ave, New York, NY 10001'
-  };
+  constructor(private fb: UntypedFormBuilder) {
+  }
 
-  public toggleFaq(index: number) {
-    this.faqs[index].isOpen = !this.faqs[index].isOpen;
+  public ngOnInit() {
+    this.userForm = this.fb.group({
+      firstName: this.fb.control('', [Validators.required, Validators.minLength(3)]),
+      secondName: this.fb.control('', [Validators.required, Validators.minLength(3)]),
+      phoneNumber: this.fb.control('', [Validators.required]),
+      email: this.fb.control('', [Validators.required, Validators.email]),
+      feedback: this.fb.control('')
+    });
+
   }
 
 
-  public onSubmit(form: any) {
-    if (form.valid) {
-      alert(`Thank you, ${form.value.name}! We will get back to you soon.`);
-      form.reset();
+  public onSubmit(): void {
+    if (this.userForm.valid) {
+      console.log('Form Submitted', this.userForm.value);
+      alert('Form Submitted Successfully!');
+      this.userForm.reset(); // Reset form after submission
+    } else {
+      alert('Please fill out the form correctly!');
     }
   }
 }

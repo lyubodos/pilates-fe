@@ -1,93 +1,145 @@
-/* Container for FAQ section */
-.faq-container {
-  max-width: 600px;
-  margin: 40px auto;
-  background: rgba(255, 255, 255, 0.6);
-  padding: 20px;
+@import '../../../../../assets/base/global';
+@import '../../../../../assets/modules/section-title';
+
+.ng_icons {
+  width: 2rem;
+  height: 2rem;
+  list-style: none;
+  margin-right: 0.3125rem;
+}
+
+
+.contacts_container {
+  margin-top: 25px;
+
+  &__heading {
+    color: grey;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style: none;
+    color: grey;
+    margin-left: 0;
+
+    li {
+      margin-bottom: 2rem;
+
+      a {
+        text-decoration: none;
+        white-space: pre-line;
+        font-size: 20px;
+      }
+
+      a {
+        color: grey;
+      }
+
+      a:hover {
+        color: #30302f;
+      }
+    }
+
+    @include atMedium {
+      flex-direction: row;
+    }
+  }
+
+  @include atMedium {
+  }
+}
+.form-container {
+  max-width: 700px;
+  margin: 0 auto 100px;
   border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Individual FAQ item styling */
-.faq {
-  margin: 10px 0;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-  cursor: pointer;
-  text-align: left;
-  transition: background 0.3s;
-}
-
-/* Hover effect for FAQ item */
-.faq:hover {
-  background: rgba(255, 107, 107, 0.1);
-}
-
-/* Styling for the question text */
-.question {
-  font-weight: bold;
-  color: #ff6b6b;
+  padding: 20px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  .form_header {
+    text-align: center;
+    color: grey;
+  }
+
+  @include atMedium {
+    box-shadow: 20px 20px 12px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
 }
 
-/* Styling for arrow indicator */
-.arrow {
-  display: inline-block;
-  position: relative;
-  font-size: 20px;
-  font-weight: bold;
-  color: #333;
-  cursor: pointer;
-  transition: transform 0.3s ease, color 0.3s ease;
+.name-fields {
+  display: block;
+
+  label:nth-child(1) {
+    margin-top: 10px;
+  }
+
+  @include atMedium {
+    display: flex;
+    gap: 10px;
+  }
 }
 
-/* Arrow icon (→) and transition effect */
-.arrow::after {
-  content: "→";
-  position: absolute;
-  top: -20px;
-  right: 10px;
-  font-size: 30px;
-  color: #ff6b6b;
-  opacity: 0;
-  transform: translateX(-10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+.input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
 }
 
-/* Hover effect for the arrow */
-.arrow:hover {
-  color: #ff6b6b;
-  transform: translateX(5px);
+textarea {
+  padding: 8px;
+  border-radius: 5px;
+  resize: vertical;
 }
 
-.arrow:hover::after {
-  opacity: 1;
-  transform: translateX(0);
+.char-counter {
+  font-size: 0.85rem;
+  color: #666;
+  text-align: right;
+  margin-bottom: 10px;
 }
 
-/* Rotate the arrow when expanded */
-.rotate {
-  transform: rotate(180deg);
+.error {
+  margin-top: 5px;
+  color: red;
+  font-size: 14px;
 }
 
-/* Container for the answer (initially collapsed) */
-.answer-container {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
-  opacity: 0;
-}
-
-/* Open the answer container */
-.answer-container.open {
-  max-height: 100px;
-  opacity: 1;
-}
-
-/* Styling for the answer text */
-.answer {
+button {
+  width: 100%;
   padding: 10px;
-  color: #333;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background: $mainRoseAsh;
+  cursor: pointer;
+
+  &:hover {
+    background: grey;
+  }
+
+  &:active {
+    background: $mainRoseAsh;
+  }
+
+  &:disabled {
+    background: gray;
+    cursor: not-allowed;
+  }
 }
+
