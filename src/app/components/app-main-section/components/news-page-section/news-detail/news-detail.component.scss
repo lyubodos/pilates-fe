@@ -1,0 +1,37 @@
+@import '../../../../../../assets/base/global';
+@import '../../../../../../assets/modules/section-title';
+
+
+.news-details {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 20px;
+  border-radius: 20px;
+
+  &__heading {
+    color: grey;
+  }
+
+  &__date {
+   text-align: center;
+  }
+
+  &__image {
+    display: block;
+    border-radius: 10px;
+
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__content {
+    font-size: 20px;
+    text-align: left;
+  }
+
+  @include atMedium {
+    background: rgba(255, 255, 255, 0.4);
+  }
+}

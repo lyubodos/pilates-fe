@@ -37,6 +37,9 @@ import {AppComponent} from "./app.component";
 import {BrowserModule} from "@angular/platform-browser";
 import {TermsOfUseComponent} from "./components/app-main-section/components/terms-of-use/terms-of-use.component";
 import {GdprComponent} from "./components/app-main-section/components/gdpr/gdpr.component";
+import {
+  NewsDetailComponent
+} from "./components/app-main-section/components/news-page-section/news-detail/news-detail.component";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -72,6 +75,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ReservationsPageSectionComponent,
     PricesPageSectionComponent,
     NewsPageSectionComponent,
+    NewsDetailComponent,
     LoadingSpinnerComponent,
     TermsOfUseComponent,
     GdprComponent,

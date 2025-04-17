@@ -1,7 +1,7 @@
 <div class="news-section">
   <h2 class="section-title">Latest ReformFlow News and Features</h2>
   <div class="news-container">
-    <div class="news-card" *ngFor="let news of newsList">
+    <div class="news-card" *ngFor="let news of newsList" (click)="openNewsInformation(news.id)">
       <img [src]="news.image" [alt]="news.title" class="news-image">
       <div class="news-content">
         <h3>{{ news.title }}</h3>

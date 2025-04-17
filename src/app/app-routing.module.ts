@@ -24,10 +24,14 @@ import {
 } from './components/app-main-section/components/prices-page-section/prices-page-section.component';
 import {TermsOfUseComponent} from "./components/app-main-section/components/terms-of-use/terms-of-use.component";
 import {GdprComponent} from "./components/app-main-section/components/gdpr/gdpr.component";
+import {
+  NewsDetailComponent
+} from "./components/app-main-section/components/news-page-section/news-detail/news-detail.component";
 
 export const routes: Routes = [
   {path: '', pathMatch: 'full', component: AppMainPageSectionComponent},
   {path: 'news', pathMatch: 'full', component: NewsPageSectionComponent},
+  {path: 'news/:id', component: NewsDetailComponent},
   {path: 'prices', pathMatch: 'full', component: PricesPageSectionComponent},
   {path: 'reservations', pathMatch: 'full', component: ReservationsPageSectionComponent},
   {path: 'gallery', pathMatch: 'full', component: GalleryPageSectionComponent},
