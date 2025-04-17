@@ -1,0 +1,28 @@
+@import '../../../../../assets/base/global';
+
+.gdpr_container{
+  width: 80%;
+  color: grey;
+  padding: 20px 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-top:50px;
+
+  h1, h2 {
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 50px;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  @include atMedium{
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+  }
+}

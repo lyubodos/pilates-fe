@@ -1,21 +1,26 @@
 <h1 class="section-title">{{ 'MAIN.GALLERY.TITLE' | translate }}</h1>
 <p class="section-description">{{ 'MAIN.GALLERY.DESCRIPTION' | translate }}</p>
-<div class="carousel">
-  <button class="prev" (click)="prevSlide()">&#10094;</button>
-
-  <div class="carousel-images">
-    <img *ngFor="let img of images; let i = index"
-         [src]="img"
-         [class.active]="i === currentIndex"
-         alt="Carousel image">
+<div class="gallery_container">
+  <div class="gallery">
+    <img
+      *ngFor="let img of images; let i = index"
+      [src]="img"
+      (click)="openModal(i)"
+      class="thumbnail"
+      alt="Gallery image"
+    />
   </div>
-
-  <button class="next" (click)="nextSlide()">&#10095;</button>
-
-  <div class="dots">
-    <span *ngFor="let img of images; let i = index"
-          class="dot"
-          [class.active]="i === currentIndex"
-          (click)="currentIndex = i"></span>
-  </div>
+  <a class="btn btn_gallery" routerLink="/reservations">Make a reservation</a>
 </div>
+
+
+<!-- Fullscreen Modal -->
+<div class="modal" *ngIf="showModal">
+  <span class="close" (click)="closeModal()">×</span>
+  <img [src]="images[currentIndex]" class="modal-content" />
+
+  <a class="prev" (click)="prev()">❮</a>
+  <a class="next" (click)="next()">❯</a>
+</div>
+
+

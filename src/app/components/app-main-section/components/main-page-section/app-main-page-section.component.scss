@@ -1,49 +1,72 @@
 @import '../../../../../assets/base/global';
 @import '../../../../../assets/modules/load-spinner';
 @import '../../../../../assets/modules/page-section';
-@import '../../../../../assets/modules/row';
-@import '../../../../../assets/modules/wrapper';
 @import '../../../../../assets/modules/section-title';
-@import '../../../../../assets/modules/feature-item';
 @import '../../../../../assets/modules/generic-content-container';
-
 
 .main-section {
   margin-top: -100px;
 }
 
+
 .intro-hero__text-content_container {
   border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.7);
   padding: 20px;
   width: 70%;
-  //left: 14.5%;
 }
 
 .intro-hero {
   border-bottom: 10px solid $mainRoseAsh;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 
   img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 800px;
+    height: 100%;
     object-fit: cover;
-    opacity: 40%;
-    display: block;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
+  }
+
+  img.active {
+    opacity: 1;
+  }
+
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    z-index: 1;
   }
 
   &__text-content {
     position: absolute;
     top: 45%;
-    left: 13%;
+    left: 10%;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.6);
     padding: 20px;
     width: 70%;
     transform: translateY(-50%);
     text-align: center;
+    z-index: 10;
 
-    @include atMedium{
-      left: 14.35%;
+    @include atSmall {
+      left: 13.3%;
+    }
+
+    @include atMedium {
+      left: 14%;
     }
   }
 
@@ -71,7 +94,7 @@
   &__subtitle {
     font-size: 2.1rem;
     font-weight: 300;
-    color: #383b38;
+    color: grey;
     margin: 0;
 
     @include atSmall {
@@ -88,7 +111,7 @@
   }
 
   &__paragraph {
-    color: #383b38;
+    color: grey;
     font-size: 1rem;
     font-weight: 100;
     margin-bottom: 50px;
@@ -98,7 +121,7 @@
       font-size: 1.2rem;
       margin-left: auto;
       margin-right: auto;
-      max-width: 360px;
+      max-width: 400px;
       margin-bottom: 30px;
     }
 
@@ -128,16 +151,21 @@
 
   &__img {
     display: block;
+    border-radius: 20px;
     margin: 50px auto 0 auto;
     opacity: 50%;
   }
 
   &__text-content {
     text-align: center;
+
+    p {
+      color: grey;
+    }
   }
 
   &__title {
-    color: $mainRoseAsh;
+    color: grey;
     font-weight: 300;
     font-size: 2rem;
 
@@ -153,7 +181,7 @@
     color: #383b38;
     font-size: 1.3rem;
     font-weight: 100;
-    margin-bottom: 50px;
+
 
     @include atSmall {
       margin: 0;
@@ -181,64 +209,159 @@
       margin-right: auto;
     }
   }
+
+  .btn_about-us {
+    margin-top: 10px;
+  }
 }
 
-.story-hero {
+.section-title {
+  color: grey;
+  margin: 0
+}
 
-  &__img {
-    height: 610px;
-    width: 5400px;
-    object-fit: contain;
-  }
+.faq_heading {
+  margin-top: 100px;
+}
 
-  &__heading {
-    color: $mainRoseAsh;
-    font-weight: 300;
-    font-size: 2rem;
-    text-align: center;
+/* Container for FAQ section */
+.faq-container {
+  white-space: pre-line;
+}
 
+/* Individual FAQ item styling */
+.faq {
+  margin: 10px 0;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.3s;
+}
 
-    @include atMedium {
-      margin-top: 0;
-      font-size: 2.875rem;
-    }
-  }
+/* Hover effect for FAQ item */
+.faq:hover {
+  background: rgba(255, 107, 107, 0.1);
+}
 
-  &__paragraph {
-    color: #383b38;
-    font-size: 1rem;
-    font-weight: 100;
-    margin-bottom: 50px;
-    text-align: center;
+/* Styling for the question text */
+.question {
+  font-size: 25px;
+  font-weight: 500;
+  color: grey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    @include atMedium {
-      text-align: left;
-    }
-  }
-
-  @include atSmall {
-    font-size: 1.3rem;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 360px;
-    margin-bottom: 30px;
-  }
+/* Styling for arrow indicator */
+.arrow {
+  display: none;
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: transform 1s ease, color 0.3s ease;
 
   @include atMedium {
-    margin: 0;
-    font-size: 1.5rem;
-    padding: 0 200px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
+    display: inline-block;
   }
+}
 
-  @include atLarge {
-    margin: 0;
-    font-size: 2rem;
-    padding: 0 200px;
-    margin-left: auto;
-    margin-right: auto;
+/* Arrow icon (↓) */
+.arrow::after {
+  content: "↓";
+  position: absolute;
+  top: -20px;
+  right: 10px;
+  font-size: 30px;
+  color: $mainRoseAsh;
+  transition: transform 0.6s ease;
+}
+
+/* Hover effect (subtle, no rotation) */
+.arrow:hover {
+  color: #ff6b6b;
+  transform: translateX(5px);
+}
+
+/* Rotate the arrow down ONLY when open */
+.arrow.rotate::after {
+  transform: rotate(180deg);
+}
+
+/* Answer container - hidden by default */
+.answer-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out, opacity 0.8s ease-in-out;
+  opacity: 0;
+}
+
+/* Open state for the answer container */
+.answer-container.open {
+  max-height: 250px;
+  opacity: 1;
+}
+
+.answer-container.open:last-child {
+  max-height: 450px;
+  opacity: 1;
+}
+
+/* Styling for the answer text */
+.answer {
+  padding: 10px;
+  color: #333;
+  font-size: 1.25rem;
+}
+
+.gma-heading {
+  font-size: 30px;
+  margin: 50px 0;
+}
+
+.quote-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background: #f8f8f8;
+}
+
+.quote-container {
+  max-width: 400px;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+  margin: 0 auto 50px;
+
+  @include atMedium {
+    max-height: 700px;
+  }
+}
+
+.quote-text {
+  font-size: 28px;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.quote-author {
+  font-size: 20px;
+  font-weight: 600;
+  color: #a33c3c;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

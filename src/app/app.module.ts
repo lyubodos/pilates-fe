@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {AppRoutingModule} from "./app-routing.module";
 import {AppFooterComponent} from "./components/app-footer/app-footer.component";
 import {AppHeaderComponent} from "./components/app-header/app-header.component";
@@ -15,8 +15,8 @@ import {
 import {
   GalleryPageSectionComponent
 } from "./components/app-main-section/components/gallery-page-section/gallery-page-section.component";
-import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
-import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from "@angular/common/http";
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {
   ReservationsPageSectionComponent
@@ -24,12 +24,22 @@ import {
 import {
   PricesPageSectionComponent
 } from "./components/app-main-section/components/prices-page-section/prices-page-section.component";
-import {CommonModule, NgClass} from "@angular/common";
+import {NgClass} from "@angular/common";
 import {LoadingSpinnerComponent} from "./components/shared/loading-spinner/loading-spinner.component";
-import {LoadingInterceptor} from "./interceptors/loading.interceptor";
 import {
   NewsPageSectionComponent
 } from "./components/app-main-section/components/news-page-section/news-page-section.component";
+import {NgIconsModule} from "@ng-icons/core";
+import {iconsStashData} from "./data/icons-stash.data";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {GoogleMapComponent} from "./components/shared/google-map/google-map.component";
+import {AppComponent} from "./app.component";
+import {BrowserModule} from "@angular/platform-browser";
+import {TermsOfUseComponent} from "./components/app-main-section/components/terms-of-use/terms-of-use.component";
+import {GdprComponent} from "./components/app-main-section/components/gdpr/gdpr.component";
+import {
+  NewsDetailComponent
+} from "./components/app-main-section/components/news-page-section/news-detail/news-detail.component";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -37,20 +47,24 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 
 @NgModule({
-    imports: [
-        AppRoutingModule,
-        HttpClientModule,
-        CommonModule,
-        TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: HttpLoaderFactory,
-                deps: [HttpClient],
-            },
-        }),
-        NgClass,
-    ],
+  imports: [
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
+    NgClass,
+    NgIconsModule.withIcons(iconsStashData),
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   declarations: [
+    AppComponent,
     AppMainSectionComponent,
     AppMainPageSectionComponent,
     AppHeaderComponent,
@@ -61,17 +75,23 @@ export function HttpLoaderFactory(http: HttpClient) {
     ReservationsPageSectionComponent,
     PricesPageSectionComponent,
     NewsPageSectionComponent,
-    LoadingSpinnerComponent
+    NewsDetailComponent,
+    LoadingSpinnerComponent,
+    TermsOfUseComponent,
+    GdprComponent,
+    GoogleMapComponent
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true }
+    // {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true}
   ],
   exports: [
     AppHeaderComponent,
     AppFooterComponent,
     AppMainSectionComponent,
     TranslateModule
-  ]
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }

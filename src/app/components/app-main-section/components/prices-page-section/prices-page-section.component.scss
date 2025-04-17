@@ -6,53 +6,158 @@
 @import '../../../../../assets/modules/feature-item';
 @import '../../../../../assets/modules/generic-content-container';
 
+
+.section-title {
+  color: grey;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
 #pilates-prices {
   padding: 2.5rem 0;
 }
 
 .container {
-  max-width: 75rem;
-  margin: 0 auto;
+  margin: 0;
   padding: 0 1.25rem;
 }
 
-.section-title {
-  color: $mainRoseAsh;
-}
-
 .group_trainings_title {
-  margin-top: 12.5rem;
+  margin-top: 6.5rem;
 }
 
 .section-description {
   text-align: center;
   font-size: 1.25rem;
-  margin-bottom: 2.5rem;
 }
 
-.price-table {
-  width: 100%;
-  margin-top: 2.5rem;
-  border-collapse: collapse;
+.price-list-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+
+  @include atMedium {
+    padding: 60px 20px;
+    margin-top: 32px;
+  }
 }
 
-.price-table th, .price-table td {
+.price-list {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  overflow: hidden;
+
+  @include atMedium {
+    box-shadow: 20px 20px 12px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.price-item {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr 0.6fr;
+  align-items: center;
+  padding: 20px 24px;
+  font-weight: initial;
+  color: grey;
+
+  &:hover {
+    background-color: #fdf2f2;
+  }
+
+  .service {
+    font-size: 18px;
+    font-weight: bold;
+    color: grey;
+  }
+
+  .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: grey;
+  }
+
+  .terms {
+    font-size: 18px;
+    font-weight: bold;
+    color: #777;
+  }
+
+
+  &.header {
+    font-weight: 600;
+
+    .service,
+    .price,
+    .terms {
+      font-size: 20px;
+      color: grey;
+
+      @include atMedium() {
+        font-size: 24px;
+      }
+    }
+  }
+
+  @include atMedium {
+    margin-left: auto;
+    margin-right: auto;
+    width: 750px;
+    grid-template-columns: 2fr 1.6fr 0.8fr;
+  }
+}
+
+
+.btn_prices {
+  margin-top: 25px;
+
+  @include atMedium {
+    margin-top: 50px;
+  }
+}
+
+
+.quote-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background: #f8f8f8;
+}
+
+.quote-container {
+  max-width: 400px;
   text-align: center;
-  padding: 0.9375rem;
-  border: 0.0625rem solid #ddd;
+  animation: fadeIn 1.5s ease-in-out;
+  margin: 100px auto;
+
+  @include atMedium {
+    max-height: 700px;
+  }
 }
 
-.price-table th {
-  background-color: #f4f4f4;
-  font-size: 1.125rem;
+.quote-text {
+  font-size: 28px;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 10px;
 }
 
-.price-table td {
-  background-color: #fff;
+.quote-author {
+  font-size: 20px;
+  font-weight: 600;
+  color: #a33c3c;
 }
 
-.price-table tr:nth-child(even) td {
-  background-color: #e4dfdf;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-
 

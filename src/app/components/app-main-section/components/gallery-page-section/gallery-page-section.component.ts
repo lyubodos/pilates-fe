@@ -1,42 +1,43 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-gallery-page-section',
   templateUrl: './gallery-page-section.component.html',
   styleUrl: './gallery-page-section.component.scss'
 })
-export class GalleryPageSectionComponent implements OnInit, OnDestroy {
-  public currentIndex = 0;
-  public interval: any;
-
-  public images = [
-    'assets/images/home/IMG_0007.jpeg',
-    'assets/images/home/IMG_0024.jpeg',
-    'assets/images/home/IMG_0025.jpeg',
-    'assets/images/home/IMG_0030.jpeg',
-    'assets/images/IMG_9979.jpeg',
-    'assets/images/IMG_9983.jpeg'
+export class GalleryPageSectionComponent {
+  public images: string[] = [
+      'assets/images/IMG_9979.jpeg',
+      'assets/images/IMG_9983.jpeg',
+      'assets/images/gallery/IMG_0313.jpeg',
+      'assets/images/home/IMG_0024.jpeg',
+      'assets/images/home/IMG_0025.jpeg',
+      'assets/images/home/IMG_0030.jpeg',
+      'assets/images/gallery/IMG_0094.jpeg',
+      'assets/images/gallery/IMG_0115.jpeg',
+      'assets/images/gallery/IMG_0139.jpeg',
+      'assets/images/gallery/IMG_0192.jpeg',
+      'assets/images/gallery/IMG_0200.jpeg',
+      'assets/images/gallery/IMG_0239.jpeg',
   ];
 
+  public currentIndex = 0;
+  public showModal = false;
 
-  public ngOnInit() {
-    this.interval = setInterval(() => {
-      this.nextSlide();
-    }, 3000);
+  public openModal(index: number) {
+    this.currentIndex = index;
+    this.showModal = true;
   }
 
-  public ngOnDestroy() {
-    if (this.interval) {
-      clearInterval(this.interval);
-    }
+  public closeModal() {
+    this.showModal = false;
   }
 
-  public nextSlide() {
+  public next() {
     this.currentIndex = (this.currentIndex + 1) % this.images.length;
   }
 
-  public prevSlide() {
+  public prev() {
     this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
   }
-
 }

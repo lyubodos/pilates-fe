@@ -1,1 +1,9 @@
 @import '../assets/modules/load-spinner';
+@import '../assets/base/global';
+@import '../assets/modules/section-title';
+@import '../assets/modules/generic-content-container';
+
+main {
+  margin-top: 100px;
+  width: auto;
+}

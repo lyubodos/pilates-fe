@@ -1,26 +1,46 @@
 <div class="footer">
-  <div class="about-us_container">
-    <h4 class="about-us_container__heading">{{ 'MAIN.FOOTER.ABOUT_US' | translate }}</h4>
-    <p class="about-us_container__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque error
-      magnam mollitia tempora, tempore, atque error
-      magnam mollitia tempora, tempore</p>
-  </div>
-  <div class="social-media_container">
-    <h4 class="social-media_container__heading">{{ 'MAIN.FOOTER.SOCIAL_MEDIA.HEADER' | translate }}</h4>
-    <ul class="social-media_container__list">
-      <li><a href="https://www.instagram.com/reformflowstudio/"><img src="./assets/icons/instagram.svg" alt="instagram icon">Instagram</a></li>
-      <li><a href=""><img src="./assets/icons/facebook.svg" alt="facebook icon">Facebook</a></li>
-      <li><a href=""><img src="./assets/images/tiktok2.png" alt="tiktok icon">TikTok</a></li>
-    </ul>
-  </div>
-  <div class="contacts_container">
-    <h4 class="contacts_container__heading">{{ 'MAIN.FOOTER.CONTACTS.HEADER' | translate }}</h4>
-    <ul class="contacts_container__list">
-      <li><a type="phone" href="tel:+1234567890"><i class="fa-solid fa-phone"></i>+359 88888888</a></li>
-      <li><a
-        href="https://g.co/kgs/Rp5DPvw"><i class="fa-solid fa-location-arrow"></i>{{ 'MAIN.FOOTER.CONTACTS.CONTACTS_LIST.LOCATION' | translate }}</a></li>
-      <li><a type="mail" href="mailto:lyubomir_vasilev1992@abv.bg"><i class="fa-solid fa-envelope"></i>{{ 'ven@abv.bg' }}</a></li>
-    </ul>
+  <div class="footer_section">
+    <div class="about-us_container">
+      <h4 class="about-us_container__heading">{{ 'MAIN.FOOTER.ABOUT_US' | translate }}</h4>
+      <p class="about-us_container__description">{{ 'MAIN.FOOTER.ABOUT_US_DESCRIPTION' | translate }}</p>
+    </div>
+    <div class="social-media_container">
+      <h4 class="social-media_container__heading">{{ 'MAIN.FOOTER.SOCIAL_MEDIA.HEADER' | translate }}</h4>
+      <ul class="social-media_container__list">
+        <li><a href="https://www.instagram.com/reformflowstudio/">
+          <ng-icon class="ng_icons" name="bootstrapInstagram"></ng-icon>
+          Instagram</a></li>
+        <li><a href="https://www.facebook.com/share/1BuCzMbYMY/?mibextid=wwXIfr">
+          <ng-icon class="ng_icons" name="bootstrapFacebook"></ng-icon>
+          Facebook</a></li>
+        <li><a href="https://www.tiktok.com/@reformflowstudio?_t=ZN-8vEIY3lqNgU&_r=1">
+          <ng-icon class="ng_icons" name="bootstrapTiktok"></ng-icon>
+          TikTok</a></li>
+      </ul>
+    </div>
+    <div class="contacts_container">
+      <h4 class="contacts_container__heading">{{ 'MAIN.FOOTER.CONTACTS.HEADER' | translate }}</h4>
+      <ul class="contacts_container__list">
+        <li><a type="phone" href="tel:+359 897870010">
+          <ng-icon class="ng_icons" name="bootstrapTelephoneFill"></ng-icon>
+          +359 897870010</a></li>
+        <li><a type="mail" href="mailto:reformflowstudio@gmail.com">
+          <ng-icon class="ng_icons" name="bootstrapEnvelopeOpenFill"></ng-icon>
+          {{ 'reformflowstudio@gmail.com' }}</a></li>
+        <li><a
+          href="https://g.co/kgs/Rp5DPvw">
+          <ng-icon class="ng_icons" name="bootstrapPinMapFill"></ng-icon>
+          {{ 'MAIN.FOOTER.CONTACTS.CONTACTS_LIST.LOCATION' | translate }}</a></li>
+      </ul>
+    </div>
+    <div class="further-options_container">
+      <h4 class="further-options_container__heading">{{ 'MAIN.FOOTER.OTHERS.TITLE' | translate }}</h4>
+      <ul class="further-options_container__list">
+        <li><a [routerLink]="['/']" fragment="faq">{{'MAIN.FOOTER.OTHERS.FAQ' | translate}}</a></li>
+        <li><a routerLink="/terms">{{'MAIN.FOOTER.OTHERS.TERMS' |translate}}</a></li>
+        <li><a routerLink="/gdpr">{{'MAIN.FOOTER.OTHERS.GDPR' | translate}}</a></li>
+      </ul>
+    </div>
   </div>
 </div>
 

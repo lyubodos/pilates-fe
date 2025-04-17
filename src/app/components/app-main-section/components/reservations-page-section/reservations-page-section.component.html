@@ -1,1 +1,72 @@
-<p>reservations-page-section works!</p>
+<h1 class="section-title">
+  {{ 'MAIN.RESERVATIONS.TITLE' | translate }}
+</h1>
+
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form-container">
+  <h2 class="form_header">
+    {{ 'MAIN.RESERVATIONS.FORM.TITLE' | translate }}
+  </h2>
+  <div class="name-fields">
+    <div class="input-group">
+      <label for="firstName">{{ 'MAIN.RESERVATIONS.FORM.FIRST_NAME' | translate }}</label>
+      <input id="firstName" type="text" formControlName="firstName"
+             placeholder="{{ 'MAIN.RESERVATIONS.FORM.FIRST_NAME' | translate }}"/>
+      <small *ngIf="userForm.get('firstName')?.invalid && userForm.get('firstName')?.touched" class="error">
+        {{ 'MAIN.RESERVATIONS.FORM.ERRORS.FIRST_NAME' | translate }}
+      </small>
+    </div>
+
+    <div class="input-group">
+      <label for="secondName">{{ 'MAIN.RESERVATIONS.FORM.LAST_NAME' | translate }}</label>
+      <input id="secondName" type="text" formControlName="secondName"
+             placeholder="{{ 'MAIN.RESERVATIONS.FORM.LAST_NAME' | translate }}"/>
+      <small *ngIf="userForm.get('secondName')?.invalid && userForm.get('secondName')?.touched" class="error">
+        {{ 'MAIN.RESERVATIONS.FORM.ERRORS.LAST_NAME' | translate }}
+      </small>
+    </div>
+  </div>
+
+  <div class="input-group">
+    <label for="phoneNumber">{{ 'MAIN.RESERVATIONS.FORM.PHONE_NUMBER' | translate }}</label>
+    <input id="phoneNumber" type="tel" formControlName="phoneNumber"
+           placeholder="{{ 'MAIN.RESERVATIONS.FORM.PHONE_NUMBER' | translate }}"/>
+    <small *ngIf="userForm.get('phoneNumber')?.invalid && userForm.get('phoneNumber')?.touched" class="error">
+      {{ 'MAIN.RESERVATIONS.FORM.ERRORS.PHONE_NUMBER' | translate }}
+    </small>
+  </div>
+
+  <!-- Email Field -->
+  <div class="input-group">
+    <label for="email">{{ 'MAIN.RESERVATIONS.FORM.E_MAIL' | translate }}</label>
+    <input id="email" type="email" formControlName="email"
+           placeholder="{{ 'MAIN.RESERVATIONS.FORM.E_MAIL' | translate }}"/>
+    <small *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched" class="error">
+      {{ 'MAIN.RESERVATIONS.FORM.ERRORS.E_MAIL' | translate }}
+    </small>
+  </div>
+
+  <div class="input-group">
+    <label for="date">{{ 'MAIN.RESERVATIONS.FORM.DATE' | translate }}</label>
+    <input id="date" type="date" formControlName="date"/>
+    <small *ngIf="userForm.get('date')?.invalid && userForm.get('date')?.touched" class="error">
+      {{ 'MAIN.RESERVATIONS.FORM.ERRORS.DATE' | translate }}
+    </small>
+  </div>
+
+  <div class="radio-group">
+    <label>
+      <input type="radio" formControlName="option" value="option1"
+             [disabled]="userForm.get('option')?.value === 'option2'"/>
+      {{ 'MAIN.RESERVATIONS.FORM.GROUP_TRAINING' | translate }}
+    </label>
+    <label>
+      <input type="radio" formControlName="option" value="option2"
+             [disabled]="userForm.get('option')?.value === 'option1'"/>
+      {{ 'MAIN.RESERVATIONS.FORM.INDIVIDUAL_TRAINING' | translate }}
+    </label>
+  </div>
+
+  <button type="submit" [disabled]="!userForm.valid">
+    {{ 'MAIN.RESERVATIONS.FORM.SUBMIT' | translate }}
+  </button>
+</form>

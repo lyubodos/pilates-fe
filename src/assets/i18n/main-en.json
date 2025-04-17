@@ -17,7 +17,43 @@
       "MIDDLE_HEADING": "The first body we reformed was our own.",
       "MIDDLE_PARAGRAPH": "After a long period in the fitness area, we decided to make the final touch.",
       "STORY_HEADING": "Where do we come from?",
-      "STORY_PARAGRAPH": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet ex eget dolor sodales euismod. Curabitur a aliquet eros, et tempor tortor. Sed sit amet nisi in magna blandit efficitur. Suspendisse potenti. Proin at dolor sagittis, malesuada metus eget, tristique ex. Donec nulla tortor, posuere ut urna vel, malesuada convallis quam. Vestibulum malesuada purus non sagittis convallis. Proin libero arcu, interdum suscipit ullamcorper sed, maximus et nisl. Pellentesque vestibulum suscipit nunc. Etiam pulvinar egestas ligula vitae egestas. Suspendisse placerat a urna vitae maximus. Vivamus iaculis id lacus vel luctus. Aliquam lobortis semper accumsan."
+      "STORY_PARAGRAPH": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet ex eget dolor sodales euismod. Curabitur a aliquet eros, et tempor tortor. Sed sit amet nisi in magna blandit efficitur. Suspendisse potenti. Proin at dolor sagittis, malesuada metus eget, tristique ex. Donec nulla tortor, posuere ut urna vel, malesuada convallis quam. Vestibulum malesuada purus non sagittis convallis. Proin libero arcu, interdum suscipit ullamcorper sed, maximus et nisl. Pellentesque vestibulum suscipit nunc. Etiam pulvinar egestas ligula vitae egestas. Suspendisse placerat a urna vitae maximus. Vivamus iaculis id lacus vel luctus. Aliquam lobortis semper accumsan.",
+      "FAQ": {
+        "FAQ_TITLE": "Frequently Asked Questions",
+        "FAQ_LIST": [
+          {
+            "question": "What are the benefits of training with Pilates Reformer?",
+            "answer": "Pilates Reformer workouts engage all muscle groups and improve core strength, posture, balance, flexibility, and mobility. They also boost energy levels, which contributes to an overall improvement in physical condition. In addition to the physical benefits, these workouts are also beneficial for mental health."
+          },
+          {
+            "question": "How many calories are burned during one workout?",
+            "answer": "During a single session, the body burns an average of 250 to 300 kcal."
+          },
+          {
+            "question": "Who are Pilates Reformer workouts suitable for?",
+            "answer": "Anyone who wants to improve their physical and mental health can start training with the Pilates Reformer."
+          },
+          {
+            "question": "Can pregnant women train?",
+            "answer": "Yes, pregnant women can do Pilates, and it is even recommended to help ease lower back pain. Of course, the exercises must be carefully selected to ensure they pose no risk to the pregnancy."
+          },
+          {
+            "question": "Can I train if I have injuries?",
+            "answer": "At the beginning of each session, the instructor gathers information about each client's health condition. If there is an injury, specially selected, gentle exercises are used, and an individual workout plan is created for the person. Regular training may even help improve the affected area. People also ask 'Do the joints get strained?' - The Reformer machine is designed to absorb joint pressure, significantly reducing their load."
+          },
+          {
+            "question": "What do I need for the workout?",
+            "answer": "Besides motivation and a good mood, you'll need comfortable workout clothes, a towel, and non-slip socks. If you don't have socks or a towel, the studio offers socks for purchase and towels for rent."
+          },
+          {
+            "question": "Why choose ReformFlow Studio?",
+            "answer": "ReformFlow Studio is a place created to provide enjoyment and satisfaction through training. Certified instructors work here, dedicated not only to your body but also to your overall well-being and good mood. With us, you’ll gain:\n* Flexibility\n* Improved strength\n* Better muscle tone\n* Enhanced balance\n* Positive energy"
+          }
+        ]
+      },
+      "GM_HEADING": "You can easily find us and start your training today!",
+      "PILATES_QUOTE": "Physical fitness is the first requisite of happiness.",
+      "JOSEPH_PILATES": "Joseph Pilates"
     },
     "PRICES": {
       "PRICES_TITLE": "Pilates Plans",
@@ -34,22 +70,169 @@
         "TWO_MONTHS": "per two months",
         "TRAINING": "Training",
         "TRAININGS": "Trainings"
-      }
+      },
+      "PILATES_QUOTE": "In 10 sessions you'll feel the difference, in 20 sessions you'll see the difference, and in 30 sessions you'll have a whole new body.",
+      "JOSEPH_PILATES": "Joseph Pilates"
     },
     "GALLERY": {
       "TITLE": "Our Studio is open and waiting for you!",
-      "DESCRIPTION": "We are using brand new reformers, which will help you strengthen your body and form."
+      "DESCRIPTION": "We are using brand new professional reformers, which will help you strengthen your body and form."
+    },
+    "RESERVATIONS": {
+      "TITLE": "Send a request for a reservation",
+      "FORM": {
+        "TITLE": "Reservation form",
+        "FIRST_NAME": "First Name",
+        "LAST_NAME": "Last Name",
+        "PHONE_NUMBER": "Phone number",
+        "E_MAIL": "E-mail",
+        "DATE": "Select Date",
+        "GROUP_TRAINING": "Group Training",
+        "INDIVIDUAL_TRAINING": "Individual Training",
+        "SUBMIT": "Send a request",
+        "ERRORS": {
+          "FIRST_NAME": "First name must be at least 3 characters.",
+          "LAST_NAME": "Last name must be at least 3 characters.",
+          "PHONE_NUMBER": "Enter a valid phone number.",
+          "E_MAIL": "Enter a valid email.",
+          "DATE": "Date is required."
+        }
+      }
+    },
+    "ABOUT_US": {
+      "MAIN-TITLE": "About Us",
+      "TITLE": "Our instructors",
+      "АGE": "Age: ",
+      "ABOUT_US_CARDS": [
+        {
+          "title": "Veneta Vasileva",
+          "age": "26",
+          "image": "assets/images/gallery/IMG_0239.jpeg",
+          "description": "Veneta is a lawyer by profession, but her passion for movement and a healthy lifestyle has always been a guiding force in her life. From an early age, she has been actively involved in sports and physical activities, which instilled in her a sense of willpower, discipline, and strength.\n\nOver the years, her interest in sports culture deepened, and she turned to fitness, where she gained solid experience in strength and functional training. But despite the physical challenges, she felt her body was seeking something more—a method that combines physical activity with mental balance, resilience, and elegance in movement.\n\nThis is how she discovered Pilates Reformer—a practice that captivated her with its depth, focus on control, and its impact on the entire body. Pilates helped her reconnect with herself, improve her posture, develop stability, concentration, and inner harmony. Inspired by her personal results, she decided to transition from practitioner to instructor and share her experience with others.\n\nAs an instructor, Veneta stands out with her attention to detail, personalized approach, and deep understanding of her clients' needs. She believes that every body is different, and every movement should be performed with awareness and respect for our limits.\n\nFor her, Pilates is not just a workout, but a way of life—a path toward building a healthier, stronger, and more peaceful self."
+        },
+        {
+          "title": "Margarita Vasileva",
+          "age": "20",
+          "image": "assets/images/about-us/IMG_0159.jpeg",
+          "description": "Margarita is an European and World Champion in rhythmic gymnastics. She believes that every movement carries strength and elegance. Through years of intense training and competitions, she has mastered not only physical discipline but also the art of grace and body control. These are exactly the skills and knowledge she wants to pass on to others through Pilates—a system that, as she says, has the power to unite strength, flexibility, and balance, just like in rhythmic gymnastics.\n\nMargi has learned that proper breathing, concentration, and stability are key to achieving inner harmony and outer beauty. As a Pilates instructor, her goal is to inspire and guide her students on the path to a healthier, stronger, and more graceful body, by providing them with the techniques and strategies that will help them feel confident and beautiful in every movement.\n\nBy training with her, you'll discover that Pilates is more than just physical exercise—it’s a way of life that combines elegance and inner strength to help you become the best version of yourself."
+        }
+      ]
+    },
+    "CONTACTS": {
+      "TITLE": "Contacts",
+      "CONTACTS_FORM": {
+        "TITLE": "Contact us or give us feedback",
+        "SUBMIT": "Send"
+      }
     },
     "FOOTER": {
       "ABOUT_US": "About Us",
+      "ABOUT_US_DESCRIPTION": "At our Pilates studio, we believe in movement with purpose. Our certified instructors are passionate about helping you build strength, flexibility, and balance—both in body and mind. Whether you're a beginner or experienced, our welcoming space is here to support your journey to a healthier, more graceful you.",
       "SOCIAL_MEDIA": {
         "HEADER": "Social media"
       },
       "CONTACTS": {
         "HEADER": "Contacts",
         "CONTACTS_LIST": {
-          "LOCATION": "Location"
+          "LOCATION": "Sofia,'Professor Hristo Vakarelski' 11А"
         }
+      },
+      "OTHERS": {
+        "TITLE": "Further Options",
+        "FAQ": "FAQ",
+        "TERMS": "Terms & Conditions",
+        "GDPR": "GDPR"
+      }
+    },
+    "OTHER": {
+      "TERMS_CONDITIONS": {
+        "TITLE": "Terms & Conditions",
+        "PARAGRAPH": "These General Terms and Conditions govern the relationship between {{studioName}} and users of its services.",
+        "TERMS": {
+          "TERMS_TITLE1": "1. Booking Reservations",
+          "1_1": "1.1 Participation in training sessions is only possible with prior booking through the studio’s website, by phone, or in person.",
+          "1_2": "1.2 Each reservation must be confirmed by the studio.",
+          "1_3": "1.3 Clients must arrive at least 5 minutes before the class starts.",
+          "1_4": "1.4 If the client is more than 10 minutes late, the instructor has the right to deny participation in the session.",
+          "TERMS_TITLE2": "2. Cancellation and Reservation Changes",
+          "2_1": "2.1 Clients can cancel a training session no later than 3 hours in advance.",
+          "2_2": "2.2 If the cancellation deadline is not met, the session will be considered used.",
+          "2_3": "2.3 The studio reserves the right to make changes to the schedule and/or cancel sessions due to exceptional circumstances (instructor illness, technical issues, etc.).",
+          "TERMS_TITLE3": "3. Subscriptions and Payments",
+          "3_1": "3.1 Services must be paid for in advance at the studio.",
+          "3_2": "3.2 Purchased sessions and passes are personal and non-transferable.",
+          "3_3": "3.3 Unused sessions within the pass validity period cannot be compensated.",
+          "TERMS_TITLE4": "4. Health Status and Responsibility",
+          "4_1": "4.1 The client declares they are in good health and capable of participating in training sessions.",
+          "4_2": "4.2 The studio is not responsible for injuries occurring during sessions due to failure to follow the instructor’s guidance.",
+          "4_3": "4.3 Clients with health conditions must inform the instructor before the session starts.",
+          "TERMS_TITLE5": "5. Conduct and Discipline",
+          "5_1": "5.1 Clients must maintain cleanliness in the studio and show respect to staff and other clients.",
+          "5_2": "5.2 Access is prohibited for individuals under the influence of alcohol or drugs.",
+          "5_3": "5.3 The studio reserves the right to deny access to individuals who disrupt order or endanger the safety of others.",
+          "TERMS_TITLE6": "6. Personal Data",
+          "6_1": "6.1 The studio processes personal data in accordance with the Data Protection Act and",
+          "6_1_1": "GDPR",
+          "6_2": "6.2 Data is used solely for the purposes of booking, communication, and with the client’s explicit consent.",
+          "TERMS_TITLE7": "7. Final Provisions",
+          "7_1": "7.1 The studio reserves the right to amend these terms and conditions.",
+          "7_2": "7.2 Use of the studio’s services implies acceptance of these terms and conditions."
+        }
+      },
+      "GDPR": {
+        "TITLE": "GDPR",
+        "PARAGRAPH": "According to Regulation (EU) 2016/679",
+        "BLOCKS": {
+          "GDPR_TITLE1": "1. General Information",
+          "1_1": "1.1 This policy aims to inform clients of ReformFlow Studio about how we collect, store, and process their personal data.",
+          "GDPR_TITLE2": "2. What Personal Data We Collect",
+          "2_1": "2.1 Depending on the services used, we may collect the following categories of data:",
+          "2_1_1": "- Name and surname",
+          "2_1_2": "- Phone number",
+          "2_1_3": "- Email address",
+          "2_1_4": "- Health information",
+          "2_1_5": "- Booking and visit history",
+          "2_1_6": "- IP address when using our website",
+          "GDPR_TITLE3": "3. Purposes of Processing",
+          "3_1": "3.1 Personal data is collected and used for the following purposes:",
+          "3_1_1": "- Managing bookings and subscriptions",
+          "3_1_2": "- Communicating with clients about schedules, changes, and events",
+          "3_1_3": "- Improving services and customer support",
+          "3_1_4": "- Fulfilling legal obligations",
+          "GDPR_TITLE4": "4. Legal Basis for Processing",
+          "4_1": "4.1 The processing of data is based on:",
+          "4_1_1": "- Providing the service",
+          "4_1_2": "- Legal obligations",
+          "4_1_3": "- Client's consent",
+          "4_1_4": "- Service improvement",
+          "GDPR_TITLE5": "5. Data Retention",
+          "5_1": "5.1 Personal data is stored for no longer than necessary for processing purposes:",
+          "5_1_1": "- Booking data (1 year)",
+          "5_1_2": "- Health data (only during active subscription or when necessary)",
+          "5_1_3": "- Accounting records (up to 10 years according to the Accounting Act)",
+          "GDPR_TITLE6": "6. Data Sharing",
+          "6_1": "6.1 No personal data is shared with third parties, except:",
+          "6_1_1": "- To government authorities, when required by law",
+          "6_1_2": "- To service providers – booking software",
+          "GDPR_TITLE7": "7. Clients' Rights",
+          "7_1": "7.1 Each client has the following rights:",
+          "7_1_1": "- Access to their personal data",
+          "7_1_2": "- Rectification of inaccurate data",
+          "7_1_3": "- Restriction of processing",
+          "7_1_4": "- Objection to processing",
+          "7_1_5": "- Withdrawal of consent at any time",
+          "7_1_note": "*To exercise these rights, you may contact us via email.",
+          "GDPR_TITLE8": "8. Data Security",
+          "8_1": "8.1 We use technical and organizational measures to protect your data.",
+          "GDPR_TITLE9": "9. Contacts",
+          "9_1": "9.1 For questions regarding the privacy policy, please contact us via email or phone."
+        }
+      }
+    },
+    "SHARED": {
+      "TEXTAREA": {
+        "TITLE": "Comments",
+        "PLACEHOLDER": "Please provide your comment of feedback"
       }
     }
   }
