@@ -52,7 +52,7 @@
   &__text-content {
     position: absolute;
     top: 45%;
-    left: 13%;
+    left: 10%;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.6);
     padding: 20px;
@@ -61,8 +61,12 @@
     text-align: center;
     z-index: 10;
 
+    @include atSmall {
+      left: 13.3%;
+    }
+
     @include atMedium {
-      left: 14.35%;
+      left: 14%;
     }
   }
 
