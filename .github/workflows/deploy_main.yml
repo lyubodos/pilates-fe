@@ -1,0 +1,43 @@
+name: Deploy to GCP
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build app
+        run: npm run build -- --configuration production --base-href /reformflow/
+
+      - name: Decode and write GCP credentials
+        run: echo "${{ secrets.GCP_SA_KEY }}" | base64 -d > ${{ github.workspace }}/gcp-key.json
+
+      - name: Authenticate with Google Cloud
+        uses: google-github-actions/auth@v1
+        with:
+          credentials_json: '${{ secrets.GCP_SA_KEY }}'
+
+      - name: Set up gcloud CLI
+        uses: google-github-actions/setup-gcloud@v1
+        with:
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+
+      - name: Deploy to GCS
+        run: |
+          gsutil -m rsync -r dist/pilates-fe/browser/ gs://$GCS_BUCKET_NAME
+        env:
+          GCS_BUCKET_NAME: ${{ secrets.GCS_BUCKET_NAME }}
