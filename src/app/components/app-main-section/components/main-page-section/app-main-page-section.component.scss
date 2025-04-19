@@ -3,6 +3,7 @@
 @import '../../../../../assets/modules/page-section';
 @import '../../../../../assets/modules/section-title';
 @import '../../../../../assets/modules/generic-content-container';
+@import '../../../../../assets/modules/quote';
 
 .main-section {
   margin-top: -100px;
@@ -330,38 +331,4 @@
   background: #f8f8f8;
 }
 
-.quote-container {
-  max-width: 400px;
-  text-align: center;
-  animation: fadeIn 1.5s ease-in-out;
-  margin: 0 auto 50px;
-
-  @include atMedium {
-    max-height: 700px;
-  }
-}
-
-.quote-text {
-  font-size: 28px;
-  font-style: italic;
-  color: #555;
-  margin-bottom: 10px;
-}
-
-.quote-author {
-  font-size: 20px;
-  font-weight: 600;
-  color: #a33c3c;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
