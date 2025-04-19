@@ -2,7 +2,7 @@ name: Deploy to GCP
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
 
 jobs:
   build-and-deploy:
@@ -35,6 +35,11 @@ jobs:
         uses: google-github-actions/setup-gcloud@v1
         with:
           project_id: ${{ secrets.GCP_PROJECT_ID }}
+
+      - name: Show active account and project
+        run: |
+         gcloud auth list
+         gcloud config list project
 
       - name: Deploy to GCS
         run: |
