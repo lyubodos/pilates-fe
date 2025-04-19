@@ -1,6 +1,7 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 import {TranslateService} from "@ngx-translate/core";
 import {Router} from "@angular/router";
+import {NewsService} from "../../services/news.service";
 
 
 @Component({
@@ -26,23 +27,27 @@ export class AppHeaderComponent implements OnInit {
   private readonly contactsLink = "/contacts";
 
   constructor(private translate: TranslateService,
-              private router: Router) {
+              private router: Router,
+              private newsService: NewsService) {
   }
 
   public ngOnInit() {
     this.translate.setDefaultLang('main-en');
     this.translate.use('main-en');
 
+
     this.currentLang = this.translate.currentLang;
   }
 
   public switchLanguageToBG() {
     this.translate.use('main-bg');
+    this.newsService.setLang('bg');
     this.currentLang = 'main-bg';
   }
 
   public switchLanguageToEN() {
     this.translate.use('main-en');
+    this.newsService.setLang('en');
     this.currentLang = 'main-en';
   }
 

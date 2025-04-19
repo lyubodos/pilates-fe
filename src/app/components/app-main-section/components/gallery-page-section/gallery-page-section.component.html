@@ -5,6 +5,7 @@
     <img
       *ngFor="let img of images; let i = index"
       [src]="img"
+      loading="lazy"
       (click)="openModal(i)"
       class="thumbnail"
       alt="Gallery image"

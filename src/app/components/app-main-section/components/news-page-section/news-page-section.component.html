@@ -1,12 +1,12 @@
 <div class="news-section">
-  <h2 class="section-title">Latest ReformFlow News and Features</h2>
+  <h2 class="section-title">{{'MAIN.NEWS.TITLE' | translate}}</h2>
   <div class="news-container">
     <div class="news-card" *ngFor="let news of newsList" (click)="openNewsInformation(news.id)">
       <img [src]="news.image" [alt]="news.title" class="news-image">
       <div class="news-content">
-        <h3>{{ news.title }}</h3>
-        <p class="news-date">{{ news.date }}</p>
-        <p>{{ news.content }}</p>
+        <h3>{{ news.title[lang] }}</h3>
+        <p class="news-date">{{ news.date[lang] }}</p>
+        <p> {{ news.content[lang] }}</p>
       </div>
     </div>
   </div>

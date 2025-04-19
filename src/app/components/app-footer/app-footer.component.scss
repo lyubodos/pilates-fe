@@ -67,6 +67,8 @@ $section-spacing: 0.9375rem; // 15px
   @extend .footer-column;
 
   &__description {
+    margin-top: 0;
+
     @include atMedium {
       padding: 0;
     }
