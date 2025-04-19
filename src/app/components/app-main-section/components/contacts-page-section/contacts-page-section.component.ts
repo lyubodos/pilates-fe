@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {animate, state, style, transition, trigger} from "@angular/animations";
 import {FormGroup, UntypedFormBuilder, Validators} from "@angular/forms";
+import {ReservationService} from "../../../../services/reservation.service";
 
 @Component({
   selector: 'app-contacts-page-section',
@@ -19,7 +20,7 @@ import {FormGroup, UntypedFormBuilder, Validators} from "@angular/forms";
 export class ContactsPageSectionComponent implements OnInit{
   public userForm: FormGroup = new FormGroup({});
 
-  constructor(private fb: UntypedFormBuilder) {
+  constructor(private fb: UntypedFormBuilder, private reservationService: ReservationService) {
   }
 
   public ngOnInit() {
@@ -28,7 +29,7 @@ export class ContactsPageSectionComponent implements OnInit{
       secondName: this.fb.control('', [Validators.required, Validators.minLength(3)]),
       phoneNumber: this.fb.control('', [Validators.required]),
       email: this.fb.control('', [Validators.required, Validators.email]),
-      feedback: this.fb.control('')
+      feedback: this.fb.control('', Validators.required)
     });
 
   }
@@ -37,7 +38,8 @@ export class ContactsPageSectionComponent implements OnInit{
   public onSubmit(): void {
     if (this.userForm.valid) {
       console.log('Form Submitted', this.userForm.value);
-      alert('Form Submitted Successfully!');
+      const cleanData = this.reservationService.trimFormValues(this.userForm)
+      this.reservationService.sendReviewEmail(cleanData).subscribe();
       this.userForm.reset(); // Reset form after submission
     } else {
       alert('Please fill out the form correctly!');

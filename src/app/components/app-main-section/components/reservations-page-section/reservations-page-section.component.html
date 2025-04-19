@@ -47,7 +47,9 @@
 
   <div class="input-group">
     <label for="date">{{ 'MAIN.RESERVATIONS.FORM.DATE' | translate }}</label>
-    <input id="date" type="date" formControlName="date"/>
+    <input id="date" type="date" formControlName="date"
+           [min]="tomorrow"
+           [(ngModel)]="date"/>
     <small *ngIf="userForm.get('date')?.invalid && userForm.get('date')?.touched" class="error">
       {{ 'MAIN.RESERVATIONS.FORM.ERRORS.DATE' | translate }}
     </small>
@@ -55,13 +57,13 @@
 
   <div class="radio-group">
     <label>
-      <input type="radio" formControlName="option" value="option1"
-             [disabled]="userForm.get('option')?.value === 'option2'"/>
+      <input type="radio" formControlName="option" value="Group training"
+             [disabled]="userForm.get('option')?.value === 'Individual training'"/>
       {{ 'MAIN.RESERVATIONS.FORM.GROUP_TRAINING' | translate }}
     </label>
     <label>
-      <input type="radio" formControlName="option" value="option2"
-             [disabled]="userForm.get('option')?.value === 'option1'"/>
+      <input type="radio" formControlName="option" value="Individual training"
+             [disabled]="userForm.get('option')?.value === 'Group training'"/>
       {{ 'MAIN.RESERVATIONS.FORM.INDIVIDUAL_TRAINING' | translate }}
     </label>
   </div>
