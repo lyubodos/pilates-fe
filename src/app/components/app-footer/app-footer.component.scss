@@ -1,20 +1,27 @@
 @import '../../../assets/base/global';
 
+$section-width: 20%;
+$section-gap: 1.5625rem; // 25px
+$section-spacing: 0.9375rem; // 15px
+
 .footer {
   background: $mainRoseAsh;
 }
 
+// ==== Footer Section Container ====
 .footer_section {
   display: flex;
-  justify-content: space-between;
-  flex-grow: 1;
-  flex-shrink: 1;
   flex-direction: column;
+  justify-content: space-between;
   align-items: flex-start;
+  flex: 1 1 auto;
   color: ivory;
   font-size: 1.125rem;
-  padding: 0 10%;
+  padding: 2.5rem 10%;
 
+  @include atMedium {
+    flex-direction: row;
+  }
 
   .ng_icons {
     width: 2rem;
@@ -23,67 +30,63 @@
     margin-right: 0.3125rem;
   }
 
-  @include atMedium {
-    flex-direction: row;
-  }
-
   h4 {
     font-size: 1.5rem;
     font-weight: lighter;
     margin-bottom: 1.25rem;
-  }
-
-  a {
-    color: #FFFFFF;
-  }
-
-  a:hover {
-    color: #ededd2;
-  }
-}
-
-.about-us_container {
-  text-align: left;
-  margin-top: 25px;
-
-  &__heading {
 
     @include atLarge {
       margin-top: 0;
     }
   }
 
-  &__description {
+  a {
+    color: #fff;
 
+    &:hover {
+      color: #ededd2;
+    }
+  }
+}
+
+// ==== Base Block for Section Columns ====
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: $section-gap;
+
+  @include atMedium {
+    width: $section-width;
+    text-align: left;
+  }
+}
+
+// ==== About Us Section ====
+.about-us_container {
+  @extend .footer-column;
+
+  &__description {
     @include atMedium {
       padding: 0;
     }
   }
-
-  @include atMedium {
-    width: 20%;
-  }
 }
 
+// ==== Social Media Section ====
 .social-media_container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-top: 25px;
+  @extend .footer-column;
 
-  &__heading {
-
-    @include atLarge {
-      margin-top: 0;
-    }
+  &__list {
+    padding-left: 0;
+    margin-top: 0;
   }
 
   li {
     display: flex;
     align-items: center;
     list-style: none;
-    margin-bottom: 0.9375rem;
-
+    margin-bottom: $section-spacing;
 
     a {
       display: flex;
@@ -91,30 +94,11 @@
       text-decoration: none;
     }
   }
-
-  &__list {
-    padding-left: 0;
-    margin-top: 0;
-  }
-
-  @include atMedium {
-    width: 20%;
-  }
 }
 
-
+// ==== Contacts Section ====
 .contacts_container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-top: 25px;
-
-  &__heading {
-
-    @include atLarge {
-      margin-top: 0;
-    }
-  }
+  @extend .footer-column;
 
   &__list {
     list-style: none;
@@ -122,50 +106,42 @@
     padding: 0;
 
     li {
-      margin-bottom: 0.9375rem;
+      margin-bottom: $section-spacing;
 
       a {
-        text-decoration: none;
         display: flex;
         align-items: center;
+        text-decoration: none;
         white-space: pre-line;
       }
     }
   }
-
-  @include atMedium {
-    width: 20%;
-    text-align: left;
-  }
 }
 
+// ==== Further Options Section ====
 .further-options_container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-top: 25px;
-
-  .further-options_container__heading {
-    margin-top: 0;
-  }
+  @extend .footer-column;
 
   .further-options_container__list {
     list-style: none;
-    display: flex;
-    flex-direction: column;
     margin: 0;
     padding: 0;
 
     li {
-      margin-bottom: 0.9375rem;
+      margin-bottom: $section-spacing;
     }
 
     a {
       text-decoration: none;
     }
   }
+}
 
-  @include atMedium {
-    width: 20%;
-  }
+// ==== Footer Rights Text ====
+.footer_rights {
+  background: #fff;
+  font-size: 0.875rem;
+  color: #777;
+  text-align: right;
+  margin: 0;
 }

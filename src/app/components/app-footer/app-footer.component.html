@@ -26,7 +26,7 @@
           +359 897870010</a></li>
         <li><a type="mail" href="mailto:reformflowstudio@gmail.com">
           <ng-icon class="ng_icons" name="bootstrapEnvelopeOpenFill"></ng-icon>
-          {{ 'reformflowstudio@gmail.com' }}</a></li>
+          {{ 'reformflowstudio' }}</a></li>
         <li><a
           href="https://g.co/kgs/Rp5DPvw">
           <ng-icon class="ng_icons" name="bootstrapPinMapFill"></ng-icon>
@@ -36,11 +36,14 @@
     <div class="further-options_container">
       <h4 class="further-options_container__heading">{{ 'MAIN.FOOTER.OTHERS.TITLE' | translate }}</h4>
       <ul class="further-options_container__list">
-        <li><a [routerLink]="['/']" fragment="faq">{{'MAIN.FOOTER.OTHERS.FAQ' | translate}}</a></li>
-        <li><a routerLink="/terms">{{'MAIN.FOOTER.OTHERS.TERMS' |translate}}</a></li>
-        <li><a routerLink="/gdpr">{{'MAIN.FOOTER.OTHERS.GDPR' | translate}}</a></li>
+        <li><a [routerLink]="['/']" fragment="faq">{{ 'MAIN.FOOTER.OTHERS.FAQ' | translate }}</a></li>
+        <li><a routerLink="/terms">{{ 'MAIN.FOOTER.OTHERS.TERMS' |translate }}</a></li>
+        <li><a routerLink="/gdpr">{{ 'MAIN.FOOTER.OTHERS.GDPR' | translate }}</a></li>
       </ul>
     </div>
   </div>
-</div>
+  <p class="footer_rights">
+    <i class="fa-regular fa-copyright"></i>
+    2025 ReformFlow. All rights reserved.
+  </p></div>
 
