@@ -7,7 +7,8 @@
   top: 0;
   width: 100%;
   height: 75px;
-  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,240,242,1) 20%, rgba(248,180,177,1) 46%, rgba(248,180,177,1) 100%);
+  background: #FFF;
+  background: linear-gradient(90deg,rgba(255, 255, 255, 1) 14%, rgba(248, 180, 177, 1) 29%, rgba(248, 180, 177, 1) 100%);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,7 +37,11 @@
     display: inline-block;
     color: #FFFFFF;
     font-weight: 200;
-    font-size: 22px;
+    font-size: 19px;
+
+    @include atSmall {
+      font-size: 22px;
+    }
 
     @include atMedium {
       font-size: 20px;
@@ -46,6 +51,10 @@
 
     @include atLarge {
       font-size: 2rem;
+    }
+
+    @include mobileView {
+      margin-left: 12.3vw
     }
   }
 
@@ -89,7 +98,7 @@
     height: 0;
     width: 100%;
     background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     display: block;
     transition: 0.3s ease-in;
     overflow: hidden;
@@ -167,6 +176,11 @@
       }
     }
 
+    @include mobileView {
+      max-height: 300px;
+      overflow-y: auto;
+    }
+
     @include atMedium {
       background: none;
       position: static;
@@ -181,6 +195,15 @@
     @include atLarge {
       margin-right: 40px;
     }
+  }
+
+  @include atSmall {
+    background: #FFF;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 5%, rgba(248, 180, 177, 1) 30%, rgba(248, 180, 177, 1) 100%);
+  }
+
+  @include atMedium {
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,240,242,1) 20%, rgba(248,180,177,1) 46%, rgba(248,180,177,1) 100%);
   }
 }
 

@@ -1,5 +1,5 @@
 @mixin atSmall {
-  @media (min-width: 530px) {
+  @media (min-width: 380px) {
     @content;
   }
 }
@@ -16,3 +16,8 @@
   }
 }
 
+@mixin mobileView {
+  @media (min-width: 700px) and (max-width: 800px) and (max-height: 450px) {
+    @content;
+  }
+}
