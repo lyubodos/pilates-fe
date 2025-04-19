@@ -1,6 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {NewsService} from "../../../../../services/news.service";
+import {TranslatedText} from "../data/news-item.data";
+import {Subscription} from "rxjs";
 
 
 @Component({
@@ -8,8 +10,10 @@ import {NewsService} from "../../../../../services/news.service";
   templateUrl: './news-detail.component.html',
   styleUrl: './news-detail.component.scss'
 })
-export class NewsDetailComponent implements OnInit {
+export class NewsDetailComponent implements OnInit, OnDestroy {
   private newsId!: string;
+  public lang: keyof TranslatedText = 'en';
+  private langSub!: Subscription;
 
   public newsData: any;
 
@@ -19,6 +23,14 @@ export class NewsDetailComponent implements OnInit {
   ngOnInit() {
     this.newsId = this.route.snapshot.paramMap.get('id')!;
     this.newsData = this.newsService.getNewsById(this.newsId); // example service
+
+    this.langSub = this.newsService.lang$.subscribe((lang) => {
+      this.lang = lang;
+    });
+  }
+
+  public ngOnDestroy() {
+    this.langSub.unsubscribe();
   }
 
 }
