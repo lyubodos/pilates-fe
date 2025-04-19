@@ -233,6 +233,10 @@
       "TEXTAREA": {
         "TITLE": "Comments",
         "PLACEHOLDER": "Please provide your comment of feedback"
+      },
+      "NAVIGATION_LINKS": {
+        "MEET_THE_INSTRUCTORS": "Meet the instructors",
+        "BOOK_A_RESERVATION": "Book a reservation"
       }
     }
   }
