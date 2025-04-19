@@ -43,6 +43,6 @@ jobs:
 
       - name: Deploy to GCS
         run: |
-          gsutil -m rsync -r dist/pilates-fe/ gs://$GCS_BUCKET_NAME
+          gsutil -m rsync -d -c -r dist/pilates-fe/ gs://$GCS_BUCKET_NAME
         env:
           GCS_BUCKET_NAME: ${{ secrets.GCS_BUCKET_NAME }}
