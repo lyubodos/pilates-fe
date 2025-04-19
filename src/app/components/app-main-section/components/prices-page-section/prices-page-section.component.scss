@@ -2,11 +2,10 @@
 @import '../../../../../assets/modules/section-title';
 @import '../../../../../assets/modules/quote';
 
-
 .section-title {
   color: grey;
   margin-top: 0;
-  margin-bottom: 16px;
+  margin-bottom: 1rem; // 16px
 }
 
 #pilates-prices {
@@ -15,46 +14,47 @@
 
 .container {
   margin: 0;
-  padding: 0 1.25rem;
+  padding: 0 1.25rem; // 20px
 }
 
 .group_trainings_title {
-  margin-top: 6.5rem;
+  margin-top: 6.5rem; // 104px
 }
 
 .section-description {
   text-align: center;
-  font-size: 1.25rem;
+  font-size: 1.25rem; // 20px
 }
 
 .price-list-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 6.25rem; // 100px
 
   @include atMedium {
-    padding: 60px 20px;
-    margin-top: 32px;
+    padding: 3.75rem 1.25rem; // 60px 20px
+    margin-top: 2rem; // 32px
   }
 }
 
 .price-list {
   display: flex;
   flex-direction: column;
-  border-radius: 16px;
+  border-radius: 1rem; // 16px
   overflow: hidden;
 
   @include atMedium {
-    box-shadow: 20px 20px 12px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow:
+      1.25rem 1.25rem 0.75rem rgba(0, 0, 0, 0.2), // 20px 20px 12px
+      0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.1);  // 1px 3px
   }
 }
 
 .price-item {
   display: grid;
-  grid-template-columns: 1fr 0.9fr 0.6fr;
-  align-items: center;
-  padding: 20px 24px;
+  grid-template-columns: 2fr 1fr 1.3fr;
+  padding: 1.25rem 1.5rem; // 20px 24px
   font-weight: initial;
   color: grey;
 
@@ -62,24 +62,18 @@
     background-color: #fdf2f2;
   }
 
-  .service {
-    font-size: 18px;
-    font-weight: bold;
-    color: grey;
-  }
-
+  .service,
   .price {
-    font-size: 18px;
+    font-size: 1rem; // 16px
     font-weight: bold;
     color: grey;
   }
 
   .terms {
-    font-size: 18px;
+    font-size: 1rem; // 16px
     font-weight: bold;
     color: #777;
   }
-
 
   &.header {
     font-weight: 600;
@@ -87,11 +81,11 @@
     .service,
     .price,
     .terms {
-      font-size: 20px;
+      font-size: 1.1875rem; // 19px
       color: grey;
 
-      @include atMedium() {
-        font-size: 24px;
+      @include atMedium {
+        font-size: 1.5rem; // 24px
       }
     }
   }
@@ -99,20 +93,19 @@
   @include atMedium {
     margin-left: auto;
     margin-right: auto;
-    width: 750px;
+    width: 46.875rem; // 750px
     grid-template-columns: 2fr 1.6fr 0.8fr;
   }
 }
 
-
 .btn_prices {
-  margin-top: 25px;
+  margin-top: 1.5625rem; // 25px
 
   @include atMedium {
-    margin-top: 50px;
+    margin-top: 3.125rem; // 50px
   }
 }
 
 .quote-container {
-  margin: 100px auto;
+  margin: 6.25rem auto; // 100px
 }
