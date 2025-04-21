@@ -1,7 +1,7 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 import {TranslateService} from "@ngx-translate/core";
 import {Router} from "@angular/router";
-import {NewsService} from "../../services/news.service";
+import {TranslatingService} from "../../services/translating.service";
 
 
 @Component({
@@ -14,6 +14,7 @@ export class AppHeaderComponent implements OnInit {
   public menuOpen = false;
 
   public currentLang: any;
+
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
@@ -28,7 +29,7 @@ export class AppHeaderComponent implements OnInit {
 
   constructor(private translate: TranslateService,
               private router: Router,
-              private newsService: NewsService) {
+              private translatingService: TranslatingService) {
   }
 
   public ngOnInit() {
@@ -41,13 +42,13 @@ export class AppHeaderComponent implements OnInit {
 
   public switchLanguageToBG() {
     this.translate.use('main-bg');
-    this.newsService.setLang('bg');
+    this.translatingService.setLang('bg');
     this.currentLang = 'main-bg';
   }
 
   public switchLanguageToEN() {
     this.translate.use('main-en');
-    this.newsService.setLang('en');
+    this.translatingService.setLang('en');
     this.currentLang = 'main-en';
   }
 

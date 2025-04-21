@@ -9,10 +9,6 @@ import {BehaviorSubject} from "rxjs";
 
 @Injectable({providedIn: "root"})
 export class NewsService {
-    private langSubject = new BehaviorSubject<keyof TranslatedText>('en');
-    public lang$ = this.langSubject.asObservable();
-
-
     private newsList: NewsItem[] = [
         {
             id: '1',
@@ -52,18 +48,6 @@ export class NewsService {
         // }
     ];
 
-    constructor(private translationService: TranslationService) {
-    }
-
-
-    setLang(lang: keyof TranslatedText): void {
-        this.langSubject.next(lang);
-    }
-
-    get currentLang(): keyof TranslatedText {
-        return this.langSubject.value;
-    }
-
     public getNewsById(id: string): NewsItem | undefined {
         return this.newsList.find(item => item.id === id);
     }
@@ -71,5 +55,4 @@ export class NewsService {
     public getAllNews(): NewsItem[] {
         return this.newsList;
     }
-
 }
