@@ -19,6 +19,9 @@ import {ReservationService} from "../../../../services/reservation.service";
 })
 export class ContactsPageSectionComponent implements OnInit{
   public userForm: FormGroup = new FormGroup({});
+  public isLoading: boolean = false;
+  public showModal = false;
+  public modalSuccess = false;
 
   constructor(private fb: UntypedFormBuilder, private reservationService: ReservationService) {
   }
@@ -38,8 +41,19 @@ export class ContactsPageSectionComponent implements OnInit{
   public onSubmit(): void {
     if (this.userForm.valid) {
       console.log('Form Submitted', this.userForm.value);
+      this.isLoading = true;
       const cleanData = this.reservationService.trimFormValues(this.userForm)
-      this.reservationService.sendReviewEmail(cleanData).subscribe();
+      this.reservationService.sendReviewEmail(cleanData).subscribe({
+        next: (res) => {
+          this.isLoading = false;
+          this.showModal = true;
+          this.modalSuccess = true;
+        },
+        error: (err) => {
+          this.isLoading = false;
+          this.showModal = true;
+        }
+      });
       this.userForm.reset(); // Reset form after submission
     } else {
       alert('Please fill out the form correctly!');

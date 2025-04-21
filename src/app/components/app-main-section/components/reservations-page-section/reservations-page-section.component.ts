@@ -19,6 +19,9 @@ export class ReservationsPageSectionComponent implements OnInit {
   public userForm: FormGroup = new FormGroup({});
   public tomorrow: string = "";
   public date = new Date();
+  public isLoading: boolean = false;
+  public showModal = false;
+  public modalSuccess = false;
 
   constructor(private fb: UntypedFormBuilder, private reservationService: ReservationService) {
   }
@@ -38,16 +41,26 @@ export class ReservationsPageSectionComponent implements OnInit {
 
   }
 
-
   public onSubmit(): void {
     if (this.userForm.valid) {
+      this.isLoading = true;
+
       const cleanData = this.reservationService.trimFormValues(this.userForm)
       console.log('Form Submitted', this.userForm.value);
-      this.reservationService.sendReservationEmail(cleanData).subscribe();
+      this.reservationService.sendReservationEmail(cleanData).subscribe({
+        next: (res) => {
+          this.isLoading = false;
+          this.showModal = true;
+          this.modalSuccess = true;
+        },
+        error: (err) => {
+        this.isLoading = false;
+        this.showModal = true;
+      }
+      });
       this.userForm.reset(); // Reset form after submission
     } else {
       alert('Please fill out the form correctly!');
     }
   }
-
 }

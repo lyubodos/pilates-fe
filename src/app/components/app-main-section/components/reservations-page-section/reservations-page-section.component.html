@@ -71,4 +71,26 @@
   <button type="submit" [disabled]="!userForm.valid">
     {{ 'MAIN.RESERVATIONS.FORM.SUBMIT' | translate }}
   </button>
+  <app-loading-spinner [isLoading]="isLoading"></app-loading-spinner>
 </form>
+
+<div class="modal-overlay" *ngIf="showModal">
+  <div class="modal-box">
+    <h2 class="modal-title">
+      {{
+        modalSuccess
+          ? ('MAIN.SHARED.ERRORS.MODAL.TITLE_SUCCESS' | translate)
+          : ('MAIN.SHARED.ERRORS.MODAL.TITLE_FAILURE' | translate)
+      }}
+    </h2>
+    <p class="modal-message">
+      {{
+        modalSuccess
+          ? ('MAIN.SHARED.ERRORS.MODAL.SUCCESS_REVIEW' | translate)
+          : ('MAIN.SHARED.ERRORS.MODAL.FAILURE_DESCRIPTION' | translate)
+      }}
+    </p>
+    <button class="modal-close" (click)="showModal = false">{{ 'MAIN.SHARED.ERRORS.MODAL.BUTTON' | translate }}</button>
+  </div>
+
+</div>
