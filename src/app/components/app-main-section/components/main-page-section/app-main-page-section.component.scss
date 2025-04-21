@@ -53,9 +53,9 @@
   &__text-content {
     position: absolute;
     top: 45%;
-    left: 10%;
+    left: 9%;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.75);
     padding: 20px;
     width: 70%;
     transform: translateY(-50%);
@@ -63,31 +63,34 @@
     z-index: 10;
 
     @include atSmall {
-      left: 13.3%;
+      left: 10%;
     }
 
     @include atMedium {
       left: 14%;
+    }
+
+    @include mobileView {
+      top:60%;
     }
   }
 
   &__title {
     color: $mainRoseAsh;
     font-weight: 300;
-    font-size: 3.1rem;
+    font-size: 2.7rem;
+    margin: 0;
+
 
     @include atSmall {
-      margin: 0;
-      font-size: 4rem;
+      font-size: 3.1rem;
     }
 
     @include atMedium {
-      margin: 0;
       font-size: 5rem;
     }
 
     @include atLarge {
-      margin: 0;
       font-size: 7rem;
     }
   }
