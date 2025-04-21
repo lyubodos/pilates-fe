@@ -20,6 +20,13 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Replace Google Maps API key in environment.prod.ts
+        run: |
+          echo "export const environment = {
+          production: true,
+          googleMapsApiKey: '${{ secrets.GOOGLE_MAPS_API_KEY }}'
+          };" > src/environments/environment.prod.ts
+
       - name: Build app
         run: npm run build -- --configuration production --base-href /reformflow/
 
