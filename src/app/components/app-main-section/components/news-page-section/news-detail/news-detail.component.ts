@@ -3,6 +3,7 @@ import {ActivatedRoute} from "@angular/router";
 import {NewsService} from "../../../../../services/news.service";
 import {TranslatedText} from "../data/news-item.data";
 import {Subscription} from "rxjs";
+import {TranslatingService} from "../../../../../services/translating.service";
 
 
 @Component({
@@ -17,14 +18,14 @@ export class NewsDetailComponent implements OnInit, OnDestroy {
 
   public newsData: any;
 
-  constructor(private route: ActivatedRoute, private newsService: NewsService) {
+  constructor(private route: ActivatedRoute, private newsService: NewsService,private translatingService: TranslatingService) {
   }
 
   ngOnInit() {
     this.newsId = this.route.snapshot.paramMap.get('id')!;
     this.newsData = this.newsService.getNewsById(this.newsId); // example service
 
-    this.langSub = this.newsService.lang$.subscribe((lang) => {
+    this.langSub = this.translatingService.lang$.subscribe((lang) => {
       this.lang = lang;
     });
   }

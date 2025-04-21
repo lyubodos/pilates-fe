@@ -3,6 +3,7 @@ import {NewsService} from "../../../../services/news.service";
 import {NewsItem, TranslatedText} from "./data/news-item.data";
 import {Router} from "@angular/router";
 import {Subscription} from "rxjs";
+import {TranslatingService} from "../../../../services/translating.service";
 
 
 @Component({
@@ -16,13 +17,13 @@ export class NewsPageSectionComponent implements OnInit, OnDestroy {
   private langSub!: Subscription;
 
 
-  constructor(private newsService: NewsService, private router: Router) {
+  constructor(private newsService: NewsService, private router: Router, private translatingService: TranslatingService) {
   }
 
   public ngOnInit(): void {
     this.newsList = this.newsService.getAllNews();
 
-    this.langSub = this.newsService.lang$.subscribe((lang) => {
+    this.langSub = this.translatingService.lang$.subscribe((lang) => {
       this.lang = lang;
     });
   }
