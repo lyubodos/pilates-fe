@@ -58,7 +58,7 @@ export class ReservationsPageSectionComponent implements OnInit {
         this.showModal = true;
       }
       });
-      this.userForm.reset(); // Reset form after submission
+      this.userForm.reset();
     } else {
       alert('Please fill out the form correctly!');
     }
