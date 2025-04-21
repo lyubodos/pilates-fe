@@ -1,5 +1,5 @@
 <div class="news-section">
-  <h2 class="section-title">{{'MAIN.NEWS.TITLE' | translate}}</h2>
+  <h2 class="news-section__heading section-title">{{'MAIN.NEWS.TITLE' | translate}}</h2>
   <div class="news-container">
     <div class="news-card" *ngFor="let news of newsList" (click)="openNewsInformation(news.id)">
       <img [src]="news.image" [alt]="news.title" class="news-image">

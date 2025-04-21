@@ -9,7 +9,11 @@
 
 .news-section {
   text-align: center;
-  padding: 40px;
+  padding-bottom: 50px;
+
+  &__heading {
+    margin-bottom: 50px;
+  }
 }
 
 .news-container {
