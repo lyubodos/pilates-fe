@@ -8,7 +8,7 @@ import {FormGroup} from "@angular/forms";
   )
 export class ReservationService {
   private readonly API_PORT = 3000;
-  private baseUrl = `http://localhost:${this.API_PORT}/api`;
+  private baseUrl = `https://mail-server-udidkvi4dq-uc.a.run.app/api`;
 
   constructor(private http: HttpClient) {}
 
