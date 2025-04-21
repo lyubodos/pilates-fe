@@ -13,6 +13,10 @@
     },
     "HOME": {
       "SUBTITLE": "Your body's reformer!",
+      "PARAGRAPH": {
+        "PART_1": "Providing the best care for your body and mind that will be appreciated by your",
+        "PART_2": "soul."
+      },
       "GET_IN_TOUCH": "Get in Touch",
       "MIDDLE_HEADING": "The first body we reformed was our own.",
       "MIDDLE_PARAGRAPH": "After a long period in the fitness area, we decided to make the final touch.",

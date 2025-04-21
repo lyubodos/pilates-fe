@@ -4,12 +4,8 @@
 
 .section-title,
 .form_header {
-  color: grey;
-}
-
-form_header {
   text-align: center;
-  color: #333;
+  color: grey;
 }
 
 .form-container {
@@ -47,7 +43,7 @@ form_header {
   flex-direction: column;
 
   label {
-    font-weight: 500;
+    font-weight: bold;
     margin-bottom: 5px;
   }
 
