@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {animate, state, style, transition, trigger} from "@angular/animations";
 import {FormGroup, UntypedFormBuilder, Validators} from "@angular/forms";
 import {ReservationService} from "../../../../services/reservation.service";
+import {TranslateService} from "@ngx-translate/core";
+import {TransmitionData} from "../reservations-page-section/reservations-page-section.component";
 
 @Component({
   selector: 'app-contacts-page-section',
@@ -23,7 +25,7 @@ export class ContactsPageSectionComponent implements OnInit{
   public showModal = false;
   public modalSuccess = false;
 
-  constructor(private fb: UntypedFormBuilder, private reservationService: ReservationService) {
+  constructor(private fb: UntypedFormBuilder, private reservationService: ReservationService, private translate: TranslateService) {
   }
 
   public ngOnInit() {
@@ -40,10 +42,19 @@ export class ContactsPageSectionComponent implements OnInit{
 
   public onSubmit(): void {
     if (this.userForm.valid) {
+      const transmitionData = {
+        firstName: this.userForm.get('firstName')?.value.trim(),
+        secondName: this.userForm.get('secondName')?.value.trim(),
+        phoneNumber: this.userForm.get('phoneNumber')?.value.trim(),
+        email: this.userForm.get('email')?.value.trim(),
+        feedback: this.userForm.get('option')?.value,
+        lang: this.translate.currentLang
+      }
+
       console.log('Form Submitted', this.userForm.value);
       this.isLoading = true;
       const cleanData = this.reservationService.trimFormValues(this.userForm)
-      this.reservationService.sendReviewEmail(cleanData).subscribe({
+      this.reservationService.sendReviewEmail(transmitionData).subscribe({
         next: (res) => {
           this.isLoading = false;
           this.showModal = true;

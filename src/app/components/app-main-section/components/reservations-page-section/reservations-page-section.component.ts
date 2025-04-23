@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, UntypedFormBuilder, Validators} from "@angular/forms";
 import {ReservationService} from "../../../../services/reservation.service";
+import {TranslateService} from "@ngx-translate/core";
 
 interface ContactFormGroup {
   firstName: FormControl<string>;
@@ -8,6 +9,16 @@ interface ContactFormGroup {
   phoneNumber: FormControl<string>;
   email: FormControl<string>;
   date: FormControl<string>;
+}
+
+export interface TransmitionData {
+  firstName: string;
+  secondName: string;
+  phoneNumber: string;
+  email: string;
+  date: string;
+  option: string;
+  lang: string;
 }
 
 @Component({
@@ -23,7 +34,7 @@ export class ReservationsPageSectionComponent implements OnInit {
   public showModal = false;
   public modalSuccess = false;
 
-  constructor(private fb: UntypedFormBuilder, private reservationService: ReservationService) {
+  constructor(private fb: UntypedFormBuilder, private reservationService: ReservationService, private translate: TranslateService) {
   }
 
   public ngOnInit() {
@@ -43,11 +54,21 @@ export class ReservationsPageSectionComponent implements OnInit {
 
   public onSubmit(): void {
     if (this.userForm.valid) {
-      this.isLoading = true;
 
-      const cleanData = this.reservationService.trimFormValues(this.userForm)
+      const transmitionData: TransmitionData = {
+        firstName: this.userForm.get('firstName')?.value.trim(),
+        secondName: this.userForm.get('secondName')?.value.trim(),
+        phoneNumber: this.userForm.get('phoneNumber')?.value.trim(),
+        email: this.userForm.get('email')?.value.trim(),
+        date: this.userForm.get('date')?.value,
+        option: this.userForm.get('option')?.value,
+        lang: this.translate.currentLang
+      }
+
+      this.isLoading = true;
+      // const cleanData = this.reservationService.trimFormValues(transmitionData)
       console.log('Form Submitted', this.userForm.value);
-      this.reservationService.sendReservationEmail(cleanData).subscribe({
+      this.reservationService.sendReservationEmail(transmitionData).subscribe({
         next: (res) => {
           this.isLoading = false;
           this.showModal = true;
