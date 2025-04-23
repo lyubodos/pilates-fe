@@ -102,7 +102,7 @@
     margin: 0;
 
     @include atSmall {
-      font-size: 3rem;
+      font-size: 2.3rem;
     }
 
     @include atMedium {
@@ -118,7 +118,6 @@
     color: grey;
     font-size: 1rem;
     font-weight: 100;
-    margin-bottom: 50px;
 
     @include atSmall {
       margin: 0;
@@ -126,7 +125,7 @@
       margin-left: auto;
       margin-right: auto;
       max-width: 400px;
-      margin-bottom: 30px;
+      margin-bottom: 15px;
     }
 
     @include atMedium {
@@ -136,7 +135,7 @@
       margin-left: auto;
       margin-right: auto;
       max-width: 360px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
 
     @include atLarge {
