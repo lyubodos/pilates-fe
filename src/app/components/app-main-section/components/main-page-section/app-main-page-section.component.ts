@@ -1,6 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {TranslateService} from "@ngx-translate/core";
+import {TranslatedText} from "../news-page-section/data/news-item.data";
+import {TranslatingService} from "../../../../services/translating.service";
+import {Subscription} from "rxjs";
+import {TestimonialsText} from "../../../shared/data/testimonials-text.data";
 
 interface FaqStruct {
   question: string;
@@ -9,12 +13,76 @@ interface FaqStruct {
 };
 
 
+
 @Component({
   selector: 'app-main-page-section',
   templateUrl: './app-main-page-section.component.html',
   styleUrl: './app-main-page-section.component.scss'
 })
 export class AppMainPageSectionComponent implements OnInit {
+  public lang: keyof TranslatedText = 'en';
+  private langSub!: Subscription;
+
+  public testimonials: TestimonialsText[]  = [
+    {
+      name: {
+        en: 'Margi Margieva',
+        bg: "Марги Маргиева"
+      },
+      image: 'assets/images/about-us/IMG_0159.jpeg',
+      info: {
+        en: 'These trainings changed my life. Highly recommended!',
+        bg: "Тези тренировки промениха живота ми"
+      },
+      role: {
+        en: 'UX Designer',
+        bg: "Дизайнер приложения"
+      },
+      message: {
+        en: "This was the best training!",
+        bg: "Това беше най-яката тренировка!"
+      }
+    },
+    {
+      name: {
+        en: 'Boris Johnson',
+        bg: "Борис Джонсън"
+      },
+      image: 'assets/images/about-us/IMG_0159.jpeg',
+      info: {
+        en: 'These trainings changed my life. Highly recommended!',
+        bg: "Тези тренировки промениха живота ми"
+      },
+      role: {
+        en: 'UX Designer',
+        bg: "Дизайнер приложения"
+      },
+      message: {
+        en: "This was the best training!",
+        bg: "Това беше най-яката тренировка!"
+      }
+    },
+    {
+      name: {
+        en: 'Cvetelina Yaneva',
+        bg: "Цветелина Янева"
+      },
+      image: 'assets/images/about-us/IMG_0159.jpeg',
+      info: {
+        en: 'These trainings changed my life. Highly recommended!',
+        bg: "Тези тренировки промениха живота ми"
+      },
+      role: {
+        en: 'UX Designer',
+        bg: "Дизайнер приложения"
+      },
+      message: {
+        en: "This was the best training!",
+        bg: "Това беше най-яката тренировка!"
+      }
+    }
+  ];
+
   private readonly contactsLink = "/contacts";
   private readonly INTERVAL = 5000;
 
@@ -30,7 +98,7 @@ export class AppMainPageSectionComponent implements OnInit {
   ];
 
 
-  constructor(private router: Router, private route: ActivatedRoute, private translateService: TranslateService) {
+  constructor(private router: Router, private route: ActivatedRoute, private translateService: TranslateService, private translatingService: TranslatingService) {
 
   }
 
@@ -38,6 +106,10 @@ export class AppMainPageSectionComponent implements OnInit {
     this.interval = setInterval(() => {
       this.nextSlide();
     }, this.INTERVAL);
+
+    this.langSub = this.translatingService.lang$.subscribe((lang) => {
+      this.lang = lang;
+    });
 
     this.loadFaqs();
 

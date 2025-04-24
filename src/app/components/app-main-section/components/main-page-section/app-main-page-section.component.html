@@ -37,4 +37,17 @@
   </div>
   <h2 class="section-title gma-heading">{{ 'MAIN.HOME.GM_HEADING' | translate }}</h2>
   <app-google-map></app-google-map>
+  <div class="testimonials-container">
+    <div class="testimonial-card" *ngFor="let t of testimonials">
+      <div class="image-wrapper">
+        <img [src]="t.image" [alt]="t.name" />
+      </div>
+      <div class="content">
+        <p class="message">"{{ t.info[lang] }}"</p>
+        <p class="name">{{ t.name[lang] }}</p>
+        <p class="role">{{ t.role[lang] }}</p>
+        <p class="message">{{t.message[lang]}}</p>
+      </div>
+    </div>
+  </div>
 </div>
