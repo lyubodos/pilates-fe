@@ -8,6 +8,10 @@
   margin-bottom: 1rem; // 16px
 }
 
+.individual-heading {
+  font-size: 1.75rem;
+}
+
 #pilates-prices {
   padding-bottom: 2.5rem;
 }
@@ -24,6 +28,8 @@
 .section-description {
   text-align: center;
   font-size: 1.25rem; // 20px
+  color: grey;
+  padding: 0 20px;
 }
 
 .price-list-section {
@@ -107,5 +113,5 @@
 }
 
 .quote-container {
-  margin: 6.25rem auto; // 100px
+  margin: 3rem auto; // 100px
 }
