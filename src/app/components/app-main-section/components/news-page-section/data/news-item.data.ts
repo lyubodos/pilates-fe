@@ -1,3 +1,5 @@
+import {TranslatedText} from "../../../../shared/data/translated-text.data";
+
 export interface NewsItem {
   id: string;
   title: TranslatedText;
@@ -5,9 +7,4 @@ export interface NewsItem {
   content: TranslatedText;
   description: TranslatedText;
   image: string;
-}
-
-export interface TranslatedText {
-  en: string;
-  bg: string;
 }
