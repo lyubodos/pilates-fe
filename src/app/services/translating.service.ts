@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
 import {BehaviorSubject} from "rxjs";
-import {TranslatedText} from "../components/app-main-section/components/news-page-section/data/news-item.data";
+import {TranslatedText} from "../components/shared/data/translated-text.data";
 
 @Injectable({
   providedIn: 'root'

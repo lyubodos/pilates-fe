@@ -1,4 +1,4 @@
-import {TranslatedText} from "../../app-main-section/components/news-page-section/data/news-item.data";
+import {TranslatedText} from "./translated-text.data";
 
 export interface TestimonialsText {
   name: TranslatedText,

@@ -1,8 +1,6 @@
 import {Injectable} from "@angular/core";
 import {
-    NewsItem,
-    TranslatedText
-} from "../components/app-main-section/components/news-page-section/data/news-item.data";
+    NewsItem} from "../components/app-main-section/components/news-page-section/data/news-item.data";
 import {TranslateService} from "@ngx-translate/core";
 import {TranslationService} from "./languages.service";
 import {BehaviorSubject} from "rxjs";

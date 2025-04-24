@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {TranslateService} from "@ngx-translate/core";
-import {TranslatedText} from "../news-page-section/data/news-item.data";
 import {TranslatingService} from "../../../../services/translating.service";
 import {Subscription} from "rxjs";
 import {TestimonialsText} from "../../../shared/data/testimonials-text.data";
+import {TranslatedText} from "../../../shared/data/translated-text.data";
 
 interface FaqStruct {
   question: string;

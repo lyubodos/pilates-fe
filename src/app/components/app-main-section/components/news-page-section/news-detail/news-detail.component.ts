@@ -1,9 +1,9 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {NewsService} from "../../../../../services/news.service";
-import {TranslatedText} from "../data/news-item.data";
 import {Subscription} from "rxjs";
 import {TranslatingService} from "../../../../../services/translating.service";
+import {TranslatedText} from "../../../../shared/data/translated-text.data";
 
 
 @Component({
