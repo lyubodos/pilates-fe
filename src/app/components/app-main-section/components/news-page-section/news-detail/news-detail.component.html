@@ -1,7 +1,58 @@
 <div class="news-details">
-    <h1 class="news-details__heading section-title">{{ newsData.title[lang] }}</h1>
-    <p class="news-details__date">{{ newsData.date?.[lang] }}</p>
-    <img class="news-details__image" src="{{newsData.image}}" alt="news-image">
-    <p class="news-details__description">{{ newsData.description[lang] }}</p>
+  <h1 class="news-details__heading section-title">{{ newsData.title[lang] }}</h1>
+  <p class="news-details__date">{{ newsData.date?.[lang] }}</p>
+  <img class="news-details__image" src="{{newsData.image}}" alt="news-image">
+  <p class="news-details__description">{{ newsData.description[lang] }}</p>
+  @if (newsData.title1) {
+    <h4 class="news-details__description">{{ newsData.title1[lang] }}</h4>
+  }
+  @if (newsData.description1) {
+    <p class="news-details__description">{{ newsData.description1[lang] }}</p>
+  }
+  @if (newsData.interestingFactTitle) {
+    <h4 class="news-details__description">{{ newsData.interestingFactTitle[lang] }}</h4>
+    @if (newsData.interestingFactParagraph) {
+      <p class="news-details__description">{{ newsData.interestingFactParagraph[lang] }}</p>
+    }
+  }
+
+  @if (newsData.orderedList1) {
+    <h3 class="news-details__description">{{ newsData.orderedList1[lang] }}</h3>
+    <ol>
+      @for (item of newsData.orderedItems; track item.id; ) {
+        <li><h3>{{ item.line1[lang] }}</h3></li>
+        @if (item.line2) {
+          <p>{{ item.line2[lang] }}</p>
+        }
+      }
+    </ol>
+  }
+
+  @if (newsData.unorderedList1) {
+    <p class="news-details__description">{{ newsData.unorderedList1[lang] }}</p>
+    <ul>
+      @for (item of newsData.unorderedItems1; track item.id; ) {
+        <li><p>{{ item[lang] }}</p></li>
+      }
+    </ul>
+  }
+  @if (newsData.title2) {
+    <h4 class="news-details__description">{{ newsData.title2[lang] }}</h4>
+    @if (newsData.description2) {
+      <p class="news-details__description">{{ newsData.description2[lang] }}</p>
+    }
+  }
+  @if (newsData.unorderedList2) {
+    <p class="news-details__description">{{ newsData.unorderedList2[lang] }}</p>
+    <ul>
+      @for (item of newsData.unorderedItems2; track item.id; ) {
+        <li><p>{{ item[lang] }}</p></li>
+      }
+    </ul>
+  }
+  @if (newsData.title3) {
+    <h4 class="news-details__description">{{ newsData.title3[lang] }}</h4>
+    <p class="news-details__description">{{ newsData.paragraphEnd[lang] }}</p>
+  }
 </div>
 
