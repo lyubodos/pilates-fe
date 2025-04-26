@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, UntypedFormBuilder, Validators} from "@angular/forms";
 import {ReservationService} from "../../../../services/reservation.service";
 import {TranslateService} from "@ngx-translate/core";
+import {TransmitionData} from "../../../shared/data/transmition-data.data";
 
 interface ContactFormGroup {
   firstName: FormControl<string>;
@@ -11,15 +12,6 @@ interface ContactFormGroup {
   date: FormControl<string>;
 }
 
-export interface TransmitionData {
-  firstName: string;
-  secondName: string;
-  phoneNumber: string;
-  email: string;
-  date: string;
-  option: string;
-  lang: string;
-}
 
 @Component({
   selector: 'app-reservations-page-section',
@@ -66,8 +58,6 @@ export class ReservationsPageSectionComponent implements OnInit {
       }
 
       this.isLoading = true;
-      // const cleanData = this.reservationService.trimFormValues(transmitionData)
-      console.log('Form Submitted', this.userForm.value);
       this.reservationService.sendReservationEmail(transmitionData).subscribe({
         next: (res) => {
           this.isLoading = false;

@@ -3,7 +3,6 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
 import {FormGroup, UntypedFormBuilder, Validators} from "@angular/forms";
 import {ReservationService} from "../../../../services/reservation.service";
 import {TranslateService} from "@ngx-translate/core";
-import {TransmitionData} from "../reservations-page-section/reservations-page-section.component";
 
 @Component({
   selector: 'app-contacts-page-section',
@@ -51,9 +50,7 @@ export class ContactsPageSectionComponent implements OnInit{
         lang: this.translate.currentLang
       }
 
-      console.log('Form Submitted', this.userForm.value);
       this.isLoading = true;
-      const cleanData = this.reservationService.trimFormValues(this.userForm)
       this.reservationService.sendReviewEmail(transmitionData).subscribe({
         next: (res) => {
           this.isLoading = false;
@@ -65,7 +62,7 @@ export class ContactsPageSectionComponent implements OnInit{
           this.showModal = true;
         }
       });
-      this.userForm.reset(); // Reset form after submission
+      this.userForm.reset();
     } else {
       alert('Please fill out the form correctly!');
     }
