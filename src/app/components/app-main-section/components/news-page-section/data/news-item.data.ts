@@ -19,7 +19,8 @@ export interface NewsItem {
   tableList?: TranslatedText;
   orderedItems?: {
     line1: TranslatedText,
-    line2?: TranslatedText
+    line2?: TranslatedText,
+    line3?: TranslatedText
   }[];
   unorderedItems1?: TranslatedText[];
   unorderedItems2?: TranslatedText[];
