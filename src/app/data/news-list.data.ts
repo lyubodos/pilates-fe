@@ -12,8 +12,8 @@ export const NEWS_LIST: NewsItem[] = [
       bg: "Март 30, 2025",
     },
     content: {
-      en: "Healthy eating and dietary methods",
-      bg: "Здравословно хранене и методи на хранене"
+      en: "Healthy eating is not a diet, deprivation, or a short-term trend. It is a long-term lifestyle that keeps both the body and mind in optimal shape.",
+      bg: "Здравословното хранене не е диета, лишения или краткосрочна мода. То е дългосрочен начин на живот, който поддържа тялото и ума в оптимална форма."
     },
     description: {
       en: "In today's world, filled with stress, constant motion, and a fast pace, eating often becomes something mechanical – something we do on the go, without thinking about what we are actually putting into our bodies. However, healthy eating is not a diet, deprivation, or a short-term trend. It is a long-term lifestyle that keeps both the body and mind in optimal shape.",
@@ -145,20 +145,19 @@ export const NEWS_LIST: NewsItem[] = [
   {
     id: '2',
     title: {
-      bg: "Какво представлява Пилатес реформър: Практики и ползи за тялото и ума",
-      en: "What is Pilates Reformer: Practices and Benefits for the Body and Mind"
+      bg: "Какво представлява Пилатес реформър: Практики и ползи",
+      en: "What is Pilates Reformer: Practices and Benefits"
     },
     date: {
       en: "April 5, 2025",
       bg: "Април 5, 2025",
     },
     content: {
-      bg: "Пилатес реформър е една от най-популярните и ефективни форми на Пилатес",
-      en: "Pilates Reformer is one of the most popular and effective forms of Pilates."
+      bg: "Пилатес реформър е една от най-популярните и ефективни форми на Пилатес, за упражняването на която се използва специален уред – реформър",
+      en: "Pilates Reformer is one of the most popular and effective forms of Pilates, performed using a special piece of equipment – the reformer."
     },
     description: {
-      bg: "Пилатес реформър е една от най-популярните и ефективни форми на Пилатес, за\n" +
-        "упражняването на която се използва специален уред – реформър, който подпомага за\n" +
+      bg: "Пилатес реформър е една от най-популярните и ефективни форми на Пилатес, за упражняването на която се използва специален уред – реформър, който подпомага за\n" +
         "подобряването на силата, гъвкавостта, баланса и координацията. Тази практика се радва на\n" +
         "все по-голям интерес, както сред начинаещи, така и сред напреднали, благодарение на\n" +
         "възможността да се адаптира към различни нива и цели.",
@@ -376,5 +375,218 @@ export const NEWS_LIST: NewsItem[] = [
         "Both styles complement each other wonderfully – many people combine both practices to achieve a balance between strength, flexibility, and control. Ultimately, the best Pilates style is the one that brings you joy and motivates you to move."
     },
     image: "assets/images/news/diff.jpg"
+  },
+  {
+    id: '4',
+    title: {
+      bg: "Топ 10 упражнения за горна част на тялото на Пилатес реформър",
+      en: "Top 10 Upper Body Exercises on the Pilates Reformer"
+    },
+    date: {
+      bg: "Април 26, 2025",
+      en: "April 26, 2025",
+    },
+    content: {
+      bg: "Пилатес реформър не е само за краката и седалището – той е отличен инструмент и за изграждане на сила, стабилност и елегантна стойка в горната част на тялото.",
+      en: "The Pilates Reformer is not just for the legs and glutes – it is also an excellent tool for building strength, stability, and an elegant posture in the upper body."
+    },
+    description: {
+      bg: "Пилатес реформър не е само за краката и седалището – той е отличен инструмент и за\n" +
+        "изграждане на сила, стабилност и елегантна стойка в горната част на тялото. С помощта на\n" +
+        "въжетата, пружините и подвижната платформа можеш да активираш мускулите на ръцете,\n" +
+        "гърдите, раменете и гърба, без излишно и прекалено натоварване върху ставите.\n" +
+        "Представяме Ви 10 от най-ефективните упражнения за горна част, подходящи както за\n" +
+        "начинаещи, така и за напреднали.",
+      en: "The Pilates Reformer is not just for the legs and glutes – it is also an excellent tool for building strength, stability, and an elegant posture in the upper body. With the help of the straps, springs, and the moving platform, you can activate the muscles of the arms, chest, shoulders, and back without unnecessary or excessive strain on the joints.\n" +
+        "We present to you 10 of the most effective upper body exercises, suitable for both beginners and advanced practitioners."
+    },
+    orderedList1: {
+      bg: "",
+      en: ""
+    },
+    orderedItems: [
+      {
+        line1: {
+          bg: "Arm Circles (кръгове с ръце с въжета)",
+          en: "Arm Circles (circles with arms using straps)"
+        },
+        line2: {
+          bg: "Зони: бицепс, трицепс, рамене, горна част на гърба",
+          en: "Zones: biceps, triceps, shoulders, upper back"
+        },
+        line3: {
+          bg: "Изпълнява се в легнало положение, по гръб, като ръцете държат късите дръжки на въжетата. Изпълняват се кръгови движения в двете посоки, които активират рамото, стабилизират лопатките и подобряват мобилността.",
+          en: "Performed lying on your back, holding the short handles of the straps. Circular movements are performed in both directions, activating the shoulder, stabilizing the shoulder blades, and improving mobility."
+        }
+      },
+      {
+        line1: {
+          bg: "Chest Expansion (разтягане на гърди)",
+          en: "Chest Expansion"
+        },
+        line2: {
+          bg: "Зони: гръден кош, бицепси, рамене",
+          en: "Zones: chest, biceps, shoulders"
+        },
+        line3: {
+          bg: "Упражнението се изпълнява в седнало положение, с лице към задната част на реформъра и ръце, държащи въжетата. Ръцете дърпат изпънати въжетата назад. С него се разтварят гърдите и се укрепва горната част на гърба.",
+          en: "The exercise is performed in a seated position, facing the back of the reformer, with the hands holding the straps. The arms pull the taut straps backward. This movement opens the chest and strengthens the upper part of the back."
+        }
+      },
+      {
+        line1: {
+          bg: "Biceps Curls",
+          en: "Biceps Curls"
+        },
+        line2: {
+          bg: "Зони: бицепс, рамо",
+          en: "Zones: biceps, shoulder"
+        },
+        line3: {
+          bg: "Това упражнение има различни вариации. Може да се изпълнява с помощта на бокс, в седнало, полуседнало положение на платформата, независимо дали тялото ще е обърнато към задната или предната част на реформъра. Упражнението се състои в сгъване на ръцете към тялото и отпускане с помощта на въжетата, които оказват съпротивление. Лактите не се местят, а усилието и контролът идва от бицепса. За разлика от свободните тежести във фитнеса тук натоварване върху ставите е минимално.",
+          en: "This exercise has various variations. It can be performed with the help of a box, seated or semi-seated on the platform, whether the body is facing the front or the back of the reformer. The exercise consists of bending the arms toward the body and releasing them with the assistance of the straps, which provide resistance. The elbows remain stationary, and the effort and control come from the biceps. Unlike free weights in the gym, here the joint strain is minimal."
+        }
+      },
+      {
+        line1: {
+          bg: "Triceps Press (избутване за трицепс)",
+          en: "Triceps Press"
+        },
+        line2: {
+          bg: "Зони: трицепси, гръб",
+          en: "Zones: triceps, back"
+        },
+        line3: {
+          bg: "Отново упражнение, което се изпълнява в различни позиции-седнал, полуседнал, с помощта на бокс, както и в двете различни посоки на реформъра. Ръцете избутват въжетата, които оказват съпротивление, назад. Това упражнение като цяло спомага за стягането на задната част на ръцете.",
+          en: "Again an exercise that is performed in different positions — seated, semi-seated, with the help of a box, and in both directions on the reformer. The arms push the straps, which provide resistance, backward. This exercise mainly helps tighten the back part of the arms."
+        }
+      },
+      {
+        line1: {
+          bg: "Hug a Tree (прегръдка на дърво)",
+          en: "Hug a Tree"
+        },
+        line2: {
+          bg: "Зони: гърди, рамене, гръб",
+          en: "Zones: chest, shoulders, back"
+        },
+        line3: {
+          bg: "Упражнението се изпълнява в седнало или полуседнало положение към фуутбара, отново може да се използва бокс за разнообразяване на упражнението. Използват се въжетата на реформъра, като ръцете ги дърпат напред. Движението на ръцете наподобява прегръдка. Така се стягат гърдите и се оформят ръцете.",
+          en: "The exercise is performed in a seated or semi-seated position facing the footbar, and a box can again be used to vary the exercise. The reformer's straps are used, with the hands pulling them forward. The movement of the arms resembles a hug. This way the chest is tightened and the arms are shaped."
+        }
+      },
+      {
+        line1: {
+          bg: "Rhomboid Pulls (дърпане към гърдите)",
+          en: "Rhomboid Pulls"
+        },
+        line2: {
+          bg: "Зони: лопатки, горна част на гърба",
+          en: "Zones: shoulder blades, upper back"
+        },
+        line3: {
+          bg: "Това упражнение се с изпълнява с лице към задната част на реформъра. Отново може да се изпълнява в седнало положение, полуседнало или с помощта на бокс. Ръцете дърпат въжетата към тялото, активирайки междулопатъчните мускули. Правилното изпълнение води до подобряване на стойката и укрепва гърба.",
+          en: "This exercise is performed facing the back of the reformer. Again, it can be done in a seated, semi-seated position, or with the help of a box. The hands pull the straps toward the body, activating the muscles between the shoulder blades. Correct execution leads to improved posture and strengthening of the back."
+        }
+      },
+      {
+        line1: {
+          bg: "Lat Pulls",
+          en: "Lat Pulls"
+        },
+        line2: {
+          bg: "Зони: широк гръбен мускул, трицепс",
+          en: "Zones: latissimus dorsi, triceps"
+        },
+        line3: {
+          bg: "Упражнението се изпълнява в легнало положение, по корем, с помощта на бокс и въжета. Ръцете издърпват въжетата встрани. За по-голямо напрежение въжетата могат да бъдат кръстосани. С това упражнение се подобрява стойката и издължава торса.",
+          en: "The exercise is performed lying prone, with the help of a box and straps. The arms pull the straps outward. For greater tension, the straps can be crossed. This exercise improves posture and elongates the torso."
+        }
+      },
+      {
+        line1: {
+          bg: "Shoulder Press",
+          en: "Shoulder Press"
+        },
+        line2: {
+          bg: "Зони: рамене, ръце",
+          en: "Zones: shoulders, arms"
+        },
+        line3: {
+          bg: "Тялото е в седнало или полуседнало положение, отново може да се използва бокс. За изпълнение на упражнението се използва въже, което се избутва нагоре, наподобява класическия shoulder press с тежести от фитнеса. Правилното изпълнение подобрява силата и контрола в раменете.",
+          en: "The body is in a seated or semi-seated position, and a box can again be used. The exercise is performed using a strap that is pushed upward, resembling the classic shoulder press with gym weights. Correct execution improves strength and control in the shoulders."
+        }
+      },
+      {
+        line1: {
+          bg: "Punching (Удари напред)",
+          en: "Punching (Forward Punches)"
+        },
+        line2: {
+          bg: "Зони: ръце, гърди, корем",
+          en: "Zones: arms, chest, core"
+        },
+        line3: {
+          bg: "В седнало положение или на колене, ръцете държат въжетата. Ръцете „удрят“ напред една след друга, редувайки се. Наподобява удар по боксова круша. С упражнението се активират раменете и ръцете, като също така се подобрява баланса и се покачва сърдечният ритъм.",
+          en: "In a seated or kneeling position, the hands hold the straps. The arms 'punch' forward one after another, alternating. It resembles hitting a boxing bag. This exercise activates the shoulders and arms, while also improving balance and raising the heart rate."
+        }
+      },
+      {
+        line1: {
+          bg: "Rowing Series (гребане отпред и отзад)",
+          en: "Rowing Series (Front and Back Rowing)"
+        },
+        line2: {
+          bg: "Зони: гръб, ръце, рамене",
+          en: "Zones: back, arms, shoulders"
+        },
+        line3: {
+          bg: "Сложна, но изключително ефективна серия, включваща различни посоки на движение. Може да се изпълнява в различни позиции и посоки на реформъра. Движението се състои в дърпане на въжетата към тялото. Тук упражнението обхваща цялата горна част на тялото.",
+          en: "A complex yet extremely effective series that involves movements in different directions. It can be performed in various positions and directions on the reformer. The movement consists of pulling the straps toward the body. This exercise engages the entire upper body."
+        }
+      }
+    ],
+    unorderedList1: {
+      bg: "Съвети за изпълнение на упражненията:",
+      en: "Advices for performing different exercises"
+    },
+    unorderedItems1: [
+      {
+        bg: "Работи с контрол, не с инерция",
+        en: "Work with control, not with momentum"
+      },
+      {
+        bg: "Така активираш дълбоката мускулатура.",
+        en: "This way you activate the deep muscles."
+      },
+      {
+        bg: "Използвай правилната съпротива",
+        en: "Use the correct resistance"
+      },
+      {
+        bg: "По-малко тежест = повече контрол.",
+        en: "Less weight = more control."
+      },
+      {
+        bg: "Следи за неутрална позиция на гръбнака и активен корем",
+        en: "Maintain a neutral spine and an active core"
+      },
+      {
+        bg: "По време на всяко упражнение.",
+        en: "During every exercise."
+      }
+    ],
+    title3: {
+      bg: "",
+      en: ""
+    },
+    paragraphEnd: {
+      bg: "Горната част на тялото често остава на заден план, но именно тя е отговорна за стойката,\n" +
+        "отворената гръд и грациозното движение. С Пилатес реформър можеш да я тренираш по\n" +
+        "интелигентен и ефективен начин, без тежки натоварвания и риск от травми. Добави тези\n" +
+        "упражнения в своята практика и усети разликата в тялото си.",
+      en: "The upper body is often neglected, but it is responsible for posture, an open chest, and graceful movement. With the Pilates Reformer, you can train it in an intelligent and effective way, without heavy strain or risk of injury. Add these exercises to your practice and feel the difference in your body."
+    },
+    image: "assets/images/home/IMG_0024.jpeg"
   }
 ];
