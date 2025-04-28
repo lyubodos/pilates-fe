@@ -105,6 +105,19 @@
           "E_MAIL": "Enter a valid email.",
           "DATE": "Date is required."
         }
+      },
+      "SCHEDULE": {
+        "TITLE": "Working hours",
+        "DAYS" : {
+          "TITLE": "Days",
+          "TIME": "Time",
+          "MONDAY": "Monday",
+          "TUESDAY": "Tuesday",
+          "WEDNESDAY": "Wednesday",
+          "THURSDAY": "Thursday",
+          "FRIDAY": "Friday",
+          "SAT_SUN":"Saturday & Sunday"
+        }
       }
     },
     "ABOUT_US": {
