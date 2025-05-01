@@ -1,5 +1,12 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup, UntypedFormBuilder, Validators} from "@angular/forms";
+import {
+  AbstractControl,
+  FormControl,
+  FormGroup,
+  UntypedFormBuilder,
+  ValidationErrors,
+  Validators
+} from "@angular/forms";
 import {ReservationService} from "../../../../services/reservation.service";
 import {TranslateService} from "@ngx-translate/core";
 import {TransmitionData} from "../../../shared/data/transmition-data.data";
@@ -38,7 +45,7 @@ export class ReservationsPageSectionComponent implements OnInit {
       secondName: this.fb.control('', [Validators.required, Validators.minLength(3)]),
       phoneNumber: this.fb.control('', [Validators.required]),
       email: this.fb.control('', [Validators.required, Validators.email]),
-      date: this.fb.control('', [Validators.required]),
+      date: this.fb.control('', [Validators.required, this.noPastDateValidator]),
       option: this.fb.control(null , Validators.required)
     });
 
@@ -73,5 +80,12 @@ export class ReservationsPageSectionComponent implements OnInit {
     } else {
       alert('Please fill out the form correctly!');
     }
+  }
+
+  private noPastDateValidator(control: AbstractControl): ValidationErrors | null {
+    const selectedDate = new Date(control.value);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    return selectedDate < today ? { pastDate: true } : null;
   }
 }
