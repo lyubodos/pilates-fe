@@ -40,6 +40,7 @@ import {GdprComponent} from "./components/app-main-section/components/gdpr/gdpr.
 import {
   NewsDetailComponent
 } from "./components/app-main-section/components/news-page-section/news-detail/news-detail.component";
+import {WorkingHoursComponent} from "./components/shared/working-hours/working-hours.component";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -76,6 +77,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     PricesPageSectionComponent,
     NewsPageSectionComponent,
     NewsDetailComponent,
+    WorkingHoursComponent,
     LoadingSpinnerComponent,
     TermsOfUseComponent,
     GdprComponent,
