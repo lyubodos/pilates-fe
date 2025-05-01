@@ -108,14 +108,6 @@
   }
 }
 
-.btn_prices {
-  margin-top: 1.5625rem; // 25px
-
-  @include atMedium {
-    margin-top: 3.125rem; // 50px
-  }
-}
-
 .quote-container {
   margin: 3rem auto; // 100px
 }
