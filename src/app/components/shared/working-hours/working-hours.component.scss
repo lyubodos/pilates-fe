@@ -1,46 +1,18 @@
-@import '../../../../../assets/base/global';
-@import '../../../../../assets/modules/section-title';
-@import '../../../../../assets/modules/quote';
+@import '../../../../assets/base/global';
+@import '../../../../assets/modules/section-title';
+
 
 .section-title {
-  color: grey;
-  margin-top: 0;
-  margin-bottom: 1rem; // 16px
-}
-
-.individual-heading {
-  font-size: 1.75rem;
-
-  @include atMedium{
-    font-size: 3.4rem;
-  }
-}
-
-#pilates-prices {
-  padding-bottom: 2.5rem;
-}
-
-.container {
-  margin: 0;
-  padding: 0 1.25rem; // 20px
-}
-
-.group_trainings_title {
-  margin-top: 6.5rem; // 104px
-}
-
-.section-description {
   text-align: center;
-  font-size: 1.25rem; // 20px
   color: grey;
-  padding: 0 20px;
 }
 
-.price-list-section {
+.working-hours-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 6.25rem; // 100px
+  margin-bottom: 2rem;
 
   @include atMedium {
     padding: 3.75rem 1.25rem; // 60px 20px
@@ -48,7 +20,7 @@
   }
 }
 
-.price-list {
+.working-hours-list {
   display: flex;
   flex-direction: column;
   border-radius: 1rem; // 16px
@@ -61,26 +33,27 @@
   }
 }
 
-.price-item {
+.working-item {
   display: grid;
-  grid-template-columns: 2fr 1.4fr 1.3fr;
+  grid-template-columns: 2fr 1fr;
   padding: 1.25rem 1.5rem; // 20px 24px
   font-weight: initial;
   color: grey;
 
   &:hover {
-    background-color: #fdf2f2;
+
+    @include atMedium {
+      background-color: #fdf2f2;
+    }
   }
 
-  .service,
-  .price {
-    font-size: 1rem; // 16px
+  .days {
+    font-size: 1.1rem; // 16px
     font-weight: bold;
-    color: grey;
   }
 
-  .terms {
-    font-size: 1rem; // 16px
+  .time {
+    font-size: 1.1rem;
     font-weight: bold;
     color: #777;
   }
@@ -88,9 +61,8 @@
   &.header {
     font-weight: 600;
 
-    .service,
-    .price,
-    .terms {
+    .days,
+    .time {
       font-size: 1.1875rem; // 19px
       color: grey;
 
@@ -104,10 +76,6 @@
     margin-left: auto;
     margin-right: auto;
     width: 46.875rem; // 750px
-    grid-template-columns: 2fr 1.6fr 0.8fr;
+    grid-template-columns: 2fr 0.5fr;
   }
-}
-
-.quote-container {
-  margin: 3rem auto; // 100px
 }
