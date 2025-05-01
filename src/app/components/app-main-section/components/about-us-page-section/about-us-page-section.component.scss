@@ -98,6 +98,7 @@
   align-items: center;
   background-color: #ffffff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 1rem;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   max-width: 320px;
@@ -133,11 +134,20 @@
   }
 }
 
+.btn_about {
+  margin-top: 1.5625rem; // 25px
+  margin-bottom: 1.5625rem; ;
+
+  @include atMedium {
+    margin-top: 3.125rem; // 50px
+  }
+}
+
+
 @media (min-width: 768px) {
   .instructor-card {
     flex-direction: row;
     max-width: 1000px;
-    border-radius: 1rem;
 
     .instructor-image {
       width: 40%;

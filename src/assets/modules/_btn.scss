@@ -1,3 +1,4 @@
+@import "../base/mixins";
 
 .btn {
   background-color: #F8B4B1;
@@ -6,6 +7,16 @@
   display: inline-block;
   text-decoration: none;
   cursor: pointer;
+}
+
+
+.btn_spacing {
+  margin-top: 1.5625rem; // 25px
+  margin-bottom: 1.3rem; ;
+
+  @include atMedium {
+    margin-top: 3.125rem; // 50px
+  }
 }
 
 .btn:hover {
