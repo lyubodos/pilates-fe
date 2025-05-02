@@ -25,14 +25,21 @@
     list-style: none;
     color: grey;
     margin-left: 0;
+    padding: 1.2rem 1rem;
 
     li {
       margin-bottom: 2rem;
 
       a {
+        display: flex;
+        align-items: center;
         text-decoration: none;
         white-space: pre-line;
         font-size: 20px;
+
+        @include atMedium {
+          align-items: flex-end;
+        }
       }
 
       a {
