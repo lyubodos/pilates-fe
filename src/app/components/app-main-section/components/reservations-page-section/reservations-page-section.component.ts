@@ -117,7 +117,7 @@ export class ReservationsPageSectionComponent implements OnInit {
   }
 
 
-  updateAvailableTimes(day: number) {
+  private updateAvailableTimes(day: number) {
     const start = day === 0 || day === 6 ? 10 : 8;
     const end = day === 0 || day === 6 ? 16 : 17;
 
