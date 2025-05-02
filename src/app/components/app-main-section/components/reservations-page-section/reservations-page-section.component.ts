@@ -1,5 +1,12 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup, UntypedFormBuilder, Validators} from "@angular/forms";
+import {
+  AbstractControl,
+  FormControl,
+  FormGroup,
+  UntypedFormBuilder,
+  ValidationErrors,
+  Validators
+} from "@angular/forms";
 import {ReservationService} from "../../../../services/reservation.service";
 import {TranslateService} from "@ngx-translate/core";
 import {TransmitionData} from "../../../shared/data/transmition-data.data";
@@ -22,6 +29,9 @@ export class ReservationsPageSectionComponent implements OnInit {
   public userForm: FormGroup = new FormGroup({});
   public tomorrow: string = "";
   public date = new Date();
+  public minTime: string = '08:00';
+  public maxTime: string = '17:00';
+  public availableTimes: string[] = [];
   public isLoading: boolean = false;
   public showModal = false;
   public modalSuccess = false;
@@ -38,10 +48,16 @@ export class ReservationsPageSectionComponent implements OnInit {
       secondName: this.fb.control('', [Validators.required, Validators.minLength(3)]),
       phoneNumber: this.fb.control('', [Validators.required]),
       email: this.fb.control('', [Validators.required, Validators.email]),
-      date: this.fb.control('', [Validators.required]),
+      date: this.fb.control('', [Validators.required, this.noPastDateValidator]),
+      reservationTime: [null, [Validators.required, this.dynamicTimeValidator.bind(this)]],
       option: this.fb.control(null , Validators.required)
     });
 
+    this.userForm.get('date')?.valueChanges.subscribe(dateStr => {
+      const day = new Date(dateStr).getDay();
+      this.updateAvailableTimes(day);
+      this.userForm.get('reservationTime')?.setValue(null);
+    });
   }
 
   public onSubmit(): void {
@@ -53,6 +69,7 @@ export class ReservationsPageSectionComponent implements OnInit {
         phoneNumber: this.userForm.get('phoneNumber')?.value.trim(),
         email: this.userForm.get('email')?.value.trim(),
         date: this.userForm.get('date')?.value,
+        reservationTime: this.userForm.get('reservationTime')?.value,
         option: this.userForm.get('option')?.value,
         lang: this.translate.currentLang
       }
@@ -72,6 +89,42 @@ export class ReservationsPageSectionComponent implements OnInit {
       this.userForm.reset();
     } else {
       alert('Please fill out the form correctly!');
+    }
+  }
+
+  private noPastDateValidator(control: AbstractControl): ValidationErrors | null {
+    const selectedDate = new Date(control.value);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    return selectedDate < today ? { pastDate: true } : null;
+  }
+
+  private dynamicTimeValidator(control: AbstractControl): ValidationErrors | null {
+    const time = control.value;
+    if (!time) return null;
+
+    const [hour, minute] = time.split(':').map(Number);
+    const totalMinutes = hour * 60 + minute;
+
+    const [minHour, minMin] = this.minTime.split(':').map(Number);
+    const [maxHour, maxMin] = this.maxTime.split(':').map(Number);
+    const minMinutes = minHour * 60 + minMin;
+    const maxMinutes = maxHour * 60 + maxMin;
+
+    return totalMinutes < minMinutes || totalMinutes > maxMinutes
+      ? { outOfTimeRange: true }
+      : null;
+  }
+
+
+  updateAvailableTimes(day: number) {
+    const start = day === 0 || day === 6 ? 10 : 8;
+    const end = day === 0 || day === 6 ? 16 : 17;
+
+    this.availableTimes = [];
+    for (let hour = start; hour <= end; hour++) {
+      const timeStr = `${hour.toString().padStart(2, '0')}:00`;
+      this.availableTimes.push(timeStr);
     }
   }
 }

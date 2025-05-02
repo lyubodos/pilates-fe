@@ -55,6 +55,22 @@
     </small>
   </div>
 
+  <div class="input-group">
+    <label for="time">Time</label>
+    <select id="time" formControlName="reservationTime">
+      <option *ngFor="let time of availableTimes" [value]="time">{{ time }}</option>
+    </select>
+
+
+    <div *ngIf="userForm.get('reservationTime')?.hasError('outOfTimeRange')">
+      Time must be between {{ minTime }} and {{ maxTime }} for the selected day.
+    </div>
+    <div *ngIf="userForm.get('reservationTime')?.hasError('notRoundHour')">
+      Please select a full hour (e.g., 13:00).
+    </div>
+  </div>
+
+
   <div class="radio-group">
     <label>
       <input type="radio" formControlName="option" value="Group training"

@@ -4,6 +4,7 @@ export interface TransmitionData {
   phoneNumber: string;
   email: string;
   date: string;
+  reservationTime: string;
   option: string;
   lang: string;
 }
