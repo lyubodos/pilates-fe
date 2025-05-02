@@ -1,6 +1,6 @@
-<h4 class="contacts_container__heading section-title">{{'MAIN.CONTACTS.TITLE' | translate}}</h4>
+<h4 class="contacts_container__heading section-title">{{ 'MAIN.CONTACTS.TITLE' | translate }}</h4>
 <div class="contacts_container">
-  <ul class="contacts_container__list">
+  <ul class="contacts_container__list page-section">
     <li><a type="phone" href="tel:+359 897870010">
       <ng-icon class="ng_icons" name="bootstrapTelephoneFill"></ng-icon>
       +359 897870010</a></li>
@@ -13,64 +13,64 @@
       {{ 'MAIN.FOOTER.CONTACTS.CONTACTS_LIST.LOCATION' | translate }}</a></li>
   </ul>
   <app-google-map></app-google-map>
-  <div action="" class="page-section">
-  <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form-container">
-    <h2 class="form_header">
-      {{'MAIN.CONTACTS.CONTACTS_FORM.TITLE' | translate}}
-    </h2>
-    <div class="name-fields">
-      <div class="input-group">
-        <label for="firstName">{{ 'MAIN.RESERVATIONS.FORM.FIRST_NAME' | translate }}</label>
-        <input id="firstName" type="text" formControlName="firstName"
-               placeholder="{{ 'MAIN.RESERVATIONS.FORM.FIRST_NAME' | translate }}"/>
-        <small *ngIf="userForm.get('firstName')?.invalid && userForm.get('firstName')?.touched" class="error">
-          {{ 'MAIN.RESERVATIONS.FORM.ERRORS.FIRST_NAME' | translate }}
-        </small>
+  <div class="page-section">
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form-container">
+      <h2 class="form_header">
+        {{ 'MAIN.CONTACTS.CONTACTS_FORM.TITLE' | translate }}
+      </h2>
+      <div class="name-fields">
+        <div class="input-group">
+          <label for="firstName">{{ 'MAIN.RESERVATIONS.FORM.FIRST_NAME' | translate }}</label>
+          <input id="firstName" type="text" formControlName="firstName"
+                 placeholder="{{ 'MAIN.RESERVATIONS.FORM.FIRST_NAME' | translate }}"/>
+          <small *ngIf="userForm.get('firstName')?.invalid && userForm.get('firstName')?.touched" class="error">
+            {{ 'MAIN.RESERVATIONS.FORM.ERRORS.FIRST_NAME' | translate }}
+          </small>
+        </div>
+
+        <div class="input-group">
+          <label for="secondName">{{ 'MAIN.RESERVATIONS.FORM.LAST_NAME' | translate }}</label>
+          <input id="secondName" type="text" formControlName="secondName"
+                 placeholder="{{ 'MAIN.RESERVATIONS.FORM.LAST_NAME' | translate }}"/>
+          <small *ngIf="userForm.get('secondName')?.invalid && userForm.get('secondName')?.touched" class="error">
+            {{ 'MAIN.RESERVATIONS.FORM.ERRORS.LAST_NAME' | translate }}
+          </small>
+        </div>
       </div>
 
       <div class="input-group">
-        <label for="secondName">{{ 'MAIN.RESERVATIONS.FORM.LAST_NAME' | translate }}</label>
-        <input id="secondName" type="text" formControlName="secondName"
-               placeholder="{{ 'MAIN.RESERVATIONS.FORM.LAST_NAME' | translate }}"/>
-        <small *ngIf="userForm.get('secondName')?.invalid && userForm.get('secondName')?.touched" class="error">
-          {{ 'MAIN.RESERVATIONS.FORM.ERRORS.LAST_NAME' | translate }}
+        <label for="phoneNumber">{{ 'MAIN.RESERVATIONS.FORM.PHONE_NUMBER' | translate }}</label>
+        <input id="phoneNumber" type="tel" formControlName="phoneNumber"
+               placeholder="{{ 'MAIN.RESERVATIONS.FORM.PHONE_NUMBER' | translate }}"/>
+        <small *ngIf="userForm.get('phoneNumber')?.invalid && userForm.get('phoneNumber')?.touched" class="error">
+          {{ 'MAIN.RESERVATIONS.FORM.ERRORS.PHONE_NUMBER' | translate }}
         </small>
       </div>
-    </div>
 
-    <div class="input-group">
-      <label for="phoneNumber">{{ 'MAIN.RESERVATIONS.FORM.PHONE_NUMBER' | translate }}</label>
-      <input id="phoneNumber" type="tel" formControlName="phoneNumber"
-             placeholder="{{ 'MAIN.RESERVATIONS.FORM.PHONE_NUMBER' | translate }}"/>
-      <small *ngIf="userForm.get('phoneNumber')?.invalid && userForm.get('phoneNumber')?.touched" class="error">
-        {{ 'MAIN.RESERVATIONS.FORM.ERRORS.PHONE_NUMBER' | translate }}
-      </small>
-    </div>
+      <!-- Email Field -->
+      <div class="input-group">
+        <label for="email">{{ 'MAIN.RESERVATIONS.FORM.E_MAIL' | translate }}</label>
+        <input id="email" type="email" formControlName="email"
+               placeholder="{{ 'MAIN.RESERVATIONS.FORM.E_MAIL' | translate }}"/>
+        <small *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched" class="error">
+          {{ 'MAIN.RESERVATIONS.FORM.ERRORS.E_MAIL' | translate }}
+        </small>
+      </div>
 
-    <!-- Email Field -->
-    <div class="input-group">
-      <label for="email">{{ 'MAIN.RESERVATIONS.FORM.E_MAIL' | translate }}</label>
-      <input id="email" type="email" formControlName="email"
-             placeholder="{{ 'MAIN.RESERVATIONS.FORM.E_MAIL' | translate }}"/>
-      <small *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched" class="error">
-        {{ 'MAIN.RESERVATIONS.FORM.ERRORS.E_MAIL' | translate }}
-      </small>
-    </div>
+      <label for="feedback">{{ 'MAIN.SHARED.TEXTAREA.TITLE' | translate }}</label>
+      <textarea
+        id="feedback"
+        formControlName="feedback"
+        maxlength="1000"
+        rows="5"
+        placeholder="{{'MAIN.SHARED.TEXTAREA.PLACEHOLDER' | translate}}"
+      ></textarea>
 
-    <label for="feedback">{{ 'MAIN.SHARED.TEXTAREA.TITLE' | translate }}</label>
-    <textarea
-      id="feedback"
-      formControlName="feedback"
-      maxlength="1000"
-      rows="5"
-      placeholder="{{'MAIN.SHARED.TEXTAREA.PLACEHOLDER' | translate}}"
-    ></textarea>
-
-    <button type="submit" [disabled]="!userForm.valid">
-      {{ 'MAIN.CONTACTS.CONTACTS_FORM.SUBMIT' | translate }}
-    </button>
-    <app-loading-spinner [isLoading]="isLoading"></app-loading-spinner>
-  </form>
+      <button type="submit" [disabled]="!userForm.valid">
+        {{ 'MAIN.CONTACTS.CONTACTS_FORM.SUBMIT' | translate }}
+      </button>
+      <app-loading-spinner [isLoading]="isLoading"></app-loading-spinner>
+    </form>
     <div class="modal-overlay" *ngIf="showModal">
       <div class="modal-box">
         <h2 class="modal-title">
@@ -87,7 +87,8 @@
               : ('MAIN.SHARED.ERRORS.MODAL.FAILURE_DESCRIPTION' | translate)
           }}
         </p>
-        <button class="modal-close" (click)="showModal = false">{{ 'MAIN.SHARED.ERRORS.MODAL.BUTTON' | translate }}</button>
+        <button class="modal-close" (click)="showModal = false">{{ 'MAIN.SHARED.ERRORS.MODAL.BUTTON' | translate }}
+        </button>
       </div>
     </div>
   </div>
