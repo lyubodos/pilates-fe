@@ -261,7 +261,7 @@
         "MODAL": {
           "TITLE_SUCCESS": "Thank you!",
           "TITLE_FAILURE": "Something went wrong",
-          "SUCCESS_DESCRIPTION": "'Your message was sent successfully. We will get back to you soon!'",
+          "SUCCESS_DESCRIPTION": "Your message was sent successfully. We will get back to you soon!",
           "FAILURE_DESCRIPTION": "Oops! There was a problem sending your message. Please try again later.",
           "SUCCESS_REVIEW":"Thank you for your review! Your opinion is important for us!",
           "BUTTON": "Close"
