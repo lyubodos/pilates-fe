@@ -89,7 +89,7 @@
   }
 
   #check:checked ~ .header_nav {
-    height: 28rem;
+    height: 29rem;
   }
 
   .header_nav {
@@ -122,7 +122,7 @@
         font-weight: 500;
         color: #ff8f8f;
         text-decoration: none;
-        font-size: 23px;
+        font-size: 20px;
         text-shadow: 2px 2px 5px rgba(225, 134, 134, 0.5);
 
         @include atMedium{
