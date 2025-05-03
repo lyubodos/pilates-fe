@@ -56,7 +56,7 @@
   </div>
 
   <div class="input-group">
-    <label for="time">Time</label>
+    <label for="time">{{ 'MAIN.RESERVATIONS.FORM.TIME' | translate }}</label>
     <select id="time" formControlName="reservationTime">
       <option *ngFor="let time of availableTimes" [value]="time">{{ time }}</option>
     </select>

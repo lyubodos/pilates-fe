@@ -30,7 +30,7 @@ export class ReservationsPageSectionComponent implements OnInit {
   public tomorrow: string = "";
   public date = new Date();
   public minTime: string = '08:00';
-  public maxTime: string = '17:00';
+  public maxTime: string = '18:00';
   public availableTimes: string[] = [];
   public isLoading: boolean = false;
   public showModal = false;
@@ -118,8 +118,8 @@ export class ReservationsPageSectionComponent implements OnInit {
 
 
   private updateAvailableTimes(day: number) {
-    const start = day === 0 || day === 6 ? 10 : 8;
-    const end = day === 0 || day === 6 ? 16 : 17;
+    const start = day === 0 || day === 6 ? 9 : 8;
+    const end = day === 0 || day === 6 ? 15 : 18;
 
     this.availableTimes = [];
     for (let hour = start; hour <= end; hour++) {

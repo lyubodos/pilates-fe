@@ -95,6 +95,7 @@
         "PHONE_NUMBER": "Phone number",
         "E_MAIL": "E-mail",
         "DATE": "Select Date",
+        "TIME": "Select Time",
         "GROUP_TRAINING": "Group Training",
         "INDIVIDUAL_TRAINING": "Individual Training",
         "SUBMIT": "Send a request",
