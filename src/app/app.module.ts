@@ -2,7 +2,6 @@ import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {AppRoutingModule} from "./app-routing.module";
 import {AppFooterComponent} from "./components/app-footer/app-footer.component";
 import {AppHeaderComponent} from "./components/app-header/app-header.component";
-import {AppMainSectionComponent} from "./components/app-main-section/app-main-section.component";
 import {
   AppMainPageSectionComponent
 } from "./components/app-main-section/components/main-page-section/app-main-page-section.component";
@@ -16,7 +15,7 @@ import {
   GalleryPageSectionComponent
 } from "./components/app-main-section/components/gallery-page-section/gallery-page-section.component";
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
-import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {HttpClient, HttpClientModule, provideHttpClient} from "@angular/common/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {
   ReservationsPageSectionComponent
@@ -24,7 +23,7 @@ import {
 import {
   PricesPageSectionComponent
 } from "./components/app-main-section/components/prices-page-section/prices-page-section.component";
-import {NgClass} from "@angular/common";
+import {NgClass, registerLocaleData} from "@angular/common";
 import {LoadingSpinnerComponent} from "./components/shared/loading-spinner/loading-spinner.component";
 import {
   NewsPageSectionComponent
@@ -41,6 +40,11 @@ import {
   NewsDetailComponent
 } from "./components/app-main-section/components/news-page-section/news-detail/news-detail.component";
 import {WorkingHoursComponent} from "./components/shared/working-hours/working-hours.component";
+import {en_US, NZ_I18N} from 'ng-zorro-antd/i18n';
+import en from '@angular/common/locales/en';
+import {provideAnimationsAsync} from '@angular/platform-browser/animations/async';
+
+registerLocaleData(en);
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -66,7 +70,6 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   declarations: [
     AppComponent,
-    AppMainSectionComponent,
     AppMainPageSectionComponent,
     AppHeaderComponent,
     AppFooterComponent,
@@ -85,11 +88,15 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   providers: [
     // {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true}
+
+    { provide: NZ_I18N, useValue: en_US },
+    provideAnimationsAsync(),
+    provideHttpClient()
   ],
   exports: [
     AppHeaderComponent,
     AppFooterComponent,
-    AppMainSectionComponent,
+    AppMainPageSectionComponent,
     TranslateModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

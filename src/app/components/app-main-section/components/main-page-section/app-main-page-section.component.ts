@@ -64,21 +64,21 @@ export class AppMainPageSectionComponent implements OnInit {
     },
     {
       name: {
-        en: 'Cvetelina Yaneva',
-        bg: "Цветелина Янева"
+        en: 'Daniela Mezeklieva',
+        bg: "Даниела Мезеклиева"
       },
-      image: 'assets/images/about-us/IMG_0159.jpeg',
+      image: 'assets/images/testimonials/anonymous.jpeg',
       info: {
         en: 'These trainings improved my life!',
-        bg: "Тези тренировки подобриха живота ми"
+        bg: "Тези тренировки подобриха живота ми!"
       },
       role: {
-        en: 'UX Designer',
-        bg: "Дизайнер приложения"
+        en: 'Receptionist',
+        bg: "Рецепционист"
       },
       message: {
-        en: "This was the best training!",
-        bg: "Това беше най-яката тренировка!"
+        en: "ReformFlow showed me exercising can be both intensive and fun. Professional team, driven to provide the best care for your body. I am always looking forward to my sessions.",
+        bg: "ReformFlow ми показа как упражненията могат да бъдат и натоварващи, и завабни. Професионален екип, който е посветен да предостави най-добрата гриьа за тялото ви. Винаги очаквам с нетърпение следващите сесии."
       }
     }
   ];
