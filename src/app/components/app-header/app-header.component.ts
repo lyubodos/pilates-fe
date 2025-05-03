@@ -43,12 +43,14 @@ export class AppHeaderComponent implements OnInit {
   public switchLanguageToBG() {
     this.translate.use('main-bg');
     this.translatingService.setLang('bg');
+    this.translatingService.switchLocale('bg');
     this.currentLang = 'main-bg';
   }
 
   public switchLanguageToEN() {
     this.translate.use('main-en');
     this.translatingService.setLang('en');
+    this.translatingService.switchLocale('en');
     this.currentLang = 'main-en';
   }
 

@@ -47,13 +47,18 @@
 
   <div class="input-group">
     <label for="date">{{ 'MAIN.RESERVATIONS.FORM.DATE' | translate }}</label>
-    <input id="date" type="date" formControlName="date"
-           [min]="tomorrow"
-           [(ngModel)]="date"/>
+    <nz-date-picker id="date"
+                    formControlName="date"
+                    nzPlaceHolder="{{ 'MAIN.RESERVATIONS.FORM.DATE' | translate }}"
+                    [nzDisabledDate]="disableBeforeMinDate"
+                    [nzStatus]="getStatus()"></nz-date-picker>
     <small *ngIf="userForm.get('date')?.invalid && userForm.get('date')?.touched" class="error">
       {{ 'MAIN.RESERVATIONS.FORM.ERRORS.DATE' | translate }}
     </small>
   </div>
+
+
+
 
   <div class="input-group">
     <label for="time">{{ 'MAIN.RESERVATIONS.FORM.TIME' | translate }}</label>

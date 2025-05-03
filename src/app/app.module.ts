@@ -2,6 +2,7 @@ import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {AppRoutingModule} from "./app-routing.module";
 import {AppFooterComponent} from "./components/app-footer/app-footer.component";
 import {AppHeaderComponent} from "./components/app-header/app-header.component";
+import {NzDatePickerModule} from 'ng-zorro-antd/date-picker';
 import {
   AppMainPageSectionComponent
 } from "./components/app-main-section/components/main-page-section/app-main-page-section.component";
@@ -40,11 +41,13 @@ import {
   NewsDetailComponent
 } from "./components/app-main-section/components/news-page-section/news-detail/news-detail.component";
 import {WorkingHoursComponent} from "./components/shared/working-hours/working-hours.component";
-import {en_US, NZ_I18N} from 'ng-zorro-antd/i18n';
+import {bg_BG, en_US, NZ_I18N} from 'ng-zorro-antd/i18n';
 import en from '@angular/common/locales/en';
+import bg from '@angular/common/locales/bg';
 import {provideAnimationsAsync} from '@angular/platform-browser/animations/async';
 
 registerLocaleData(en);
+registerLocaleData(bg, 'bg');
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -67,6 +70,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     NgIconsModule.withIcons(iconsStashData),
     FormsModule,
     ReactiveFormsModule,
+    NzDatePickerModule
   ],
   declarations: [
     AppComponent,
@@ -89,7 +93,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   providers: [
     // {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true}
 
-    { provide: NZ_I18N, useValue: en_US },
+    {provide: NZ_I18N, useValue: [en_US, bg_BG]},
     provideAnimationsAsync(),
     provideHttpClient()
   ],
