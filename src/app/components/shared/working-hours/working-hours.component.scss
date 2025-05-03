@@ -78,4 +78,8 @@
     width: 46.875rem; // 750px
     grid-template-columns: 2fr 0.5fr;
   }
+
+  @media (min-width: 430px) {
+    grid-template-columns: 4fr 1fr;
+  }
 }
