@@ -3,7 +3,6 @@
 .gdpr_container{
   width: 80%;
   color: grey;
-  padding: 20px 40px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
@@ -24,5 +23,6 @@
   @include atMedium{
     background: rgba(255, 255, 255, 0.4);
     border-radius: 10px;
+    padding: 20px 40px;
   }
 }
