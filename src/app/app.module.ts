@@ -45,6 +45,11 @@ import {bg_BG, en_US, NZ_I18N} from 'ng-zorro-antd/i18n';
 import en from '@angular/common/locales/en';
 import bg from '@angular/common/locales/bg';
 import {provideAnimationsAsync} from '@angular/platform-browser/animations/async';
+import {NzFormControlComponent, NzFormDirective, NzFormItemComponent, NzFormLabelComponent} from "ng-zorro-antd/form";
+import {NzColDirective, NzRowDirective} from "ng-zorro-antd/grid";
+import {NzInputDirective} from "ng-zorro-antd/input";
+import {NzRadioComponent, NzRadioGroupComponent} from "ng-zorro-antd/radio";
+import {NzButtonComponent} from "ng-zorro-antd/button";
 
 registerLocaleData(en);
 registerLocaleData(bg);
@@ -70,7 +75,17 @@ export function HttpLoaderFactory(http: HttpClient) {
     NgIconsModule.withIcons(iconsStashData),
     FormsModule,
     ReactiveFormsModule,
-    NzDatePickerModule
+    NzDatePickerModule,
+    NzFormDirective,
+    NzFormItemComponent,
+    NzFormLabelComponent,
+    NzFormControlComponent,
+    NzColDirective,
+    NzInputDirective,
+    NzRadioComponent,
+    NzButtonComponent,
+    NzRowDirective,
+    NzRadioGroupComponent
   ],
   declarations: [
     AppComponent,

@@ -2,96 +2,128 @@
   {{ 'MAIN.RESERVATIONS.TITLE' | translate }}
 </h1>
 
-<form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form-container">
+<form nz-form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form-container" nzLayout="vertical">
   <h2 class="form_header">
     {{ 'MAIN.RESERVATIONS.FORM.TITLE' | translate }}
   </h2>
-  <div class="name-fields">
-    <div class="input-group">
-      <label for="firstName">{{ 'MAIN.RESERVATIONS.FORM.FIRST_NAME' | translate }}</label>
-      <input id="firstName" type="text" formControlName="firstName"
-             placeholder="{{ 'MAIN.RESERVATIONS.FORM.FIRST_NAME' | translate }}"/>
-      <small *ngIf="userForm.get('firstName')?.invalid && userForm.get('firstName')?.touched" class="error">
-        {{ 'MAIN.RESERVATIONS.FORM.ERRORS.FIRST_NAME' | translate }}
-      </small>
+
+  <div nz-row [nzGutter]="16">
+    <div nz-col [nzXs]="24" [nzSm]="12">
+      <nz-form-item>
+        <nz-form-label [nzFor]="'firstName'">
+          {{ 'MAIN.RESERVATIONS.FORM.FIRST_NAME' | translate }}
+        </nz-form-label>
+        <nz-form-control [nzValidateStatus]="getNzStatus('firstName')">
+          <input nz-input id="firstName" formControlName="firstName"
+                 [placeholder]="'MAIN.RESERVATIONS.FORM.FIRST_NAME' | translate"/>
+          <nz-form-explain class="error"
+                           *ngIf="userForm.get('firstName')?.invalid && userForm.get('firstName')?.touched">
+            {{ 'MAIN.RESERVATIONS.FORM.ERRORS.FIRST_NAME' | translate }}
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
     </div>
 
-    <div class="input-group">
-      <label for="secondName">{{ 'MAIN.RESERVATIONS.FORM.LAST_NAME' | translate }}</label>
-      <input id="secondName" type="text" formControlName="secondName"
-             placeholder="{{ 'MAIN.RESERVATIONS.FORM.LAST_NAME' | translate }}"/>
-      <small *ngIf="userForm.get('secondName')?.invalid && userForm.get('secondName')?.touched" class="error">
-        {{ 'MAIN.RESERVATIONS.FORM.ERRORS.LAST_NAME' | translate }}
-      </small>
-    </div>
-  </div>
-
-  <div class="input-group">
-    <label for="phoneNumber">{{ 'MAIN.RESERVATIONS.FORM.PHONE_NUMBER' | translate }}</label>
-    <input id="phoneNumber" type="tel" formControlName="phoneNumber"
-           placeholder="{{ 'MAIN.RESERVATIONS.FORM.PHONE_NUMBER' | translate }}"/>
-    <small *ngIf="userForm.get('phoneNumber')?.invalid && userForm.get('phoneNumber')?.touched" class="error">
-      {{ 'MAIN.RESERVATIONS.FORM.ERRORS.PHONE_NUMBER' | translate }}
-    </small>
-  </div>
-
-  <!-- Email Field -->
-  <div class="input-group">
-    <label for="email">{{ 'MAIN.RESERVATIONS.FORM.E_MAIL' | translate }}</label>
-    <input id="email" type="email" formControlName="email"
-           placeholder="{{ 'MAIN.RESERVATIONS.FORM.E_MAIL' | translate }}"/>
-    <small *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched" class="error">
-      {{ 'MAIN.RESERVATIONS.FORM.ERRORS.E_MAIL' | translate }}
-    </small>
-  </div>
-
-  <div class="input-group">
-    <label for="date">{{ 'MAIN.RESERVATIONS.FORM.DATE' | translate }}</label>
-    <nz-date-picker id="date"
-                    formControlName="date"
-                    nzPlaceHolder="{{ 'MAIN.RESERVATIONS.FORM.DATE' | translate }}"
-                    [nzDisabledDate]="disableBeforeMinDate"
-                    [nzStatus]="getStatus()"></nz-date-picker>
-    <small *ngIf="userForm.get('date')?.invalid && userForm.get('date')?.touched" class="error">
-      {{ 'MAIN.RESERVATIONS.FORM.ERRORS.DATE' | translate }}
-    </small>
-  </div>
-
-
-
-
-  <div class="input-group">
-    <label for="time">{{ 'MAIN.RESERVATIONS.FORM.TIME' | translate }}</label>
-    <select id="time" formControlName="reservationTime">
-      <option *ngFor="let time of availableTimes" [value]="time">{{ time }}</option>
-    </select>
-
-
-    <div *ngIf="userForm.get('reservationTime')?.hasError('outOfTimeRange')">
-      Time must be between {{ minTime }} and {{ maxTime }} for the selected day.
-    </div>
-    <div *ngIf="userForm.get('reservationTime')?.hasError('notRoundHour')">
-      Please select a full hour (e.g., 13:00).
+    <div nz-col [nzXs]="24" [nzSm]="12">
+      <nz-form-item>
+        <nz-form-label [nzFor]="'secondName'">
+          {{ 'MAIN.RESERVATIONS.FORM.LAST_NAME' | translate }}
+        </nz-form-label>
+        <nz-form-control [nzValidateStatus]="getNzStatus('secondName')">
+          <input nz-input id="secondName" formControlName="secondName"
+                 [placeholder]="'MAIN.RESERVATIONS.FORM.LAST_NAME' | translate"/>
+          <nz-form-explain *ngIf="userForm.get('secondName')?.invalid && userForm.get('secondName')?.touched"
+                           class="error">
+            {{ 'MAIN.RESERVATIONS.FORM.ERRORS.LAST_NAME' | translate }}
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
     </div>
   </div>
 
+  <nz-form-item>
+    <nz-form-label [nzFor]="'phoneNumber'">
+      {{ 'MAIN.RESERVATIONS.FORM.PHONE_NUMBER' | translate }}
+    </nz-form-label>
+    <nz-form-control [nzValidateStatus]="getNzStatus('phoneNumber')">
+      <input nz-input id="phoneNumber" type="tel" formControlName="phoneNumber"
+             [placeholder]="'MAIN.RESERVATIONS.FORM.PHONE_NUMBER' | translate"/>
+      <nz-form-explain *ngIf="userForm.get('phoneNumber')?.invalid && userForm.get('phoneNumber')?.touched"
+                       class="error">
+        {{ 'MAIN.RESERVATIONS.FORM.ERRORS.PHONE_NUMBER' | translate }}
+      </nz-form-explain>
+    </nz-form-control>
+  </nz-form-item>
 
-  <div class="radio-group">
-    <label>
-      <input type="radio" formControlName="option" value="Group training"
-             [disabled]="userForm.get('option')?.value === 'Individual training'"/>
-      {{ 'MAIN.RESERVATIONS.FORM.GROUP_TRAINING' | translate }}
-    </label>
-    <label>
-      <input type="radio" formControlName="option" value="Individual training"
-             [disabled]="userForm.get('option')?.value === 'Group training'"/>
-      {{ 'MAIN.RESERVATIONS.FORM.INDIVIDUAL_TRAINING' | translate }}
-    </label>
-  </div>
+  <nz-form-item>
+    <nz-form-label [nzFor]="'email'">
+      {{ 'MAIN.RESERVATIONS.FORM.E_MAIL' | translate }}
+    </nz-form-label>
+    <nz-form-control [nzValidateStatus]="getNzStatus('email')">
+      <input nz-input id="email" type="email" formControlName="email"
+             [placeholder]="'MAIN.RESERVATIONS.FORM.E_MAIL' | translate"/>
+      <nz-form-explain *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched" class="error">
+        {{ 'MAIN.RESERVATIONS.FORM.ERRORS.E_MAIL' | translate }}
+      </nz-form-explain>
+    </nz-form-control>
+  </nz-form-item>
 
-  <button type="submit" [disabled]="!userForm.valid">
-    {{ 'MAIN.RESERVATIONS.FORM.SUBMIT' | translate }}
-  </button>
+  <nz-form-item>
+    <nz-form-label [nzFor]="'date'">
+      {{ 'MAIN.RESERVATIONS.FORM.DATE' | translate }}
+    </nz-form-label>
+    <nz-form-control [nzValidateStatus]="getNzStatus('date')">
+      <nz-date-picker id="date"
+                      formControlName="date"
+                      [nzPlaceHolder]="'MAIN.RESERVATIONS.FORM.DATE' | translate"
+                      [nzDisabledDate]="disableBeforeMinDate"
+                      [nzStatus]="getNzStatus('date')"
+                      style="width: 100%;"></nz-date-picker>
+      <nz-form-explain *ngIf="userForm.get('date')?.invalid && userForm.get('date')?.touched" class="error">
+        {{ 'MAIN.RESERVATIONS.FORM.ERRORS.DATE' | translate }}
+      </nz-form-explain>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label [nzFor]="'reservationTime'">
+      {{ 'MAIN.RESERVATIONS.FORM.TIME' | translate }}
+    </nz-form-label>
+    <nz-form-control [nzValidateStatus]="getNzStatus('reservationTime')">
+      <select nz-select id="time" formControlName="reservationTime" style="width: 100%;">
+        <option *ngFor="let time of availableTimes" [value]="time">{{ time }}</option>
+      </select>
+      <nz-form-explain *ngIf="userForm.get('reservationTime')?.hasError('outOfTimeRange')" class="error">
+        Time must be between {{ minTime }} and {{ maxTime }} for the selected day.
+      </nz-form-explain>
+      <nz-form-explain *ngIf="userForm.get('reservationTime')?.hasError('notRoundHour')" class="error">
+        Please select a full hour (e.g., 13:00).
+      </nz-form-explain>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-control>
+      <nz-radio-group class="custom-radio-group"
+                      formControlName="option">
+        <label nz-radio [nzValue]="'Group training'">
+          {{ 'MAIN.RESERVATIONS.FORM.GROUP_TRAINING' | translate }}
+        </label>
+        <label nz-radio [nzValue]="'Individual training'">
+          {{ 'MAIN.RESERVATIONS.FORM.INDIVIDUAL_TRAINING' | translate }}
+        </label>
+      </nz-radio-group>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-control>
+      <button type="submit" [disabled]="!userForm.valid">
+        {{ 'MAIN.RESERVATIONS.FORM.SUBMIT' | translate }}
+      </button>
+    </nz-form-control>
+  </nz-form-item>
+
   <app-loading-spinner [isLoading]="isLoading"></app-loading-spinner>
 </form>
 

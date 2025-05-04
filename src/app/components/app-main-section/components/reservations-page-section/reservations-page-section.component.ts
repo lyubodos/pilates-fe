@@ -61,13 +61,10 @@ export class ReservationsPageSectionComponent implements OnInit {
     });
   }
 
-  public getStatus(): NzStatus {
-    const status: NzStatus = '';
-
-    if (this.userForm.get('date')?.invalid && this.userForm.get('date')?.touched) {
-      return 'error';
-    }
-    return status;
+  public getNzStatus(controlName: string): '' | 'error' | 'warning' {
+    const control = this.userForm.get(controlName);
+    if (!control) return '';
+    return control.invalid && (control.dirty || control.touched) ? 'error' : '';
   }
 
   public disableBeforeMinDate = (current: Date): boolean => {
