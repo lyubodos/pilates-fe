@@ -47,7 +47,7 @@ import bg from '@angular/common/locales/bg';
 import {provideAnimationsAsync} from '@angular/platform-browser/animations/async';
 
 registerLocaleData(en);
-registerLocaleData(bg, 'bg');
+registerLocaleData(bg);
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');

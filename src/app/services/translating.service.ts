@@ -10,7 +10,8 @@ export class TranslatingService {
   private langSubject = new BehaviorSubject<keyof TranslatedText>('en');
   public lang$ = this.langSubject.asObservable();
 
-  constructor(private nzI18nService: NzI18nService) {}
+  constructor(private nzI18nService: NzI18nService) {
+  }
 
   get currentLang(): keyof TranslatedText {
     return this.langSubject.value;
@@ -25,6 +26,9 @@ export class TranslatingService {
     switch (lang) {
       case 'bg':
         this.nzI18nService.setLocale(bg_BG);
+        break;
+      case 'en':
+        this.nzI18nService.setLocale(en_US);
         break;
       default:
         this.nzI18nService.setLocale(en_US);
