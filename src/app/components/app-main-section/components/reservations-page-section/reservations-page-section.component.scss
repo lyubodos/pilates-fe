@@ -13,6 +13,10 @@ nz-form-label {
   font-size: 1rem;
 }
 
+.ant-picker-now {
+  display: none;
+}
+
 .section-title {
   color: grey;
 }
@@ -44,6 +48,7 @@ nz-form-label {
 }
 
 .error {
+  display: block;
   margin-top: 5px;
   color: red;
 }

@@ -50,6 +50,8 @@ import {NzColDirective, NzRowDirective} from "ng-zorro-antd/grid";
 import {NzInputDirective} from "ng-zorro-antd/input";
 import {NzRadioComponent, NzRadioGroupComponent} from "ng-zorro-antd/radio";
 import {NzButtonComponent} from "ng-zorro-antd/button";
+import {NzTimePickerComponent} from "ng-zorro-antd/time-picker";
+import {NzTooltipDirective} from "ng-zorro-antd/tooltip";
 
 registerLocaleData(en);
 registerLocaleData(bg);
@@ -85,7 +87,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     NzRadioComponent,
     NzButtonComponent,
     NzRowDirective,
-    NzRadioGroupComponent
+    NzRadioGroupComponent,
+    NzTimePickerComponent,
+    NzTooltipDirective
   ],
   declarations: [
     AppComponent,

@@ -77,6 +77,7 @@
                       formControlName="date"
                       [nzPlaceHolder]="'MAIN.RESERVATIONS.FORM.DATE' | translate"
                       [nzDisabledDate]="disableBeforeMinDate"
+                      [nzShowToday]="false"
                       [nzStatus]="getNzStatus('date')"
                       style="width: 100%;"></nz-date-picker>
       <nz-form-explain *ngIf="userForm.get('date')?.invalid && userForm.get('date')?.touched" class="error">
@@ -90,18 +91,30 @@
       {{ 'MAIN.RESERVATIONS.FORM.TIME' | translate }}
     </nz-form-label>
     <nz-form-control [nzValidateStatus]="getNzStatus('reservationTime')">
-      <select nz-select id="time" formControlName="reservationTime" style="width: 100%;">
-        <option *ngFor="let time of availableTimes" [value]="time">{{ time }}</option>
-      </select>
-      <nz-form-explain *ngIf="userForm.get('reservationTime')?.hasError('outOfTimeRange')" class="error">
-        Time must be between {{ minTime }} and {{ maxTime }} for the selected day.
+      <nz-time-picker
+        class="timepicker-no-now"
+        formControlName="reservationTime"
+        [nzFormat]="'HH:mm'"
+        [nzMinuteStep]="60"
+        [nzDisabledHours]="getDisabledHours"
+        [nzHideDisabledOptions]="true"
+        [nzInputReadOnly]="true"
+        [nzNowText]="' '"
+        [nzDisabled]="!userForm.get('date')?.value"
+        style="width: 100%;"
+      ></nz-time-picker>
+
+      <nz-form-extra nz-tooltip *ngIf="userForm.get('date')?.value">
+        {{ 'MAIN.RESERVATIONS.FORM.ERRORS.TIME_HINT' | translate }}
+      </nz-form-extra>
+      <nz-form-explain class="error"
+                       *ngIf="userForm.get('reservationTime')?.invalid && userForm.get('reservationTime')?.touched">
+        {{ 'MAIN.RESERVATIONS.FORM.ERRORS.TIME' | translate }}
       </nz-form-explain>
       <nz-form-explain *ngIf="userForm.get('reservationTime')?.hasError('notRoundHour')" class="error">
-        Please select a full hour (e.g., 13:00).
-      </nz-form-explain>
+        Please select a full hour (e.g., 13:00).</nz-form-explain>
     </nz-form-control>
   </nz-form-item>
-
   <nz-form-item>
     <nz-form-control>
       <nz-radio-group class="custom-radio-group"
