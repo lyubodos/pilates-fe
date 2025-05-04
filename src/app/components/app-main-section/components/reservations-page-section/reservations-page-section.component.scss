@@ -14,15 +14,15 @@ nz-form-label {
 }
 
 .section-title {
-   color: grey;
- }
+  color: grey;
+}
 
 .form_header {
   text-align: center;
   font-size: 1.5rem;
   color: grey;
 
-  @include atMedium{
+  @include atMedium {
     font-size: 2rem;
   }
 }
@@ -81,7 +81,11 @@ select {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
+  text-align: left;
+
+  @include atMedium {
+    text-align: center;
+  }
 }
 
 .custom-radio-group ::ng-deep .ant-radio-wrapper {
@@ -92,14 +96,5 @@ select {
 .custom-radio-group ::ng-deep .ant-radio {
   transform: scale(1.3); /* scale up the circle */
   margin-right: 8px;
-}
-
-
-@media (max-width: 768px) {
-  input,
-  label,
-  select {
-    font-size: 1rem;
-  }
 }
 

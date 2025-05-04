@@ -5,12 +5,12 @@ import {
   FormGroup,
   UntypedFormBuilder,
   ValidationErrors,
+  ValidatorFn,
   Validators
 } from "@angular/forms";
 import {ReservationService} from "../../../../services/reservation.service";
 import {TranslateService} from "@ngx-translate/core";
 import {TransmitionData} from "../../../shared/data/transmition-data.data";
-import {NzStatus} from "ng-zorro-antd/core/types";
 
 
 interface ContactFormGroup {
@@ -47,7 +47,7 @@ export class ReservationsPageSectionComponent implements OnInit {
     this.userForm = this.fb.group({
       firstName: this.fb.control('', [Validators.required, Validators.minLength(3)]),
       secondName: this.fb.control('', [Validators.required, Validators.minLength(3)]),
-      phoneNumber: this.fb.control('', [Validators.required]),
+      phoneNumber: this.fb.control('', [Validators.required, this.phoneNumberValidator()]),
       email: this.fb.control('', [Validators.required, Validators.email]),
       date: this.fb.control('', [Validators.required, this.noPastDateValidator]),
       reservationTime: [null, [Validators.required, this.dynamicTimeValidator.bind(this)]],
@@ -146,5 +146,19 @@ export class ReservationsPageSectionComponent implements OnInit {
       const timeStr = `${hour.toString().padStart(2, '0')}:00`;
       this.availableTimes.push(timeStr);
     }
+  }
+
+  private phoneNumberValidator(): ValidatorFn {
+    return (control: AbstractControl): ValidationErrors | null => {
+      const value = control.value;
+
+      if (!value) return null;
+
+      const phoneRegex = /^\+\d{10,15}$/;
+
+      return phoneRegex.test(value)
+        ? null
+        : {invalidPhoneNumber: true};
+    };
   }
 }
