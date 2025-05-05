@@ -52,6 +52,7 @@ import {NzRadioComponent, NzRadioGroupComponent} from "ng-zorro-antd/radio";
 import {NzButtonComponent} from "ng-zorro-antd/button";
 import {NzTimePickerComponent} from "ng-zorro-antd/time-picker";
 import {NzTooltipDirective} from "ng-zorro-antd/tooltip";
+import {NzCarouselComponent, NzCarouselModule} from "ng-zorro-antd/carousel";
 
 registerLocaleData(en);
 registerLocaleData(bg);
@@ -78,6 +79,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     FormsModule,
     ReactiveFormsModule,
     NzDatePickerModule,
+    NzCarouselModule,
     NzFormDirective,
     NzFormItemComponent,
     NzFormLabelComponent,
@@ -90,7 +92,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     NzRadioGroupComponent,
     NzTimePickerComponent,
     NzTooltipDirective,
-    NzAutosizeDirective
+    NzAutosizeDirective,
+    NzCarouselComponent
   ],
   declarations: [
     AppComponent,
