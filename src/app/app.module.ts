@@ -47,7 +47,7 @@ import bg from '@angular/common/locales/bg';
 import {provideAnimationsAsync} from '@angular/platform-browser/animations/async';
 import {NzFormControlComponent, NzFormDirective, NzFormItemComponent, NzFormLabelComponent} from "ng-zorro-antd/form";
 import {NzColDirective, NzRowDirective} from "ng-zorro-antd/grid";
-import {NzInputDirective} from "ng-zorro-antd/input";
+import {NzAutosizeDirective, NzInputDirective} from "ng-zorro-antd/input";
 import {NzRadioComponent, NzRadioGroupComponent} from "ng-zorro-antd/radio";
 import {NzButtonComponent} from "ng-zorro-antd/button";
 import {NzTimePickerComponent} from "ng-zorro-antd/time-picker";
@@ -89,7 +89,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     NzRowDirective,
     NzRadioGroupComponent,
     NzTimePickerComponent,
-    NzTooltipDirective
+    NzTooltipDirective,
+    NzAutosizeDirective
   ],
   declarations: [
     AppComponent,

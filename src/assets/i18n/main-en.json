@@ -105,6 +105,7 @@
           "PHONE_NUMBER": "Enter a valid phone number.",
           "E_MAIL": "Enter a valid email.",
           "DATE": "Date is required.",
+          "FEEDBACK": "Please provide feedback or leave your comment",
           "TIME": "Please select a valid hour",
           "TIME_HINT": "Please select a full hour (e.g. 13:00, 14:00). Minutes are not allowed as the sessions start at round hours."
         }

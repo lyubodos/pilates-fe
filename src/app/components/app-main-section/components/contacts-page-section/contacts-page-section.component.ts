@@ -38,6 +38,11 @@ export class ContactsPageSectionComponent implements OnInit{
 
   }
 
+  public getNzStatus(controlName: string): '' | 'error' | 'warning' {
+    const control = this.userForm.get(controlName);
+    if (!control) return '';
+    return control.invalid && (control.dirty || control.touched) ? 'error' : '';
+  }
 
   public onSubmit(): void {
     if (this.userForm.valid) {

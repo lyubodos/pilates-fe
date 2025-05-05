@@ -3,6 +3,11 @@
 @import '../../../../../assets/modules/page-section';
 @import '../../../../../assets/modules/modal';
 
+
+:host ::ng-deep .ant-row {
+  width: 100%;
+}
+
 .ng_icons {
   width: 2rem;
   height: 2rem;
@@ -57,6 +62,7 @@
   }
 
 }
+
 .form-container {
   max-width: 700px;
   border-radius: 10px;
@@ -70,54 +76,16 @@
   .form_header {
     text-align: center;
     color: grey;
+    font-size: 1.5rem;
+
+    @include atMedium {
+      font-size: 2rem;
+    }
   }
 
   @include atMedium {
     box-shadow: 20px 20px 12px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.1);
   }
-}
-
-.name-fields {
-  display: block;
-
-  label:nth-child(1) {
-    margin-top: 10px;
-  }
-
-  @include atMedium {
-    display: flex;
-    gap: 10px;
-  }
-}
-
-.input-group {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-
-  label {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-
-  input {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-  }
-}
-
-textarea {
-  padding: 8px;
-  border-radius: 5px;
-  resize: vertical;
-}
-
-.char-counter {
-  font-size: 0.85rem;
-  color: #666;
-  text-align: right;
-  margin-bottom: 10px;
 }
 
 .error {
