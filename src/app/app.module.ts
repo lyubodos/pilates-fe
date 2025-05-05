@@ -53,6 +53,8 @@ import {NzButtonComponent} from "ng-zorro-antd/button";
 import {NzTimePickerComponent} from "ng-zorro-antd/time-picker";
 import {NzTooltipDirective} from "ng-zorro-antd/tooltip";
 import {NzCarouselComponent, NzCarouselModule} from "ng-zorro-antd/carousel";
+import {NzTableComponent} from "ng-zorro-antd/table";
+import {NzDividerComponent} from "ng-zorro-antd/divider";
 
 registerLocaleData(en);
 registerLocaleData(bg);
@@ -93,7 +95,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     NzTimePickerComponent,
     NzTooltipDirective,
     NzAutosizeDirective,
-    NzCarouselComponent
+    NzCarouselComponent,
+    NzTableComponent,
+    NzDividerComponent
   ],
   declarations: [
     AppComponent,

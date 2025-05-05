@@ -33,9 +33,9 @@ export class AppHeaderComponent implements OnInit {
   }
 
   public ngOnInit() {
-    this.translate.setDefaultLang('main-en');
-    this.translatingService.switchLocale('en');
-    this.translate.use('main-en');
+    this.translate.setDefaultLang('main-bg');
+    this.translatingService.switchLocale('bg');
+    this.translate.use('main-bg');
 
 
     this.currentLang = this.translate.currentLang;

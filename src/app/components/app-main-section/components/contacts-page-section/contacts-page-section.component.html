@@ -1,17 +1,41 @@
 <h4 class="contacts_container__heading section-title">{{ 'MAIN.CONTACTS.TITLE' | translate }}</h4>
 <div class="contacts_container">
-  <ul class="contacts_container__list page-section">
-    <li><a type="phone" href="tel:+359 897870010">
-      <ng-icon class="ng_icons" name="bootstrapTelephoneFill"></ng-icon>
-      +359 897870010</a></li>
-    <li><a type="mail" href="mailto:reformflowstudio@gmail.com">
-      <ng-icon class="ng_icons" name="bootstrapEnvelopeOpenFill"></ng-icon>
-      {{ 'reformflowstudio@gmail.com' }}</a></li>
-    <li><a
-      href="https://g.co/kgs/Rp5DPvw">
-      <ng-icon class="ng_icons" name="bootstrapPinMapFill"></ng-icon>
-      {{ 'MAIN.FOOTER.CONTACTS.CONTACTS_LIST.LOCATION' | translate }}</a></li>
-  </ul>
+  <div class="contacts-time_wrapper page-section">
+    <ul class="contacts_container__list page-section">
+      <li><a type="phone" href="tel:+359 897870010">
+        <ng-icon class="ng_icons" name="bootstrapTelephoneFill"></ng-icon>
+        +359 897870010</a></li>
+      <li><a type="mail" href="mailto:reformflowstudio@gmail.com">
+        <ng-icon class="ng_icons" name="bootstrapEnvelopeOpenFill"></ng-icon>
+        {{ 'reformflowstudio@gmail.com' }}</a></li>
+      <li><a
+        href="https://g.co/kgs/Rp5DPvw">
+        <ng-icon class="ng_icons" name="bootstrapPinMapFill"></ng-icon>
+        {{ 'MAIN.FOOTER.CONTACTS.CONTACTS_LIST.LOCATION' | translate }}</a></li>
+    </ul>
+    <div class="table_wrapper">
+      <h3 class="table_title">Working hours</h3>
+      <nz-table #basicTable class="time-table" [nzSize]="'middle'" [nzVirtualItemSize]="8">
+        <thead>
+        <tr>
+          <th>Days</th>
+          <th>Time</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Monday-Fri</td>
+          <td>08:00-19:00</td>
+        </tr>
+        <tr>
+          <td>Sat-Sun</td>
+          <td>10:00-16:00</td>
+        </tr>
+        </tbody>
+      </nz-table>
+    </div>
+  </div>
+
   <app-google-map></app-google-map>
   <div class="page-section">
     <div class="form-test-wrapper">
@@ -104,7 +128,7 @@
 
           <nz-form-control>
             <button class="contacts_btn" type="submit" [disabled]="!userForm.valid">
-              {{ 'MAIN.RESERVATIONS.FORM.SUBMIT' | translate }}
+              {{ 'MAIN.CONTACTS.CONTACTS_FORM.SUBMIT' | translate }}
             </button>
           </nz-form-control>
         </nz-form-item>
@@ -150,6 +174,4 @@
       </div>
     </div>
   </div>
-
 </div>
-<app-working-hours></app-working-hours>

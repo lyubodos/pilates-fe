@@ -7,7 +7,7 @@ import {bg_BG, en_US, NzI18nService} from "ng-zorro-antd/i18n";
   providedIn: 'root'
 })
 export class TranslatingService {
-  private langSubject = new BehaviorSubject<keyof TranslatedText>('en');
+  private langSubject = new BehaviorSubject<keyof TranslatedText>('bg');
   public lang$ = this.langSubject.asObservable();
 
   constructor(private nzI18nService: NzI18nService) {

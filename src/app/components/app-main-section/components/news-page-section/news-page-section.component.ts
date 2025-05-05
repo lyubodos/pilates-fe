@@ -14,7 +14,7 @@ import {TranslatedText} from "../../../shared/data/translated-text.data";
 })
 export class NewsPageSectionComponent implements OnInit, OnDestroy {
   public newsList: NewsItem[] = [];
-  public lang: keyof TranslatedText = 'en';
+  public lang: keyof TranslatedText = 'bg';
   private langSub!: Subscription;
 
 

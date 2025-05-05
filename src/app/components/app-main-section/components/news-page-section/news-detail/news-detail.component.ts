@@ -13,7 +13,7 @@ import {TranslatedText} from "../../../../shared/data/translated-text.data";
 })
 export class NewsDetailComponent implements OnInit, OnDestroy {
   private newsId!: string;
-  public lang: keyof TranslatedText = 'en';
+  public lang: keyof TranslatedText = 'bg';
   private langSub!: Subscription;
 
   public newsData: any;

@@ -21,6 +21,7 @@
   width: 100%;
 }
 
+
 .ng_icons {
   width: 2rem;
   height: 2rem;
@@ -28,6 +29,26 @@
   margin-right: 0.3125rem;
 }
 
+.contacts-time_wrapper {
+  display:flex;
+  justify-content: space-between;
+}
+
+
+.table_title{
+  font-size: 2rem;
+  text-align: center;
+  color: grey;
+}
+
+.table_wrapper{
+  background-color: $mainBgColor;
+}
+
+.time-table {
+  width: 500px;
+
+}
 
 .contacts_container {
   margin-top: 25px;
@@ -68,17 +89,12 @@
         color: #30302f;
       }
     }
-
-    @include atMedium {
-      flex-direction: row;
-    }
   }
 
 }
 
 .form-container {
   max-width: 700px;
-  max-height: 658px;
   border-radius: 10px;
   padding: 20px;
   display: flex;
@@ -169,7 +185,6 @@
   font-weight: bold;
   color: #666;
 }
-
 
 .image-wrapper {
   position: absolute;
