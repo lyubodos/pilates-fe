@@ -78,6 +78,7 @@
                       [nzPlaceHolder]="'MAIN.RESERVATIONS.FORM.DATE' | translate"
                       [nzDisabledDate]="disableBeforeMinDate"
                       [nzShowToday]="false"
+                      [nzInputReadOnly]="true"
                       [nzStatus]="getNzStatus('date')"
                       style="width: 100%;"></nz-date-picker>
       <nz-form-explain *ngIf="userForm.get('date')?.invalid && userForm.get('date')?.touched" class="error">
