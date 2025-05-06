@@ -37,7 +37,9 @@ export class AppHeaderComponent implements OnInit {
     this.translatingService.switchLocale('bg');
     this.translate.use('main-bg');
 
-
+    document.querySelectorAll('a').forEach(link =>
+      link.addEventListener('click', () => link.blur())
+    );
     this.currentLang = this.translate.currentLang;
   }
 

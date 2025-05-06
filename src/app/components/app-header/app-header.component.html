@@ -12,12 +12,12 @@
     <ul class="nav_list">
       <li><a routerLink="/" routerLinkActive="active-link"
              (click)="closeMenu()">{{ 'MAIN.HEADER.NAV.HOME' | translate }}</a></li>
-      <li><a routerLink="/news" (click)="closeMenu()">{{ 'MAIN.HEADER.NAV.NEWS' | translate }}</a></li>
-      <li><a routerLink="/prices" (click)="closeMenu()">{{ 'MAIN.HEADER.NAV.PRICES' | translate }}</a></li>
-      <li><a routerLink="/reservations" (click)="closeMenu()">{{ 'MAIN.HEADER.NAV.RESERVATIONS' | translate }}</a></li>
-      <li><a routerLink="/gallery" (click)="closeMenu()">{{ 'MAIN.HEADER.NAV.GALLERY' | translate }}</a></li>
-      <li><a routerLink="/about-us" (click)="closeMenu()">{{ 'MAIN.HEADER.NAV.ABOUT_US' | translate }}</a></li>
-      <li><a routerLink="/contacts" (click)="closeMenu()">{{ 'MAIN.HEADER.NAV.CONTACTS' | translate }}</a></li>
+      <li><a routerLink="/news" (click)="closeMenu()" routerLinkActive="active-link">{{ 'MAIN.HEADER.NAV.NEWS' | translate }}</a></li>
+      <li><a routerLink="/prices" (click)="closeMenu()" routerLinkActive="active-link">{{ 'MAIN.HEADER.NAV.PRICES' | translate }}</a></li>
+      <li><a routerLink="/reservations" (click)="closeMenu()" routerLinkActive="active-link">{{ 'MAIN.HEADER.NAV.RESERVATIONS' | translate }}</a></li>
+      <li><a routerLink="/gallery" (click)="closeMenu()" routerLinkActive="active-link">{{ 'MAIN.HEADER.NAV.GALLERY' | translate }}</a></li>
+      <li><a routerLink="/about-us" (click)="closeMenu()" routerLinkActive="active-link">{{ 'MAIN.HEADER.NAV.ABOUT_US' | translate }}</a></li>
+      <li><a routerLink="/contacts" (click)="closeMenu()" routerLinkActive="active-link">{{ 'MAIN.HEADER.NAV.CONTACTS' | translate }}</a></li>
       @if (currentLang == 'main-en' || currentLang == undefined) {
         <li><a class="contacts_link_mobile" (click)="switchLanguageToBG()">BG</a></li>
       } @else {
