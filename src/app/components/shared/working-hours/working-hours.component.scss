@@ -27,9 +27,8 @@
   overflow: hidden;
 
   @include atMedium {
-    box-shadow:
-      1.25rem 1.25rem 0.75rem rgba(0, 0, 0, 0.2), // 20px 20px 12px
-      0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.1);  // 1px 3px
+    box-shadow: 1.25rem 1.25rem 0.75rem rgba(0, 0, 0, 0.2), // 20px 20px 12px
+    0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.1); // 1px 3px
   }
 }
 

@@ -33,7 +33,9 @@
   transition: transform 0.3s;
 
   &:hover {
-    transform: scale(1.05);
+    @include atMedium {
+      transform: scale(1.05);
+    }
   }
 }
 

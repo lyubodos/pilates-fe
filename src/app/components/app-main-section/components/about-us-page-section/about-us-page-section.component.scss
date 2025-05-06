@@ -2,15 +2,11 @@
 @import '../../../../../assets/modules/section-title';
 
 
-.about-us {
-  border-bottom: 10px solid $mainRoseAsh;
-}
-
 .about-us_section {
   text-align: center;
   border-bottom: 10px solid $mainRoseAsh;
 
-  @include atMedium{
+  @include atMedium {
     padding: 0 60px 40px;
   }
 }
@@ -31,46 +27,6 @@
   flex-direction: column;
   gap: 50px;
   text-align: left;
-}
-
-.about-us_card {
-  display: flex;
-  flex-direction: column;
-  background: rgba(255, 255, 255, 0.3);
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  color: grey;
-  overflow: hidden;
-  transition: transform 0.3s;
-
-
-  &:hover {
-    @include atMedium {
-      transform: scale(1.05);
-    }
-  }
-
-  &__heading {
-    font-size: 25px;
-    margin: 0;
-  }
-
-  @include atMedium {
-    width: 60%;
-    border-radius: 10px;
-    text-align: left;
-    margin-left: auto;
-    margin-right: auto;
-    flex-direction: row;
-    align-items: flex-start;
-  }
-}
-
-.about-us_image {
-  object-fit: contain;
-
-  @include atMedium{
-    width: 30%;
-  }
 }
 
 .about-us_description {
@@ -105,8 +61,12 @@
   margin: 1rem auto;
 
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+    @include atMedium {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
   }
 
   .instructor-image {
@@ -135,11 +95,11 @@
 }
 
 .btn_about {
-  margin-top: 1.5625rem; // 25px
-  margin-bottom: 1.5625rem; ;
+  margin-top: 1.5625rem;
+  margin-bottom: 1.5625rem;;
 
   @include atMedium {
-    margin-top: 3.125rem; // 50px
+    margin-top: 3.125rem;
   }
 }
 
