@@ -10,17 +10,16 @@
 }
 
 :host ::ng-deep .testimonial-carousel .slick-dots li button {
-  background-color: #ccc !important; // default dot color
+  background-color: #ccc !important;
 }
 
 :host ::ng-deep .testimonial-carousel .slick-dots li.slick-active button {
-  background-color: #333 !important; // active dot color
+  background-color: #333 !important;
 }
 
 :host ::ng-deep .ant-row {
   width: 100%;
 }
-
 
 .ng_icons {
   width: 2rem;
@@ -30,24 +29,57 @@
 }
 
 .contacts-time_wrapper {
-  display:flex;
+  display: flex;
   justify-content: space-between;
+  flex-direction: column;
+
+  @include atMedium {
+    flex-direction: row;
+  }
 }
 
-
-.table_title{
-  font-size: 2rem;
-  text-align: center;
-  color: grey;
-}
-
-.table_wrapper{
-  background-color: $mainBgColor;
+.time-table-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
 }
 
 .time-table {
-  width: 500px;
+  width: 100%;
+  max-width: 600px;
+  border-collapse: collapse;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+  background-color: $mainBgColor;
+}
 
+.time-table th,
+.time-table td {
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 1rem;
+  color: grey;
+}
+
+.time-table th {
+  background-color: #f7f7f7;
+  font-weight: 600;
+}
+
+.table_title {
+  font-size: 2rem;
+  text-align: center;
+  color: grey;
+  margin-bottom: 0;
+}
+
+.time-table {
+  width: 600px;
+
+  @include atMedium {
+    margin-bottom: 45px;
+  }
 }
 
 .contacts_container {
@@ -90,7 +122,6 @@
       }
     }
   }
-
 }
 
 .form-container {
@@ -111,6 +142,11 @@
     @include atMedium {
       font-size: 2rem;
     }
+  }
+
+  @include atSmall {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   @include atMedium {
@@ -172,7 +208,6 @@
   justify-content: center;
   text-align: center;
   padding: 1rem;
-  box-sizing: border-box;
 }
 
 .testimonial-message {
@@ -205,7 +240,7 @@
   }
 
   @include atMedium {
-    top: 50px;
+    top: 0;
     width: 200px;
     height: 200px;
   }

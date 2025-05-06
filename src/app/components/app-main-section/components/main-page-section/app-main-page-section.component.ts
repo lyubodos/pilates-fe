@@ -39,8 +39,8 @@ export class AppMainPageSectionComponent implements OnInit {
         bg: "Фитнес инструктор"
       },
       message: {
-        en: "Most of the time, as someone who loves to work out, I spend it in the gym. After visiting ReformFlow Studio, my focus shifted not only to fitness but also to the Pilates Reformer, which helps with perfect recovery and further improvement of physical form.",
-        bg: "През по-голямата част от времето, като човек, обичащ да тренира, прекарвам във фитнес залата. След като посетих ReformFlow Studio моят поглед се фокусира не само върху фитнеса, но и пилатес реформъра, който спомага за перфектното възстановяване и доусъвършенстване на физическата форма."
+        en: "After visiting ReformFlow Studio, my focus shifted not only to fitness but also to the Pilates Reformer, which helps with perfect recovery and further improvement of physical form.",
+        bg: "След като посетих ReformFlow Studio моят поглед се фокусира не само върху фитнеса, но и пилатес реформъра, който спомага за перфектното възстановяване и доусъвършенстване на физическата форма."
       }
     },
     {

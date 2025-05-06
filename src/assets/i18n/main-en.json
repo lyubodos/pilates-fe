@@ -261,6 +261,19 @@
         "MEET_THE_INSTRUCTORS": "Meet the instructors",
         "BOOK_A_RESERVATION": "Book a reservation"
       },
+      "SCHEDULE": {
+        "TITLE": "Working hours",
+        "DAYS" : {
+          "TITLE": "Days",
+          "TIME": "Time",
+          "MONDAY_FRI": "Monday - Friday",
+          "TUESDAY": "Tuesday",
+          "WEDNESDAY": "Wednesday",
+          "THURSDAY": "Thursday",
+          "FRIDAY": "Friday",
+          "SAT_SUN":"Saturday & Sunday"
+        }
+      },
       "ERRORS": {
         "MODAL": {
           "TITLE_SUCCESS": "Thank you!",

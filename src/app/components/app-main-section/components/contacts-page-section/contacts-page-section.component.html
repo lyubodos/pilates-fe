@@ -14,28 +14,29 @@
         {{ 'MAIN.FOOTER.CONTACTS.CONTACTS_LIST.LOCATION' | translate }}</a></li>
     </ul>
     <div class="table_wrapper">
-      <h3 class="table_title">Working hours</h3>
-      <nz-table #basicTable class="time-table" [nzSize]="'middle'" [nzVirtualItemSize]="8">
-        <thead>
-        <tr>
-          <th>Days</th>
-          <th>Time</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>Monday-Fri</td>
-          <td>08:00-19:00</td>
-        </tr>
-        <tr>
-          <td>Sat-Sun</td>
-          <td>10:00-16:00</td>
-        </tr>
-        </tbody>
-      </nz-table>
+      <h3 class="table_title">{{ 'MAIN.SHARED.SCHEDULE.TITLE' | translate }}</h3>
+      <div class="time-table-wrapper">
+        <table class="time-table">
+          <thead>
+          <tr>
+            <th>{{ 'MAIN.SHARED.SCHEDULE.DAYS.TITLE' |translate }}</th>
+            <th>{{ 'MAIN.SHARED.SCHEDULE.DAYS.TIME' | translate }}</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>{{ 'MAIN.SHARED.SCHEDULE.DAYS.MONDAY_FRI' | translate }}</td>
+            <td>08:00 - 19:00</td>
+          </tr>
+          <tr>
+            <td>{{ 'MAIN.SHARED.SCHEDULE.DAYS.SAT_SUN' | translate }}</td>
+            <td>10:00 - 16:00</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
-
   <app-google-map></app-google-map>
   <div class="page-section">
     <div class="form-test-wrapper">
@@ -132,8 +133,6 @@
             </button>
           </nz-form-control>
         </nz-form-item>
-
-        <app-loading-spinner [isLoading]="isLoading"></app-loading-spinner>
       </form>
       <nz-carousel
         nzAutoPlay
@@ -175,3 +174,4 @@
     </div>
   </div>
 </div>
+<app-loading-spinner [isLoading]="isLoading"></app-loading-spinner>
