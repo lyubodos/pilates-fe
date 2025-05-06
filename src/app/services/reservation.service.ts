@@ -19,16 +19,4 @@ export class ReservationService {
   public sendReviewEmail(data: any) {
     return this.http.post(`${this.baseUrl}/send-review`, data);
   }
-
-  public trimFormValues(form: FormGroup): any {
-    const raw = form.getRawValue();
-    let trimmed: { [x: string]: any; } = {};
-
-    Object.keys(raw).forEach(key => {
-      const value = raw[key];
-      trimmed[key] = typeof value === 'string' ? value.trim() : value;
-    });
-
-    return trimmed;
-  }
 }
