@@ -55,7 +55,7 @@
     top: 45%;
     left: 8%;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     width: 85%;
     transform: translateY(-50%);
@@ -114,7 +114,7 @@
 
   &__paragraph {
     color: grey;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 100;
 
     @include atSmall {
