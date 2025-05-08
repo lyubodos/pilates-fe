@@ -21,6 +21,16 @@
   width: 100%;
 }
 
+::ng-deep .ant-form-item-label label {
+  color: grey;
+  font-size: 1rem;
+}
+
+.section-title {
+  color: grey;
+  font-weight: 500;
+}
+
 .ng_icons {
   width: 2rem;
   height: 2rem;
@@ -68,7 +78,7 @@
 }
 
 .table_title {
-  font-size: 2rem;
+  font-size: 1.9rem;
   text-align: center;
   color: grey;
   margin-bottom: 0;
@@ -84,10 +94,6 @@
 
 .contacts_container {
   margin-top: 25px;
-
-  &__heading {
-    color: grey;
-  }
 
   &__list {
     display: flex;
