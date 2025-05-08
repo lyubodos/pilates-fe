@@ -1,6 +1,13 @@
 import {Component, OnInit} from '@angular/core';
 import {animate, state, style, transition, trigger} from "@angular/animations";
-import {FormGroup, UntypedFormBuilder, Validators} from "@angular/forms";
+import {
+  AbstractControl,
+  FormGroup,
+  UntypedFormBuilder,
+  ValidationErrors,
+  ValidatorFn,
+  Validators
+} from "@angular/forms";
 import {ReservationService} from "../../../../services/reservation.service";
 import {TranslateService} from "@ngx-translate/core";
 import {TestimonialsText} from "../../../shared/data/testimonials-text.data";
@@ -41,7 +48,7 @@ export class ContactsPageSectionComponent implements OnInit {
     this.userForm = this.fb.group({
       firstName: this.fb.control('', [Validators.required, Validators.minLength(3)]),
       secondName: this.fb.control('', [Validators.required, Validators.minLength(3)]),
-      phoneNumber: this.fb.control('', [Validators.required]),
+      phoneNumber: this.fb.control('', [Validators.required, this.phoneValidator()]),
       email: this.fb.control('', [Validators.required, Validators.email]),
       feedback: this.fb.control('', Validators.required)
     });
@@ -66,7 +73,7 @@ export class ContactsPageSectionComponent implements OnInit {
         secondName: this.userForm.get('secondName')?.value.trim(),
         phoneNumber: this.userForm.get('phoneNumber')?.value.trim(),
         email: this.userForm.get('email')?.value.trim(),
-        feedback: this.userForm.get('option')?.value,
+        feedback: this.userForm.get('feedback')?.value.trim(),
         lang: this.translate.currentLang
       }
 
@@ -86,5 +93,22 @@ export class ContactsPageSectionComponent implements OnInit {
     } else {
       alert('Please fill out the form correctly!');
     }
+  }
+
+  private phoneValidator(): ValidatorFn {
+    return (control: AbstractControl): ValidationErrors | null => {
+      const value = control.value;
+
+      if (!value) return null;
+
+      // Accept optional spaces between groups
+      const phoneRegex = /^(?:\+359\s?|0)(?:88\d|89\d|7\d{2})\s?\d{2}\s?\d{2}\s?\d{2}$/;
+
+      const compactValue = value.replace(/\s+/g, '');
+      const compactRegex = /^(?:\+359|0)(88\d{6}|89\d{6}|7\d{7})$/;
+
+      const valid = phoneRegex.test(value) || compactRegex.test(compactValue);
+      return valid ? null : { invalidPhone: true };
+    };
   }
 }
