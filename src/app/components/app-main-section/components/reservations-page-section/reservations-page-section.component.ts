@@ -45,7 +45,7 @@ export class ReservationsPageSectionComponent implements OnInit {
     this.userForm = this.fb.group({
       firstName: this.fb.control('', [Validators.required, Validators.minLength(3)]),
       secondName: this.fb.control('', [Validators.required, Validators.minLength(3)]),
-      phoneNumber: this.fb.control('', [Validators.required, this.phoneNumberValidator()]),
+      phoneNumber: this.fb.control('', [Validators.required, this.phoneValidator()]),
       email: this.fb.control('', [Validators.required, Validators.email]),
       date: this.fb.control('', [Validators.required, this.noPastDateValidator]),
       reservationTime: [null, [Validators.required, this.dynamicTimeValidator.bind(this)]],
@@ -150,17 +150,20 @@ export class ReservationsPageSectionComponent implements OnInit {
     }
   }
 
-  private phoneNumberValidator(): ValidatorFn {
+  private phoneValidator(): ValidatorFn {
     return (control: AbstractControl): ValidationErrors | null => {
       const value = control.value;
 
       if (!value) return null;
 
-      const phoneRegex = /^\+\d{10,15}$/;
+      // Accept optional spaces between groups
+      const phoneRegex = /^(?:\+359\s?|0)(?:88\d|89\d|7\d{2})\s?\d{2}\s?\d{2}\s?\d{2}$/;
 
-      return phoneRegex.test(value)
-        ? null
-        : {invalidPhoneNumber: true};
+      const compactValue = value.replace(/\s+/g, '');
+      const compactRegex = /^(?:\+359|0)(88\d{6}|89\d{6}|7\d{7})$/;
+
+      const valid = phoneRegex.test(value) || compactRegex.test(compactValue);
+      return valid ? null : { invalidPhone: true };
     };
   }
 
