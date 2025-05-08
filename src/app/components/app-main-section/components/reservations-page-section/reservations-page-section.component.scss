@@ -8,7 +8,8 @@
   font-size: 1rem !important;
 }
 
-nz-form-label {
+::ng-deep .ant-form-item-label label {
+  color: grey;
   font-size: 1rem;
 }
 
@@ -24,6 +25,7 @@ nz-form-label {
 
 .section-title {
   color: grey;
+  font-weight: 500;
 }
 
 .form_header {
