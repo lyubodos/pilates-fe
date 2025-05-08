@@ -8,7 +8,7 @@
   width: 100%;
   height: 75px;
   background: #FFF;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 20%, rgba(248, 180, 177, 1) 35%, rgba(248, 180, 177, 1) 100%);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 18%, rgba(248, 180, 177, 1) 35%, rgba(248, 180, 177, 1) 100%);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,19 +35,25 @@
 
   .header_title {
     display: inline-block;
+    position: absolute;
     color: #FFFFFF;
     font-weight: 200;
     font-size: 19px;
     margin-bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
 
     @include atSmall {
       font-size: 22px;
     }
 
     @include atMedium {
+      position: initial;
       font-size: 20px;
       color: $mainRoseAsh;
       margin-left: 5px;
+      transform: initial;
     }
 
     @include atLarge {
@@ -206,7 +212,7 @@
 
   @include atSmall {
     background: #FFF;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 10%, rgba(248, 180, 177, 1) 30%, rgba(248, 180, 177, 1) 100%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 22%, rgba(248, 180, 177, 1) 40%, rgba(248, 180, 177, 1) 100%);
   }
 
   @include atMedium {
@@ -238,4 +244,6 @@
   display: inline-block;
 }
 
-
+.header-wrapper {
+  display: inline-block;
+}
