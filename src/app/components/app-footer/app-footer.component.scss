@@ -67,12 +67,13 @@ $section-spacing: 0.9375rem; // 15px
 // ==== About Us Section ====
 .about-us_container {
   @extend .footer-column;
-  margin-top: 0;
+  margin-top: 20px;
 
   &__description {
     margin-top: 0;
 
     @include atMedium {
+      margin-top: 0;
       padding: 0;
     }
   }
