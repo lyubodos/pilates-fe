@@ -41,7 +41,7 @@
     font-size: 19px;
     margin-bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-40%);
 
 
     @include atSmall {
@@ -58,10 +58,6 @@
 
     @include atLarge {
       font-size: 2rem;
-    }
-
-    @include mobileView {
-      margin-left: 12.3vw
     }
   }
 
