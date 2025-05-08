@@ -59,8 +59,8 @@ export class TestimonialsService {
         bg: "Рецепционист"
       },
       message: {
-        en: "ReformFlow showed me exercising can be both intensive and fun. Professional team, driven to provide the best care for your body. I am always looking forward to my sessions.",
-        bg: "ReformFlow ми показа как упражненията могат да бъдат и натоварващи, и завабни. Професионален екип, който е посветен да предостави най-добрата гриьа за тялото ви. Винаги очаквам с нетърпение следващите сесии."
+        en: "ReformFlow Studio showed me exercising can be both intensive and fun. Professional team, driven to provide the best care for your body. I am always looking forward to my sessions.",
+        bg: "ReformFlow Studio ми показа как упражненията могат да бъдат и натоварващи, и завабни. Професионален екип, който е посветен да предостави най-добрата гриьа за тялото ви. Винаги очаквам с нетърпение следващите сесии."
       }
     }
   ];
