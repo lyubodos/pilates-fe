@@ -219,11 +219,12 @@
 }
 
 .faq_heading {
-  margin-top: 100px;
+  margin-top: 50px;
   font-size: 35px;
 
   @include atMedium {
     font-size: 3.55rem;
+    margin-top: 80px;
   }
 }
 
