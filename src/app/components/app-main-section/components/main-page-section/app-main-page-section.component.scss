@@ -84,7 +84,7 @@
     }
 
     @include mobileView {
-      top: 24%;
+      top: 20%;
       left: 0;
     }
   }
@@ -117,6 +117,7 @@
     font-weight: 300;
     color: $mainTextColor;
     margin-top: 0;
+    margin-bottom: 1.2rem;
 
     @include atSmall {
       font-size: 1.4rem;
