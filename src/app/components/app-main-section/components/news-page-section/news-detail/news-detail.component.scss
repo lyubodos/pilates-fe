@@ -1,6 +1,9 @@
 @import '../../../../../../assets/base/global';
 @import '../../../../../../assets/modules/section-title';
 
+news-page-section {
+  background-color: $secondaryBgColor !important;
+}
 
 .news-details {
   width: 80%;
@@ -8,8 +11,13 @@
   padding: 10px 0;
   border-radius: 20px;
 
+  h4 {
+    font-weight: bold;
+    margin-top: 40px;
+  }
+
   &__heading {
-    color: grey;
+    color: $mainTextColor;
     margin-top: 0;
     font-size: 1.9rem;
 
@@ -19,7 +27,7 @@
   }
 
   &__date {
-   text-align: center;
+    text-align: center;
   }
 
   &__image {

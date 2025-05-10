@@ -95,7 +95,7 @@
   &__subtitle {
     font-size: 1.4rem;
     font-weight: 300;
-    color: grey;
+    color: $mainTextColor;
     margin-top: 0;
 
     @include atSmall {
@@ -113,7 +113,7 @@
   }
 
   &__paragraph {
-    color: grey;
+    color: $mainTextColor;
     font-size: 1rem;
     font-weight: 100;
 
@@ -157,12 +157,12 @@
     text-align: center;
 
     p {
-      color: grey;
+      color: $mainTextColor;
     }
   }
 
   &__title {
-    color: grey;
+    color: $mainTextColor;
     font-weight: 300;
     font-size: 2rem;
 
@@ -179,7 +179,7 @@
   }
 
   &__paragraph {
-    color: #383b38;
+    color: $mainTextColor;
     font-size: 1.1rem;
     font-weight: 100;
 
@@ -214,7 +214,7 @@
 }
 
 .section-title {
-  color: grey;
+  color: $mainTextColor;
   margin: 0
 }
 
@@ -252,7 +252,7 @@
 .question {
   font-size: 20px;
   font-weight: 500;
-  color: grey;
+  color: $mainTextColor;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -355,7 +355,7 @@
 }
 
 .testimonial-card {
-  color: grey;
+  color: $mainTextColor;
   background: #ffe3e3;
   border-radius: 1rem;
   padding-top: 4rem;
@@ -414,7 +414,7 @@
     }
 
     .role {
-      color: #666;
+      color: $mainTextColor;
       font-size: 0.9rem;
     }
   }

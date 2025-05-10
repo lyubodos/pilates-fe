@@ -25,7 +25,7 @@ export class AppMainPageSectionComponent implements OnInit {
 
   public testimonials: TestimonialsText[] = [];
 
-  private readonly contactsLink = "/contacts";
+  private readonly reservationsLink = "/reservations";
   private readonly INTERVAL = 5000;
 
   public faqs: FaqStruct[] = [];
@@ -80,8 +80,8 @@ export class AppMainPageSectionComponent implements OnInit {
     this.currentIndex = (this.currentIndex + 1) % this.imgs.length;
   }
 
-  public navigateToContacts() {
-    this.router.navigate([this.contactsLink]);
+  public navigateToReservations() {
+    this.router.navigate([this.reservationsLink]);
   }
 
   private loadFaqs() {

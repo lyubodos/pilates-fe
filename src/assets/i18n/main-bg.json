@@ -8,20 +8,19 @@
         "RESERVATIONS": "Резервации",
         "GALLERY": "Галерия",
         "ABOUT_US": "За Нас",
-        "CONTACTS": "Контакти"
+        "CONTACTS": "Контакти",
+        "RESERVATIONS_LINK": "Предизвикай се!"
       }
     },
     "HOME": {
       "SUBTITLE": "Промяната в твоето тяло!",
       "PARAGRAPH": {
-        "PART_1": "Доставяме най-добрата грижа за вашето тяло и ум, която ще бъде оценена от вашата",
+        "PART_1": "Ново предизвикателство за вашето тяло!",
         "PART_2": "душа."
       },
       "GET_IN_TOUCH": "Контакти",
-      "MIDDLE_HEADING": "Първо усъвършенстахме себе си.",
-      "MIDDLE_PARAGRAPH": "След дълго време прекарано във фитнес сферата, фокусът ни се насочи към финалното извайване.",
-      "STORY_HEADING": "Нашата история",
-      "STORY_PARAGRAPH": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet ex eget dolor sodales euismod. Curabitur a aliquet eros, et tempor tortor. Sed sit amet nisi in magna blandit efficitur. Suspendisse potenti. Proin at dolor sagittis, malesuada metus eget, tristique ex. Donec nulla tortor, posuere ut urna vel, malesuada convallis quam. Vestibulum malesuada purus non sagittis convallis. Proin libero arcu, interdum suscipit ullamcorper sed, maximus et nisl. Pellentesque vestibulum suscipit nunc. Etiam pulvinar egestas ligula vitae egestas. Suspendisse placerat a urna vitae maximus. Vivamus iaculis id lacus vel luctus. Aliquam lobortis semper accumsan.",
+      "MIDDLE_HEADING": "Защо да ни се доверите?",
+      "MIDDLE_PARAGRAPH": "а сега е вереме за Вас!",
       "FAQ": {
         "FAQ_TITLE": "Често задавани въпроси и отговори",
         "FAQ_LIST": [
