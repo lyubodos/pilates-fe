@@ -3,7 +3,7 @@
 @import '../../../../../assets/modules/quote';
 
 .section-title {
-  color: grey;
+  color: $mainTextColor;
   margin-top: 0;
   margin-bottom: 1rem; // 16px
 }
@@ -32,7 +32,7 @@
 .section-description {
   text-align: center;
   font-size: 1.25rem; // 20px
-  color: grey;
+  color: $mainTextColor;
   padding: 0 20px;
 }
 
@@ -66,7 +66,7 @@
   grid-template-columns: 2fr 1.4fr 1.3fr;
   padding: 1.25rem 1.5rem; // 20px 24px
   font-weight: initial;
-  color: grey;
+  color: $mainTextColor;
 
   &:hover {
     background-color: #fdf2f2;
@@ -76,13 +76,13 @@
   .price {
     font-size: 1rem; // 16px
     font-weight: bold;
-    color: grey;
+    color: $mainTextColor;
   }
 
   .terms {
     font-size: 1rem; // 16px
     font-weight: bold;
-    color: #777;
+    color: $mainTextColor;
   }
 
   &.header {
@@ -92,7 +92,7 @@
     .price,
     .terms {
       font-size: 1.1875rem; // 19px
-      color: grey;
+      color: $mainTextColor;
 
       @include atMedium {
         font-size: 1.5rem; // 24px

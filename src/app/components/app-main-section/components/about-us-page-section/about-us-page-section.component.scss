@@ -1,6 +1,14 @@
 @import '../../../../../assets/base/global';
 @import '../../../../../assets/modules/section-title';
 
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1rem;
+}
 
 .about-us_section {
   text-align: center;
@@ -12,13 +20,17 @@
 }
 
 .about-us_heading {
-  color: grey;
+  color: $mainTextColor;
 }
 
 .about-us_trainers-heading {
-  color: grey;
-  font-size: 22px;
+  color: $mainTextColor;
+  font-size: 23px;
   font-weight: 500;
+
+  @include atMedium {
+    font-size: 30px;
+  }
 }
 
 .about-us_container {
@@ -30,11 +42,10 @@
 }
 
 .about-us_description {
-  padding: 15px;
-  margin-top: 10px;
+  padding: 30px;
 
   @include atMedium {
-    padding-top: 0;
+    //padding-top: 0;
   }
 }
 
@@ -80,15 +91,14 @@
     text-align: center;
 
     .instructor-name {
-      font-size: 1.5rem;
       font-weight: 600;
       margin-bottom: 0.5rem;
-      color: #333;
+      color: $mainTextColor;
     }
 
     .instructor-description {
       font-size: 1rem;
-      color: #666;
+      color: $mainTextColor;
       line-height: 1.5;
     }
   }

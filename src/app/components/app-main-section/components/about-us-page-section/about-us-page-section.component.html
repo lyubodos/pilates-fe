@@ -5,7 +5,7 @@
     <div class="instructor-card" *ngFor="let card of aboutUsCardsList">
       <img [src]="card.image" [alt]="card.title" class="instructor-image">
       <div class="about-us_description">
-        <h3 class="instructor-name">{{ card.title }}</h3>
+        <h1 class="instructor-name">{{ card.title }}</h1>
         <p class="instructor-description scroll-container">{{ card.description }}</p>
       </div>
     </div>

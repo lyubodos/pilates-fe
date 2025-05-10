@@ -22,12 +22,12 @@
 }
 
 ::ng-deep .ant-form-item-label label {
-  color: grey;
+  color: $mainTextColor;
   font-size: 1rem;
 }
 
 .section-title {
-  color: grey;
+  color: $mainTextColor;
   font-weight: 500;
 }
 
@@ -69,7 +69,7 @@
   border: 1px solid #ddd;
   text-align: left;
   font-size: 1rem;
-  color: grey;
+  color: $mainTextColor;
 }
 
 .time-table th {
@@ -80,7 +80,7 @@
 .table_title {
   font-size: 1.9rem;
   text-align: center;
-  color: grey;
+  color: $mainTextColor;
   margin-bottom: 0;
 }
 
@@ -100,7 +100,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     list-style: none;
-    color: grey;
+    color: $mainTextColor;
     margin-left: 0;
     padding: 1.2rem 1rem;
 
@@ -120,11 +120,11 @@
       }
 
       a {
-        color: grey;
+        color: $mainTextColor;
       }
 
       a:hover {
-        color: #30302f;
+        color: #6982bd;
       }
     }
   }
@@ -138,11 +138,11 @@
   flex-direction: column;
   gap: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  color: grey;
+  color: $mainTextColor;
 
   .form_header {
     text-align: center;
-    color: grey;
+    color: $mainTextColor;
     font-size: 1.5rem;
 
     @include atMedium {
@@ -224,7 +224,7 @@
 .testimonial-author {
   margin-top: 1rem;
   font-weight: bold;
-  color: #666;
+  color: $mainTextColor;
 }
 
 .image-wrapper {

@@ -100,13 +100,12 @@
     left: 0;
     height: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 1);
     backdrop-filter: blur(10px);
     display: block;
     transition: 0.3s ease-in;
     overflow: hidden;
     z-index: -1;
-
 
     .nav_list {
       color: white;
@@ -208,7 +207,7 @@
 
   @include atSmall {
     background: #FFF;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 22%, rgba(248, 180, 177, 1) 40%, rgba(248, 180, 177, 1) 100%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 15%, rgba(248, 180, 177, 1) 40%, rgba(248, 180, 177, 1) 100%);
   }
 
   @include atMedium {
@@ -219,6 +218,7 @@
 
 .header_nav.active {
   display: block !important;
+  //border-bottom: 10px solid $secondaryBgColor;
 }
 
 
