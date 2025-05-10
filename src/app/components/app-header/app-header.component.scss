@@ -41,7 +41,7 @@
     font-size: 19px;
     margin-bottom: 0;
     left: 50%;
-    transform: translateX(-40%);
+    transform: translateX(-45%);
 
 
     @include atSmall {
@@ -207,7 +207,7 @@
 
   @include atSmall {
     background: #FFF;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 15%, rgba(248, 180, 177, 1) 40%, rgba(248, 180, 177, 1) 100%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 14%, rgba(248, 180, 177, 1) 30%, rgba(248, 180, 177, 1) 100%);
   }
 
   @include atMedium {

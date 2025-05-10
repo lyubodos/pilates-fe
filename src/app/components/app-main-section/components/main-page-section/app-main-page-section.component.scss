@@ -8,7 +8,8 @@
 
 .section-title {
   color: $mainTextColor;
-  margin: 0
+  margin: 0;
+  font-weight: bold;
 }
 
 .main-section {
@@ -91,7 +92,6 @@
 
   &__title {
     color: $mainRoseAsh;
-    font-weight: 300;
     margin: 0;
     font-size: 2.5rem;
 
@@ -114,7 +114,6 @@
 
   &__subtitle {
     font-size: 1.4rem;
-    font-weight: 300;
     color: $mainTextColor;
     margin-top: 0;
     margin-bottom: 1.2rem;
@@ -201,7 +200,7 @@
 
   &__title {
     color: $mainTextColor;
-    font-weight: 300;
+    font-weight: bold;
     font-size: 2rem;
     padding-top: 50px;
 
@@ -269,18 +268,18 @@
 }
 
 .faq_heading {
-  margin-top: 50px;
   font-size: 35px;
+  margin-bottom: 50px;
 
   @include atMedium {
     font-size: 3.55rem;
-    margin-top: 80px;
   }
 }
 
 /* Container for FAQ section */
 .faq-container {
   white-space: pre-line;
+  background-color: $secondaryBgColor;
 }
 
 /* Individual FAQ item styling */
