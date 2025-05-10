@@ -1,7 +1,10 @@
+@import "./colors";
+
 .section-title {
   font-size: 2.3rem;
-  font-weight: 300;
   text-align: center;
+  font-weight: bold;
+
 
   @include atMedium {
     font-size: 3.4rem;
@@ -20,5 +23,4 @@
       display: inline-block;
     }
   }
-
 }
