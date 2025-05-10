@@ -13,15 +13,14 @@
       }
     },
     "HOME": {
-      "SUBTITLE": "Your body's reformer!",
+      "SUBTITLE": "The change in your body",
       "PARAGRAPH": {
         "PART_1": "New challenge for your body!",
         "PART_2": "soul."
       },
       "GET_IN_TOUCH": "Get in Touch",
-      "MIDDLE_HEADING": "The first body we reformed was our own.",
-      "MIDDLE_PARAGRAPH": "After a long period in the fitness area, we decided to make the final touch.",
-      "FAQ": {
+      "MIDDLE_HEADING": "Why should You put your trust in us?",
+      "MIDDLE_DESCRIPTION": "At our Pilates studio, we believe in the power of mindful movement. Our certified instructors not only bring deep knowledge and experience but also a true passion for inspiring and supporting each individual on their journey to inner and outer harmony. With great attention to detail and a personalized approach, we create an environment where the body is strengthened, the mind is calmed, and the spirit is uplifted. Whether you're just beginning or seeking a new challenge, you’ll find a safe, welcoming, and inspiring space to nurture a healthier, stronger, and more graceful version of yourself.",
         "FAQ_TITLE": "Frequently Asked Questions",
         "FAQ_LIST": [
           {
@@ -52,8 +51,7 @@
             "question": "Why choose ReformFlow Studio?",
             "answer": "ReformFlow Studio is a place created to provide enjoyment and satisfaction through training. Certified instructors work here, dedicated not only to your body but also to your overall well-being and good mood. With us, you’ll gain:\n* Flexibility\n* Improved strength\n* Better muscle tone\n* Enhanced balance\n* Positive energy"
           }
-        ]
-      },
+        ],
       "GM_HEADING": "You can easily find us and start your training today!",
       "TESTIMONIALS_TITLE": "Testimonials",
       "PILATES_QUOTE": "Physical fitness is the first requisite of happiness.",
