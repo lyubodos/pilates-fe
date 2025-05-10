@@ -41,10 +41,10 @@
       </div>
     </div>
   </div>
-  <h2 class="section-title faq_heading" id="faq">{{ 'MAIN.HOME.FAQ.FAQ_TITLE' | translate }}</h2>
   <h2 class="section-title gma-heading">{{ 'MAIN.HOME.GM_HEADING' | translate }}</h2>
   <app-google-map></app-google-map>
   <div class="faq-container page-section">
+    <h2 class="section-title faq_heading" id="faq">{{ 'MAIN.HOME.FAQ.FAQ_TITLE' | translate }}</h2>
     <div *ngFor="let faq of faqs; let i = index" class="faq" (click)="toggleFaq(i)">
       <div class="question">
         {{ faq.question }}
