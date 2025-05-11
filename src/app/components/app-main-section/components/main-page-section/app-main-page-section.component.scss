@@ -180,7 +180,6 @@
     display: block;
     border-radius: 20px;
     width: 90%;
-    opacity: 90%;
 
     @include atMedium {
       width: 50%;
@@ -200,6 +199,7 @@
     font-weight: bold;
     font-size: 2rem;
     padding-top: 50px;
+    margin-bottom: 0;
 
     @include atMedium {
       font-size: 3rem;
@@ -250,7 +250,6 @@
     display: block;
     border-radius: 20px;
     width: 90%;
-    opacity: 90%;
 
     @include atMedium {
       width: 50%;
@@ -333,25 +332,17 @@
     width: 90%;
     text-align: left;
     font-size: 1.2rem;
+    margin-top: 20px;
 
     @include atMedium {
       font-size: 1.6rem;
+      padding: 0 30px;
     }
   }
 
   @include atMedium {
     flex-direction: row;
     align-items: normal;
-  }
-}
-
-.last-hero_description {
-  margin-top: 20px;
-
-  @include atMedium {
-    font-size: 1.6rem;
-    margin-top: 0;
-    padding: 0 30px;
   }
 }
 
