@@ -27,7 +27,8 @@ $section-spacing: 0.9375rem; // 15px
     width: 2rem;
     height: 2rem;
     list-style: none;
-    margin-right: 0.3125rem;
+    margin-right: 1rem;
+    flex-shrink: 0;
   }
 
   h4 {
