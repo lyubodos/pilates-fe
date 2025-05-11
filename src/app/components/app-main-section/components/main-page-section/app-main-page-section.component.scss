@@ -14,7 +14,6 @@
   margin-top: -100px;
 }
 
-
 .intro-hero__text-content_container {
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.7);
@@ -244,24 +243,115 @@
   }
 }
 
-.about-us_wrapper {
+.last-hero {
+  background-color: $mainRoseAsh;
+
+  &__img {
+    display: block;
+    border-radius: 20px;
+    width: 90%;
+    opacity: 90%;
+
+    @include atMedium {
+      width: 50%;
+    }
+  }
+
+  &__text-content {
+    text-align: center;
+
+    p {
+      color: $mainTextColor;
+    }
+  }
+
+  &__title {
+    color: $mainTextColor;
+    font-weight: bold;
+    font-size: 2rem;
+    padding-top: 50px;
+
+    @include atMedium {
+      font-size: 3rem;
+    }
+
+  }
+
+  &__paragraph {
+    color: $mainTextColor;
+    font-size: 1.1rem;
+    font-weight: 100;
+
+
+    @include atSmall {
+      margin: 0;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 540px;
+      margin-bottom: 30px;
+    }
+
+    @include atMedium {
+      margin: 0;
+      font-size: 1.5rem;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 30px;
+    }
+
+    @include atLarge {
+      margin: 0;
+      font-size: 2rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .btn_news {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    background-color: $secondaryBgColor;
+    color: #0c0d0c;
+  }
+
+  .btn_news:hover {
+    background-color: #87eadc;
+    color: #0c0d0c;
+  }
+
+  .btn_news:active {
+    background-color: $secondaryBgColor;
+  }
+}
+
+.hero_wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
 
   &__description {
+    width: 90%;
     text-align: left;
     font-size: 1.2rem;
-    padding: 0 30px;
 
     @include atMedium {
       font-size: 1.6rem;
     }
   }
 
-  @include  atMedium {
+  @include atMedium {
     flex-direction: row;
     align-items: normal;
+  }
+}
+
+.last-hero_description {
+  margin-top: 20px;
+
+  @include atMedium {
+    font-size: 1.6rem;
+    margin-top: 0;
+    padding: 0 30px;
   }
 }
 
@@ -415,7 +505,7 @@
 
   &:hover {
 
-    @include  atMedium {
+    @include atMedium {
       transform: translateY(-5px);
     }
   }
@@ -466,6 +556,3 @@
     }
   }
 }
-
-
-
