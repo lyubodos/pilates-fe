@@ -347,12 +347,7 @@
 }
 
 .faq_heading {
-  font-size: 35px;
   margin-bottom: 50px;
-
-  @include atMedium {
-    font-size: 3.55rem;
-  }
 }
 
 /* Container for FAQ section */
