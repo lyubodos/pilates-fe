@@ -8,8 +8,9 @@
   margin-bottom: 1rem; // 16px
 }
 
-.individual-heading {
+.type-training-heading {
   font-size: 1.75rem;
+  font-weight: bold;
 
   @include atMedium{
     font-size: 3.4rem;
@@ -91,7 +92,7 @@
     .service,
     .price,
     .terms {
-      font-size: 1.1875rem; // 19px
+      font-size: 1.1rem;
       color: $mainTextColor;
 
       @include atMedium {
