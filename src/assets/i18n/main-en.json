@@ -23,6 +23,7 @@
       "MIDDLE_DESCRIPTION": "At our Pilates studio, we believe in the power of mindful movement. Our certified instructors not only bring deep knowledge and experience but also a true passion for inspiring and supporting each individual on their journey to inner and outer harmony. With great attention to detail and a personalized approach, we create an environment where the body is strengthened, the mind is calmed, and the spirit is uplifted. Whether you're just beginning or seeking a new challenge, you’ll find a safe, welcoming, and inspiring space to nurture a healthier, stronger, and more graceful version of yourself.",
       "LAST_HERO_HEADING": "Benefits",
       "LAST_HERO_DESCRIPTION": "Reformer Pilates is a powerful method for building strength, stability, and full-body control. The machine’s refined resistance system activates deep core muscles, improves posture, and reduces impact on the joints. Each movement encourages a connection between breath and body, enhancing both focus and mindfulness. Suitable for everyone—from beginners to experienced practitioners—Reformer sessions are adaptable to your individual needs and goals. It’s a smart, effective way to cultivate a strong, balanced, and beautifully aligned body while keeping the mind calm and centered.",
+      "FAQ": {
         "FAQ_TITLE": "Frequently Asked Questions",
         "FAQ_LIST": [
           {
@@ -53,7 +54,8 @@
             "question": "Why choose ReformFlow Studio?",
             "answer": "ReformFlow Studio is a place created to provide enjoyment and satisfaction through training. Certified instructors work here, dedicated not only to your body but also to your overall well-being and good mood. With us, you’ll gain:\n* Flexibility\n* Improved strength\n* Better muscle tone\n* Enhanced balance\n* Positive energy"
           }
-        ],
+        ]
+      },
       "GM_HEADING": "You can easily find us and start your training today!",
       "TESTIMONIALS_TITLE": "Testimonials",
       "PILATES_QUOTE": "Physical fitness is the first requisite of happiness.",
@@ -111,7 +113,7 @@
       },
       "SCHEDULE": {
         "TITLE": "Working hours",
-        "DAYS" : {
+        "DAYS": {
           "TITLE": "Days",
           "TIME": "Time",
           "MONDAY": "Monday",
@@ -119,7 +121,7 @@
           "WEDNESDAY": "Wednesday",
           "THURSDAY": "Thursday",
           "FRIDAY": "Friday",
-          "SAT_SUN":"Saturday & Sunday"
+          "SAT_SUN": "Saturday & Sunday"
         }
       }
     },
@@ -263,7 +265,7 @@
       },
       "SCHEDULE": {
         "TITLE": "Working hours",
-        "DAYS" : {
+        "DAYS": {
           "TITLE": "Days",
           "TIME": "Time",
           "MONDAY_FRI": "Monday - Friday",
@@ -271,7 +273,7 @@
           "WEDNESDAY": "Wednesday",
           "THURSDAY": "Thursday",
           "FRIDAY": "Friday",
-          "SAT_SUN":"Saturday & Sunday"
+          "SAT_SUN": "Saturday & Sunday"
         }
       },
       "ERRORS": {
@@ -280,7 +282,7 @@
           "TITLE_FAILURE": "Something went wrong",
           "SUCCESS_DESCRIPTION": "Your message was sent successfully. We will get back to you soon!",
           "FAILURE_DESCRIPTION": "Oops! There was a problem sending your message. Please try again later.",
-          "SUCCESS_REVIEW":"Thank you for your review! Your opinion is important for us!",
+          "SUCCESS_REVIEW": "Thank you for your review! Your opinion is important for us!",
           "BUTTON": "Close"
         }
       }
