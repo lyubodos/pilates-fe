@@ -14,19 +14,32 @@
   <div class="middle-hero">
     <div class="middle-hero__text-content">
       <h1 class="middle-hero__title">{{ 'MAIN.HOME.MIDDLE_HEADING' | translate }}</h1>
-      <div class="about-us_wrapper page-section">
-        <p class="about-us_wrapper__description">{{'MAIN.HOME.MIDDLE_DESCRIPTION' | translate }}</p>
-              <img class="middle-hero__img" src="./assets/images/home/IMG_0001.jpeg" alt="main-section stretch image"
-                   loading="lazy">
+      <div class="hero_wrapper page-section">
+        <p class="hero_wrapper__description">{{ 'MAIN.HOME.MIDDLE_DESCRIPTION' | translate }}</p>
+        <img class="middle-hero__img" src="./assets/images/home/IMG_0001.jpeg" alt="main-section stretch image"
+             loading="lazy">
       </div>
       <a routerLink="/about-us"
          class="btn btn_about-us">{{ 'MAIN.SHARED.NAVIGATION_LINKS.MEET_THE_INSTRUCTORS' | translate }}</a>
     </div>
   </div>
-<!--  <div class="quote-container">-->
-<!--    <p class="quote-text">“{{ 'MAIN.HOME.PILATES_QUOTE' | translate }}”</p>-->
-<!--    <p class="quote-author">— {{ 'MAIN.HOME.JOSEPH_PILATES' | translate }}</p>-->
-<!--  </div>-->
+  <!-- Section 3 -->
+  <div class="last-hero">
+    <div class="last-hero__text-content">
+      <h1 class="last-hero__title">{{ 'MAIN.HOME.LAST_HERO_HEADING' | translate }}</h1>
+      <div class="hero_wrapper page-section">
+        <img class="middle-hero__img" src="./assets/images/gallery/IMG_0115.jpeg" alt="main-section stretch image"
+             loading="lazy">
+        <p class="hero_wrapper__description last-hero_description">{{'MAIN.HOME.LAST_HERO_DESCRIPTION' | translate}}</p>
+      </div>
+      <a routerLink="/news/1"
+         class="btn btn_news">{{ 'MAIN.SHARED.NAVIGATION_LINKS.LEARN_MORE' | translate }}</a>
+    </div>
+  </div>
+  <!--  <div class="quote-container">-->
+  <!--    <p class="quote-text">“{{ 'MAIN.HOME.PILATES_QUOTE' | translate }}”</p>-->
+  <!--    <p class="quote-author">— {{ 'MAIN.HOME.JOSEPH_PILATES' | translate }}</p>-->
+  <!--  </div>-->
   <h3 class="testimonials-heading section-title">{{ 'MAIN.HOME.TESTIMONIALS_TITLE' | translate }}</h3>
   <div class="testimonials-container">
     <div class="testimonial-card" *ngFor="let t of testimonials">

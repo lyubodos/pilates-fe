@@ -160,4 +160,22 @@
     <button class="modal-close" (click)="showModal = false">{{ 'MAIN.SHARED.ERRORS.MODAL.BUTTON' | translate }}</button>
   </div>
 </div>
-<app-working-hours></app-working-hours>
+<h3 class="table_title">{{ 'MAIN.SHARED.SCHEDULE.TITLE' | translate }}</h3>
+<table class="time-table">
+<thead>
+<tr>
+  <th>{{ 'MAIN.SHARED.SCHEDULE.DAYS.TITLE' |translate }}</th>
+  <th>{{ 'MAIN.SHARED.SCHEDULE.DAYS.TIME' | translate }}</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>{{ 'MAIN.SHARED.SCHEDULE.DAYS.MONDAY_FRI' | translate }}</td>
+  <td>08:00 - 19:00</td>
+</tr>
+<tr>
+  <td>{{ 'MAIN.SHARED.SCHEDULE.DAYS.SAT_SUN' | translate }}</td>
+  <td>09:00 - 16:00</td>
+</tr>
+</tbody>
+</table>
