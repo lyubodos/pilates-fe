@@ -68,8 +68,8 @@
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.85);
     padding: 20px;
-    width: 85%;
-    transform: translate(9%);
+    width: 90%;
+    transform: translate(5.5%);
     text-align: center;
     z-index: 10;
 
@@ -90,10 +90,10 @@
   &__title {
     color: $mainRoseAsh;
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 3rem;
 
     @include atSmall {
-      font-size: 3rem;
+      font-size: 4rem;
     }
 
     @include atMedium {
@@ -116,7 +116,7 @@
     margin-bottom: 1.2rem;
 
     @include atSmall {
-      font-size: 1.4rem;
+      font-size: 1.8rem;
     }
 
     @include atMedium {
@@ -135,7 +135,7 @@
 
   &__paragraph {
     color: $mainTextColor;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 100;
 
     @include atSmall {
@@ -144,6 +144,7 @@
       margin-right: auto;
       max-width: 400px;
       margin-bottom: 15px;
+      font-size: 1.4rem;
     }
 
     @include atMedium {
