@@ -72,6 +72,7 @@
     transform: translate(5.5%);
     text-align: center;
     z-index: 10;
+    cursor: default;
 
 
     @include atMedium {
@@ -93,7 +94,7 @@
     font-size: 3rem;
 
     @include atSmall {
-      font-size: 4rem;
+      font-size: 3rem;
     }
 
     @include atMedium {
