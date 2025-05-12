@@ -18,11 +18,12 @@ $section-spacing: 0.9375rem; // 15px
   flex: 1 1 auto;
   color: ivory;
   font-size: 1.125rem;
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 
   @include atMedium {
     flex-direction: row;
+    padding: 0.7rem 200px;
   }
 
   .ng_icons {
