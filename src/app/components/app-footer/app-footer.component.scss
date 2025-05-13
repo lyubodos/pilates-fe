@@ -69,27 +69,28 @@ $section-spacing: 0.9375rem; // 15px
 }
 
 // ==== About Us Section ====
-.about-us_container {
-  @extend .footer-column;
-  margin-top: 20px;
-
-  &__description {
-    margin-top: 0;
-
-    @include atMedium {
-      margin-top: 0;
-      padding: 0;
-    }
-  }
-
-  @include atMedium {
-    margin-top: $section-gap;
-  }
-}
+//.about-us_container {
+//  @extend .footer-column;
+//  margin-top: 20px;
+//
+//  &__description {
+//    margin-top: 0;
+//
+//    @include atMedium {
+//      margin-top: 0;
+//      padding: 0;
+//    }
+//  }
+//
+//  @include atMedium {
+//    margin-top: $section-gap;
+//  }
+//}
 
 // ==== Social Media Section ====
 .social-media_container {
   @extend .footer-column;
+  margin-top: 1.8rem;
 
   &__list {
     padding-left: 0;
