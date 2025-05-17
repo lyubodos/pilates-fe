@@ -110,7 +110,6 @@ export class ReservationsPageSectionComponent implements OnInit {
         hoursToDisable.push(h);
       }
     }
-
     return hoursToDisable;
   };
 
@@ -126,7 +125,7 @@ export class ReservationsPageSectionComponent implements OnInit {
         secondName: this.userForm.get('secondName')?.value.trim(),
         phoneNumber: this.userForm.get('phoneNumber')?.value.trim(),
         email: this.userForm.get('email')?.value.trim(),
-        date: this.userForm.get('date')?.value,
+        date: this.userForm.get('date')?.value.toString(),
         reservationTime: formattedTime,
         option: this.userForm.get('option')?.value,
         lang: this.translate.currentLang
