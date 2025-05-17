@@ -49,7 +49,7 @@ export class TestimonialsService {
         en: 'Daniela Mezeklieva',
         bg: "Даниела Мезеклиева"
       },
-      image: 'assets/images/testimonials/anonymous.jpeg',
+      image: 'assets/images/testimonials/IMG_7371.jpg',
       info: {
         en: 'These trainings improved my life!',
         bg: "Тези тренировки подобриха живота ми!"

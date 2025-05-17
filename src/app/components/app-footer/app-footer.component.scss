@@ -52,6 +52,11 @@ $section-spacing: 0.9375rem; // 15px
       color: #ededd2;
     }
   }
+
+  @media (min-width: 900px) and (max-width: 1024px) {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
 }
 
 // ==== Base Block for Section Columns ====
@@ -114,8 +119,8 @@ $section-spacing: 0.9375rem; // 15px
 // ==== Contacts Section ====
 .contacts_container {
   @extend .footer-column;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  //overflow: hidden;
+  //text-overflow: ellipsis;
 
   &__list {
     list-style: none;
