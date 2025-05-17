@@ -1,8 +1,9 @@
 @import '../../../../../assets/base/global';
+@import '../../../../../assets/modules/colors';
 
 .terms_container{
   width: 80%;
-  color: grey;
+  color: $mainTextColor;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
