@@ -109,6 +109,12 @@ select {
   margin-right: 8px;
 }
 
+.time-table-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 1rem 2rem 1rem;
+}
+
 .table_title {
   font-size: 1.9rem;
   text-align: center;
