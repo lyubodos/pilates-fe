@@ -172,6 +172,14 @@
   @include atMedium {
     height: 100vh;
   }
+
+  .btn {
+    margin-bottom: 10px;
+
+    @include atMedium {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .middle-hero {
