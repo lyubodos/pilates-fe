@@ -7,10 +7,14 @@
   background: $secondaryBgColor;
   border-radius: 10px;
   text-align: center;
+  max-width: 600px;
   padding: 80px 20px;
-  max-width: 1000px;
   margin: auto;
   color: $mainTextColor;
+
+  @include atMedium {
+    max-width: 1000px;
+  }
 }
 
 .not-found-container h1 {
