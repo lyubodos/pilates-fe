@@ -22,10 +22,10 @@
       @for (item of newsData.orderedItems; track item.id; ) {
         <li><h3>{{ item.line1[lang] }}</h3></li>
         @if (item.line2) {
-          <p>{{ item.line2[lang] }}</p>
+          <p class="news-details__additional-text">{{ item.line2[lang] }}</p>
         }
         @if (item.line3) {
-          <p>{{ item.line3[lang] }}</p>
+          <p class="news-details__additional-text">{{ item.line3[lang] }}</p>
         }
       }
     </ol>
