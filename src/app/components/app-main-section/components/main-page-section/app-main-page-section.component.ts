@@ -21,23 +21,19 @@ interface FaqStruct {
 })
 export class AppMainPageSectionComponent implements OnInit {
   public lang: keyof TranslatedText = 'en';
-  private langSub!: Subscription;
-
   public testimonials: TestimonialsText[] = [];
-
-  private readonly reservationsLink = "/reservations";
-  private readonly INTERVAL = 5000;
-
   public faqs: FaqStruct[] = [];
   public currentIndex = 0;
   public interval: any;
-
-
   public imgs = [
     'assets/images/IMG_9979.jpeg',
     'assets/images/IMG_9983.jpeg',
     'assets/images/gallery/IMG_0313.jpeg',
   ];
+
+  private langSub!: Subscription;
+  private readonly reservationsLink = "/reservations";
+  private readonly INTERVAL = 5000;
 
 
   constructor(private router: Router, private route: ActivatedRoute, private translateService: TranslateService, private translatingService: TranslatingService, private testimonialsService: TestimonialsService) {
