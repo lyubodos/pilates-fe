@@ -16,6 +16,11 @@ news-page-section {
     margin-top: 40px;
   }
 
+  li {
+    font-size: 1.1rem;
+  }
+
+
   &__heading {
     color: $mainTextColor;
     margin-top: 0;
@@ -35,6 +40,10 @@ news-page-section {
     border-radius: 10px;
     width: 700px;
     margin: 0 auto 50px auto;
+  }
+
+  &__additional-text{
+    font-size: 1rem;
   }
 
   &__description {
