@@ -55,6 +55,7 @@ import {NzTooltipDirective} from "ng-zorro-antd/tooltip";
 import {NzCarouselComponent, NzCarouselModule} from "ng-zorro-antd/carousel";
 import {NzTableComponent} from "ng-zorro-antd/table";
 import {NzDividerComponent} from "ng-zorro-antd/divider";
+import {NotFoundComponent} from "./components/app-main-section/components/not-found/not-found.component";
 
 registerLocaleData(en);
 registerLocaleData(bg);
@@ -115,7 +116,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     LoadingSpinnerComponent,
     TermsOfUseComponent,
     GdprComponent,
-    GoogleMapComponent
+    GoogleMapComponent,
+    NotFoundComponent
   ],
   providers: [
     // {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true}

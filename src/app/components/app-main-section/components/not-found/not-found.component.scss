@@ -1,0 +1,29 @@
+@import '../../../../../assets/base/global';
+
+.not-found-section {
+  height: 100vh;
+}
+.not-found-container {
+  background: $secondaryBgColor;
+  border-radius: 10px;
+  text-align: center;
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: auto;
+  color: $mainTextColor;
+}
+
+.not-found-container h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.not-found-container p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.btn {
+  color: $mainTextColor;
+}
