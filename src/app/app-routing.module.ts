@@ -27,6 +27,7 @@ import {GdprComponent} from "./components/app-main-section/components/gdpr/gdpr.
 import {
   NewsDetailComponent
 } from "./components/app-main-section/components/news-page-section/news-detail/news-detail.component";
+import {NotFoundComponent} from "./components/app-main-section/components/not-found/not-found.component";
 
 export const routes: Routes = [
   {path: '', pathMatch: 'full', component: AppMainPageSectionComponent},
@@ -39,6 +40,8 @@ export const routes: Routes = [
   {path: 'contacts', pathMatch: 'full', component: ContactsPageSectionComponent},
   {path: 'terms', pathMatch: 'full', component: TermsOfUseComponent},
   {path: 'gdpr', pathMatch: 'full', component: GdprComponent},
+  {path: '**', component: NotFoundComponent}
+
 ];
 
 const routerOptions: ExtraOptions = {
