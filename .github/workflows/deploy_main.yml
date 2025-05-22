@@ -28,7 +28,7 @@ jobs:
           };" > src/environments/environment.prod.ts
 
       - name: Build app
-        run: npm run build -- --configuration production --base-href /reformflow/
+        run: npm run build -- --configuration production --base-href=/
 
       - name: Decode and write GCP credentials
         run: echo "${{ secrets.GCP_SA_KEY }}" | base64 -d > ${{ github.workspace }}/gcp-key.json
