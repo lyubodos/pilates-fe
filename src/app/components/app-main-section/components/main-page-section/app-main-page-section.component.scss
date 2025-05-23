@@ -208,7 +208,7 @@
   &__title {
     color: $mainTextColor;
     font-weight: bold;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     padding-top: 50px;
     margin-bottom: 0;
 
@@ -467,8 +467,12 @@
 }
 
 .gma-heading {
-  font-size: 25px;
-  margin: 50px 0;
+  font-size: 1.6rem;
+  margin: 50px 8px;
+
+  @include atMedium {
+    font-size: 2.5rem;
+  }
 }
 
 .quote-section {
