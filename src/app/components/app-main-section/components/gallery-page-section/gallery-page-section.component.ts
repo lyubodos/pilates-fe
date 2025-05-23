@@ -7,18 +7,21 @@ import {Component} from '@angular/core';
 })
 export class GalleryPageSectionComponent {
   public images: string[] = [
-      'assets/images/IMG_9979.jpeg',
-      'assets/images/IMG_9983.jpeg',
-      'assets/images/gallery/IMG_0313.jpeg',
-      'assets/images/home/IMG_0024.jpeg',
-      'assets/images/home/IMG_0025.jpeg',
-      'assets/images/home/IMG_0030.jpeg',
-      'assets/images/gallery/IMG_0094.jpeg',
-      'assets/images/gallery/IMG_0115.jpeg',
-      'assets/images/gallery/IMG_0139.jpeg',
-      'assets/images/gallery/IMG_0192.jpeg',
-      'assets/images/gallery/IMG_0200.jpeg',
-      'assets/images/gallery/IMG_0239.jpeg',
+    'assets/images/IMG_9979.jpeg',
+    'assets/images/IMG_9983.jpeg',
+    'assets/images/gallery/IMG_0313.jpeg',
+    'assets/images/gallery/IMG_1075.jpeg',
+    'assets/images/home/IMG_0025.jpeg',
+    'assets/images/home/IMG_0030.jpeg',
+    'assets/images/gallery/IMG_0094.jpeg',
+    'assets/images/gallery/IMG_0115.jpeg',
+    'assets/images/gallery/IMG_0139.jpeg',
+    'assets/images/gallery/IMG_0192.jpeg',
+    'assets/images/gallery/IMG_0200.jpeg',
+    'assets/images/gallery/IMG_1062.jpeg',
+    'assets/images/gallery/IMG_1072.jpeg',
+    'assets/images/gallery/IMG_1073.jpeg',
+    'assets/images/gallery/IMG_1076.jpeg',
   ];
 
   public currentIndex = 0;
