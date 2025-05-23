@@ -1,15 +1,18 @@
 <h1 class="section-title">{{ 'MAIN.GALLERY.TITLE' | translate }}</h1>
 <p class="section-description">{{ 'MAIN.GALLERY.DESCRIPTION' | translate }}</p>
 <div class="gallery_container">
-  <div class="gallery">
-    <img
-      *ngFor="let img of images; let i = index"
-      [src]="img"
-      rel="preload"
-      (click)="openModal(i)"
-      class="thumbnail"
-      alt="Gallery image"
-    />
+  <div *ngIf="!imagesLoaded">
+    <app-loading-spinner [isLoading]="isLoading"></app-loading-spinner>
+  </div>
+  <div class="gallery" *ngIf="imagesLoaded">
+      <img
+        *ngFor="let img of images; let i = index"
+        [src]="img"
+        rel="preload"
+        (click)="openModal(i)"
+        class="thumbnail"
+        alt="Gallery image"
+      />
   </div>
   <a class="btn btn_gallery" routerLink="/reservations">{{ 'MAIN.HEADER.NAV.RESERVATIONS_LINK' | translate }}</a>
 </div>
@@ -18,7 +21,7 @@
 <!-- Fullscreen Modal -->
 <div class="modal" *ngIf="showModal">
   <span class="close" (click)="closeModal()">×</span>
-  <img [src]="images[currentIndex]" class="modal-content" />
+  <img [src]="images[currentIndex]" class="modal-content"/>
 
   <a class="prev" (click)="prev()">❮</a>
   <a class="next" (click)="next()">❯</a>
