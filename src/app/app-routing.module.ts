@@ -28,11 +28,12 @@ import {
   NewsDetailComponent
 } from "./components/app-main-section/components/news-page-section/news-detail/news-detail.component";
 import {NotFoundComponent} from "./components/app-main-section/components/not-found/not-found.component";
+import {NewsExistsGuard} from "./guards/news-exist.guard";
 
 export const routes: Routes = [
   {path: '', pathMatch: 'full', component: AppMainPageSectionComponent},
   {path: 'news', pathMatch: 'full', component: NewsPageSectionComponent},
-  {path: 'news/:id', component: NewsDetailComponent},
+  {path: 'news/:id', component: NewsDetailComponent, canActivate: [NewsExistsGuard]},
   {path: 'prices', pathMatch: 'full', component: PricesPageSectionComponent},
   {path: 'reservations', pathMatch: 'full', component: ReservationsPageSectionComponent},
   {path: 'gallery', pathMatch: 'full', component: GalleryPageSectionComponent},
