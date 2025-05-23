@@ -3,7 +3,7 @@
   <h2 class="about-us_trainers-heading">{{ 'MAIN.ABOUT_US.TITLE' | translate }}</h2>
   <div class="about-us_container">
     <div class="instructor-card" *ngFor="let card of aboutUsCardsList">
-      <img [src]="card.image" [alt]="card.title" class="instructor-image">
+      <img [src]="card.image" [alt]="card.title" class="instructor-image" rel="preload">
       <div class="about-us_description">
         <h1 class="instructor-name">{{ card.title }}</h1>
         <p class="instructor-description scroll-container">{{ card.description }}</p>
@@ -11,6 +11,8 @@
     </div>
   </div>
   <a routerLink="/reservations"
-     class="btn btn_spacing">{{ 'MAIN.HEADER.NAV.RESERVATIONS_LINK' +
-  '' | translate }}</a>
+     class="btn btn_spacing">{{
+      'MAIN.HEADER.NAV.RESERVATIONS_LINK' +
+      '' | translate
+    }}</a>
 </section>
