@@ -142,7 +142,7 @@
         @for (testimonial of testimonials; track testimonial) {
           <div nz-carousel-content>
             <div class="image-wrapper">
-              <img [src]="testimonial.image" [alt]="testimonial.image">
+              <img [src]="testimonial.image" [alt]="testimonial.image" loading="lazy">
             </div>
             <div class="testimonial-slide">
               <p class="testimonial-message">“{{ testimonial.message[lang] }}”</p>
