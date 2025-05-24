@@ -1,7 +1,7 @@
 <h1 class="section-title">{{ 'MAIN.GALLERY.TITLE' | translate }}</h1>
 <p class="section-description">{{ 'MAIN.GALLERY.DESCRIPTION' | translate }}</p>
 <div class="gallery_container">
-  <div *ngIf="!imagesLoaded">
+  <div *ngIf="!imagesLoaded" [ngClass]="{ 'preload-width': !imagesLoaded }">
     <app-loading-spinner [isLoading]="isLoading"></app-loading-spinner>
   </div>
   <div class="gallery" *ngIf="imagesLoaded">

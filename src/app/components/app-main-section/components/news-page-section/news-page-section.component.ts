@@ -15,6 +15,9 @@ import {TranslatedText} from "../../../shared/data/translated-text.data";
 export class NewsPageSectionComponent implements OnInit, OnDestroy {
   public newsList: NewsItem[] = [];
   public lang: keyof TranslatedText = 'bg';
+  public isLoading = false;
+  public imagesLoaded = false;
+
   private langSub!: Subscription;
 
 
@@ -23,6 +26,13 @@ export class NewsPageSectionComponent implements OnInit, OnDestroy {
 
   public ngOnInit(): void {
     this.newsList = this.newsService.getAllNews();
+    this.preloadImages().then(() => {
+      this.imagesLoaded = true;
+      this.isLoading = false;
+    }).catch(() => {
+      console.warn('Some images failed to preload.');
+      this.imagesLoaded = true;
+    });
 
     this.langSub = this.translatingService.lang$.subscribe((lang) => {
       this.lang = lang;
@@ -39,5 +49,19 @@ export class NewsPageSectionComponent implements OnInit, OnDestroy {
 
   public getTranslatedValue(obj: TranslatedText): string {
     return obj[this.lang as keyof TranslatedText];
+  }
+
+  private preloadImages() {
+    this.isLoading = true;
+    const preloadPromises = this.newsList.map((news) => {
+      return new Promise<void>((resolve, reject) => {
+        const img = new Image();
+        img.onload = () => resolve();
+        img.onerror = () => reject();
+        img.src = news.image;
+      });
+    });
+
+    return Promise.all(preloadPromises);
   }
 }
