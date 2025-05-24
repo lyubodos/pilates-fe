@@ -1,8 +1,8 @@
-<section class="about-us_section">
+<section class="about-us_section" [ngClass]="{ 'preload-width': !imagesLoaded }">
   <h1 class="section-title about-us_heading">{{ 'MAIN.ABOUT_US.MAIN-TITLE' | translate }}</h1>
   <h2 class="about-us_trainers-heading">{{ 'MAIN.ABOUT_US.TITLE' | translate }}</h2>
   <app-loading-spinner [isLoading]="isLoading"></app-loading-spinner>
-  <div class="about-us_container" *ngIf="imagesLoaded" [ngClass]="{ 'preload-width': !imagesLoaded }">
+  <div class="about-us_container" *ngIf="imagesLoaded">
     <div class="instructor-card" *ngFor="let card of aboutUsCardsList">
       <img [src]="card.image" [alt]="card.title" class="instructor-image" rel="preload">
       <div class="about-us_description">

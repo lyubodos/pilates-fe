@@ -24,6 +24,8 @@ export class AppMainPageSectionComponent implements OnInit {
   public testimonials: TestimonialsText[] = [];
   public faqs: FaqStruct[] = [];
   public currentIndex = 0;
+  public isLoading = false;
+  public imagesLoaded = false;
   public interval: any;
   public imgs = [
     'assets/images/IMG_9979.jpeg',
@@ -36,7 +38,10 @@ export class AppMainPageSectionComponent implements OnInit {
   private readonly INTERVAL = 5000;
 
 
-  constructor(private router: Router, private route: ActivatedRoute, private translateService: TranslateService, private translatingService: TranslatingService, private testimonialsService: TestimonialsService) {
+  constructor(private router: Router, private route: ActivatedRoute,
+              private translateService: TranslateService,
+              private translatingService: TranslatingService,
+              private testimonialsService: TestimonialsService) {
 
   }
 
@@ -44,6 +49,14 @@ export class AppMainPageSectionComponent implements OnInit {
     this.interval = setInterval(() => {
       this.nextSlide();
     }, this.INTERVAL);
+
+    this.preloadImages(this.imgs).then(() => {
+      this.imagesLoaded = true;
+      this.isLoading = false;
+    }).catch(() => {
+      console.warn('Some images failed to preload.');
+      this.imagesLoaded = true;
+    });
 
     this.langSub = this.translatingService.lang$.subscribe((lang) => {
       this.lang = lang;
@@ -80,6 +93,7 @@ export class AppMainPageSectionComponent implements OnInit {
     this.router.navigate([this.reservationsLink]);
   }
 
+
   private loadFaqs() {
     this.translateService.get('MAIN.HOME.FAQ.FAQ_LIST').subscribe((faqList: any[]) => {
       this.faqs = faqList.map(faq => ({
@@ -96,5 +110,19 @@ export class AppMainPageSectionComponent implements OnInit {
       const y = element.getBoundingClientRect().top + window.pageYOffset - offset;
       window.scrollTo({top: y, behavior: 'smooth'});
     }
+  }
+
+  private preloadImages(items: any) {
+    this.isLoading = true;
+    const preloadPromises = items.map((item: any) => {
+      return new Promise<void>((resolve, reject) => {
+        const img = new Image();
+        img.onload = () => resolve();
+        img.onerror = () => reject();
+        img.src = item;
+      });
+    });
+
+    return Promise.all(preloadPromises);
   }
 }
