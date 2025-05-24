@@ -3,6 +3,10 @@
 @import '../../../../../assets/modules/section-title';
 @import '../../../../../assets/modules/generic-content-container';
 
+.preload-width {
+  height: 100vh;
+}
+
 .section-title {
   color: $mainTextColor;
 }

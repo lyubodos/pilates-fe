@@ -23,4 +23,8 @@ export class NewsService {
   public getAllNews(): NewsItem[] {
     return this.newsList;
   }
+
+  public getAllNewsObs(): Observable<NewsItem[]> {
+    return of(this.newsList);
+  }
 }
