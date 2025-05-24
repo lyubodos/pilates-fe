@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {ImagesLoaderService} from "../../../../services/images-loader.service";
 
 @Component({
   selector: 'app-gallery-page-section',
@@ -28,9 +29,12 @@ export class GalleryPageSectionComponent implements OnInit {
   public showModal = false;
   public isLoading = false;
 
+  constructor(private imagesLoaderService: ImagesLoaderService) {
+  }
 
   ngOnInit() {
-    this.preloadImages().then(() => {
+    this.isLoading = true;
+    this.imagesLoaderService.preloadImages(this.images).then(() => {
       this.imagesLoaded = true;
       this.isLoading = false;
     }).catch(() => {
@@ -54,19 +58,5 @@ export class GalleryPageSectionComponent implements OnInit {
 
   public prev() {
     this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
-  }
-
-  private preloadImages() {
-    this.isLoading = true;
-    const preloadPromises = this.images.map((image) => {
-      return new Promise<void>((resolve, reject) => {
-        const img = new Image();
-        img.onload = () => resolve();
-        img.onerror = () => reject();
-        img.src = image;
-      });
-    });
-
-    return Promise.all(preloadPromises);
   }
 }

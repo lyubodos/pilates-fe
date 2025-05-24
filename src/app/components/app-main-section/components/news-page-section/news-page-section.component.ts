@@ -5,6 +5,7 @@ import {Router} from "@angular/router";
 import {Subscription} from "rxjs";
 import {TranslatingService} from "../../../../services/translating.service";
 import {TranslatedText} from "../../../shared/data/translated-text.data";
+import {ImagesLoaderService} from "../../../../services/images-loader.service";
 
 
 @Component({
@@ -21,12 +22,13 @@ export class NewsPageSectionComponent implements OnInit, OnDestroy {
   private langSub!: Subscription;
 
 
-  constructor(private newsService: NewsService, private router: Router, private translatingService: TranslatingService) {
+  constructor(private newsService: NewsService, private router: Router, private translatingService: TranslatingService, private imagesLoaderService: ImagesLoaderService) {
   }
 
   public ngOnInit(): void {
     this.newsList = this.newsService.getAllNews();
-    this.preloadImages().then(() => {
+    this.isLoading = true;
+    this.imagesLoaderService.preloadImages(this.newsList).then(() => {
       this.imagesLoaded = true;
       this.isLoading = false;
     }).catch(() => {
@@ -45,23 +47,5 @@ export class NewsPageSectionComponent implements OnInit, OnDestroy {
 
   public openNewsInformation(newsId: string) {
     this.router.navigate([`/news/${newsId}`]);
-  }
-
-  public getTranslatedValue(obj: TranslatedText): string {
-    return obj[this.lang as keyof TranslatedText];
-  }
-
-  private preloadImages() {
-    this.isLoading = true;
-    const preloadPromises = this.newsList.map((news) => {
-      return new Promise<void>((resolve, reject) => {
-        const img = new Image();
-        img.onload = () => resolve();
-        img.onerror = () => reject();
-        img.src = news.image;
-      });
-    });
-
-    return Promise.all(preloadPromises);
   }
 }
