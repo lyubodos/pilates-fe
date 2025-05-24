@@ -1,7 +1,7 @@
-<div class="news-section">
+<div class="news-section" [ngClass]="{ 'preload-width': !imagesLoaded }">
   <h2 class="news-section__heading section-title">{{'MAIN.NEWS.TITLE' | translate}}</h2>
   <app-loading-spinner [isLoading]="isLoading"></app-loading-spinner>
-  <div class="news-container" *ngIf="imagesLoaded" [ngClass]="{ 'preload-width': !imagesLoaded }">
+  <div class="news-container" *ngIf="imagesLoaded" >
     <div class="news-card" *ngFor="let news of newsList" (click)="openNewsInformation(news.id)">
       <img [src]="news.image" [alt]="news.title" class="news-image">
       <div class="news-content">

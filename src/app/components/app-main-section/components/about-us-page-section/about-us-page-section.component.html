@@ -11,7 +11,8 @@
       </div>
     </div>
   </div>
-  <a routerLink="/reservations"
+  <a  *ngIf="imagesLoaded"
+    routerLink="/reservations"
      class="btn btn_spacing">{{
       'MAIN.HEADER.NAV.RESERVATIONS_LINK' +
       '' | translate
